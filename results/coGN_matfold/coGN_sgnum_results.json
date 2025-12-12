@@ -1,0 +1,9 @@
+{
+  "model": "coGN",
+  "split_type": "sgnum",
+  "test_mae": 52.9099863156461,
+  "test_rmse": 98.65596792311628,
+  "train_samples": 467,
+  "test_samples": 36,
+  "train_time": 41.855571269989014
+}

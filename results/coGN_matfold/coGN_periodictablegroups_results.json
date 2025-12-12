@@ -1,0 +1,9 @@
+{
+  "model": "coGN",
+  "split_type": "periodictablegroups",
+  "test_mae": 52.43533564177973,
+  "test_rmse": 110.21131089669878,
+  "train_samples": 427,
+  "test_samples": 87,
+  "train_time": 39.874892234802246
+}

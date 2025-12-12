@@ -1,0 +1,9 @@
+{
+  "model": "coGN",
+  "split_type": "chemsys",
+  "test_mae": 49.63097733102496,
+  "test_rmse": 110.21377395719307,
+  "train_samples": 444,
+  "test_samples": 66,
+  "train_time": 40.92708396911621
+}

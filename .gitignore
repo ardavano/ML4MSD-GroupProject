@@ -1,0 +1,49 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data files (better to keep on HPC)
+data/
+
+# Temporary scripts
+scripts/temp_*.py
+scripts/slurm_*.slurm
+
+# SLURM error files
+logs/*.err
+
+# Large files 
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+# Don't ignore these
+!results/
+!results/**/*.json
+!results/**/*.csv
+!results/**/*_model/

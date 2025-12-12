@@ -1,0 +1,10 @@
+{
+  "model": "coNGN",
+  "split_type": "elements",
+  "test_mae": 90.9811993327056,
+  "test_rmse": 139.30983871858015,
+  "train_samples": 452,
+  "val_samples": 129,
+  "test_samples": 55,
+  "train_time": 217.47819423675537
+}

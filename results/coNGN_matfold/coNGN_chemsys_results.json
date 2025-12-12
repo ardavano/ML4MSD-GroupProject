@@ -1,0 +1,12 @@
+{
+  "model": "coNGN",
+  "split_type": "chemsys",
+  "split_ratio": "0.7-0.2-0.1",
+  "test_mae": 45.077877411885474,
+  "test_rmse": 99.99215322429933,
+  "train_samples": 444,
+  "val_samples": 126,
+  "test_samples": 66,
+  "epochs": 50,
+  "train_time_seconds": 243.32086205482483
+}
