@@ -1,0 +1,3165 @@
+[
+  {
+    "name": "Andrew",
+    "path": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Andrew",
+    "total_files": 59,
+    "file_types": {
+      ".json": 27,
+      ".csv": 32
+    },
+    "folder_structure": [
+      "ChemSys",
+      "Composition",
+      "CrystalSys",
+      "Elements",
+      "Groups",
+      "PointGroup",
+      "Sgnum"
+    ],
+    "all_filenames": [
+      "ChemSys/mf.index-val_chemsys-test_0.7-0.2-0.1.json",
+      "ChemSys/mf.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+      "ChemSys/mf.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+      "ChemSys/mf.index-val_chemsys-test_0.7-0.2-0.1.train.csv",
+      "ChemSys/mf.index-val_chemsys-test_0.7-0.2-0.1.validation.csv",
+      "ChemSys/mf.index-val_chemsys-test_0.8-0.0-0.2.json",
+      "ChemSys/mf.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+      "ChemSys/mf.index-val_chemsys-test_0.8-0.0-0.2.test.csv",
+      "ChemSys/mf.index-val_chemsys-test_0.8-0.0-0.2.train.csv",
+      "Composition/mf.index-val_composition-test_0.7-0.2-0.1.json",
+      "Composition/mf.index-val_composition-test_0.7-0.2-0.1.summary.json",
+      "Composition/mf.index-val_composition-test_0.7-0.2-0.1.test.csv",
+      "Composition/mf.index-val_composition-test_0.7-0.2-0.1.train.csv",
+      "Composition/mf.index-val_composition-test_0.7-0.2-0.1.validation.csv",
+      "Composition/mf.index-val_composition-test_0.8-0.0-0.2.json",
+      "Composition/mf.index-val_composition-test_0.8-0.0-0.2.summary.json",
+      "Composition/mf.index-val_composition-test_0.8-0.0-0.2.test.csv",
+      "Composition/mf.index-val_composition-test_0.8-0.0-0.2.train.csv",
+      "CrystalSys/mf.index-val_crystalsys-test_0.7-0.2-0.1.json",
+      "CrystalSys/mf.index-val_crystalsys-test_0.8-0.0-0.2.json",
+      "CrystalSys/mf.index-val_crystalsys-test_0.8-0.0-0.2.summary.json",
+      "CrystalSys/mf.index-val_crystalsys-test_0.8-0.0-0.2.test.csv",
+      "CrystalSys/mf.index-val_crystalsys-test_0.8-0.0-0.2.train.csv",
+      "Elements/mf.index-val_elements-test_0.7-0.2-0.1.json",
+      "Elements/mf.index-val_elements-test_0.7-0.2-0.1.summary.json",
+      "Elements/mf.index-val_elements-test_0.7-0.2-0.1.test.csv",
+      "Elements/mf.index-val_elements-test_0.7-0.2-0.1.train.csv",
+      "Elements/mf.index-val_elements-test_0.7-0.2-0.1.validation.csv",
+      "Elements/mf.index-val_elements-test_0.8-0.0-0.2.json",
+      "Elements/mf.index-val_elements-test_0.8-0.0-0.2.summary.json",
+      "Elements/mf.index-val_elements-test_0.8-0.0-0.2.test.csv",
+      "Elements/mf.index-val_elements-test_0.8-0.0-0.2.train.csv",
+      "Groups/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.json",
+      "Groups/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.summary.json",
+      "Groups/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+      "Groups/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+      "Groups/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv",
+      "Groups/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.json",
+      "Groups/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.summary.json",
+      "Groups/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+      "Groups/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.train.csv",
+      "PointGroup/mf.index-val_pointgroup-test_0.7-0.2-0.1.json",
+      "PointGroup/mf.index-val_pointgroup-test_0.7-0.2-0.1.summary.json",
+      "PointGroup/mf.index-val_pointgroup-test_0.7-0.2-0.1.test.csv",
+      "PointGroup/mf.index-val_pointgroup-test_0.7-0.2-0.1.train.csv",
+      "PointGroup/mf.index-val_pointgroup-test_0.7-0.2-0.1.validation.csv",
+      "PointGroup/mf.index-val_pointgroup-test_0.8-0.0-0.2.json",
+      "PointGroup/mf.index-val_pointgroup-test_0.8-0.0-0.2.summary.json",
+      "PointGroup/mf.index-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+      "PointGroup/mf.index-val_pointgroup-test_0.8-0.0-0.2.train.csv",
+      "Sgnum/mf.index-val_sgnum-test_0.7-0.2-0.1.json",
+      "Sgnum/mf.index-val_sgnum-test_0.7-0.2-0.1.summary.json",
+      "Sgnum/mf.index-val_sgnum-test_0.7-0.2-0.1.test.csv",
+      "Sgnum/mf.index-val_sgnum-test_0.7-0.2-0.1.train.csv",
+      "Sgnum/mf.index-val_sgnum-test_0.7-0.2-0.1.validation.csv",
+      "Sgnum/mf.index-val_sgnum-test_0.8-0.0-0.2.json",
+      "Sgnum/mf.index-val_sgnum-test_0.8-0.0-0.2.summary.json",
+      "Sgnum/mf.index-val_sgnum-test_0.8-0.0-0.2.test.csv",
+      "Sgnum/mf.index-val_sgnum-test_0.8-0.0-0.2.train.csv"
+    ],
+    "split_types_found": [
+      "chemsys",
+      "composition",
+      "crystalsys",
+      "elements",
+      "groups",
+      "pointgroup",
+      "sgnum",
+      "periodictablegroups"
+    ],
+    "ratios_found": [
+      "0.7-0.2-0.1",
+      "0.8-0.0-0.2"
+    ],
+    "partitions_found": [
+      "train",
+      "validation",
+      "val",
+      "test"
+    ],
+    "has_structure_column": false,
+    "has_composition_column": true,
+    "structure_format": null,
+    "csv_columns_sample": {
+      "file": "ChemSys/mf.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+      "columns": [
+        "mat_index",
+        "composition",
+        "log10(G_VRH)"
+      ],
+      "shape": "1147 rows x 3 cols",
+      "dtypes": {
+        "mat_index": "object",
+        "composition": "object",
+        "log10(G_VRH)": "float64"
+      }
+    },
+    "json_files": [
+      {
+        "file": "ChemSys/mf.index-val_chemsys-test_0.7-0.2-0.1.json",
+        "keys": [
+          "MatFold",
+          "data_checksums",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "ChemSys/mf.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+        "keys": [
+          "create_train_validation_test_splits",
+          "train_fraction_actual",
+          "validation_fraction_actual",
+          "test_fraction_actual",
+          "n_train",
+          "n_validation",
+          "n_test",
+          "naive_random_split_trainval_test",
+          "naive_random_split_train_val",
+          "n_train_set_labels"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "ChemSys/mf.index-val_chemsys-test_0.8-0.0-0.2.json",
+        "keys": [
+          "MatFold",
+          "data_checksums",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "ChemSys/mf.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+        "keys": [
+          "create_train_validation_test_splits",
+          "train_fraction_actual",
+          "validation_fraction_actual",
+          "test_fraction_actual",
+          "n_train",
+          "n_validation",
+          "n_test",
+          "naive_random_split_trainval_test",
+          "naive_random_split_train_val",
+          "n_train_set_labels"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "Composition/mf.index-val_composition-test_0.7-0.2-0.1.json",
+        "keys": [
+          "MatFold",
+          "data_checksums",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      }
+    ],
+    "issues": [],
+    "datasets_found": [],
+    "splits_inventory": {
+      "chemsys": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.json",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.json",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "composition": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_composition-test_0.7-0.2-0.1.json",
+            "mf.index-val_composition-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_composition-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_composition-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_composition-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_composition-test_0.8-0.0-0.2.json",
+            "mf.index-val_composition-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_composition-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_composition-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "crystalsys": {
+        "0.7-0.2-0.1": {
+          "train": false,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_crystalsys-test_0.7-0.2-0.1.json"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_crystalsys-test_0.8-0.0-0.2.json",
+            "mf.index-val_crystalsys-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_crystalsys-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_crystalsys-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "elements": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_elements-test_0.7-0.2-0.1.json",
+            "mf.index-val_elements-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_elements-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_elements-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_elements-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_elements-test_0.8-0.0-0.2.json",
+            "mf.index-val_elements-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_elements-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_elements-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "groups": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.json",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.json",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "pointgroup": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.json",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.json",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "sgnum": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.json",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.json",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Brennan",
+    "path": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Brennan",
+    "total_files": 56,
+    "file_types": {
+      ".json": 22,
+      ".csv": 34
+    },
+    "folder_structure": [
+      "Chemsys Splits",
+      "Composition splits",
+      "Periodictablegroup splits",
+      "Periodictablegroup splits/ptgroups splits 80-20 n=3",
+      "element n=10 splits",
+      "pointgroup splits n=10",
+      "sgnum splits n=10",
+      "split stats (all datasets csv files pre split)"
+    ],
+    "all_filenames": [
+      "Chemsys Splits/mf.index-val_chemsys-test_0.7-0.2-0.1.json",
+      "Chemsys Splits/mf.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+      "Chemsys Splits/mf.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+      "Chemsys Splits/mf.index-val_chemsys-test_0.7-0.2-0.1.train.csv",
+      "Chemsys Splits/mf.index-val_chemsys-test_0.7-0.2-0.1.validation.csv",
+      "Chemsys Splits/mf.index-val_chemsys-test_0.8-0.0-0.2.json",
+      "Chemsys Splits/mf.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+      "Chemsys Splits/mf.index-val_chemsys-test_0.8-0.0-0.2.test.csv",
+      "Chemsys Splits/mf.index-val_chemsys-test_0.8-0.0-0.2.train.csv",
+      "Composition splits/mf.index-val_composition-test_0.8-0.0-0.2.json",
+      "Composition splits/mf.index-val_composition-test_0.8-0.0-0.2.summary.json",
+      "Composition splits/mf.index-val_composition-test_0.8-0.0-0.2.test.csv",
+      "Periodictablegroup splits/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.json",
+      "Periodictablegroup splits/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.summary.json",
+      "Periodictablegroup splits/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+      "Periodictablegroup splits/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+      "Periodictablegroup splits/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv",
+      "Periodictablegroup splits/ptgroups splits 80-20 n=3/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.json",
+      "Periodictablegroup splits/ptgroups splits 80-20 n=3/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.summary.json",
+      "Periodictablegroup splits/ptgroups splits 80-20 n=3/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+      "Periodictablegroup splits/ptgroups splits 80-20 n=3/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.train.csv",
+      "element n=10 splits/mf.index-val_elements-test_0.7-0.2-0.1.json",
+      "element n=10 splits/mf.index-val_elements-test_0.7-0.2-0.1.summary.json",
+      "element n=10 splits/mf.index-val_elements-test_0.7-0.2-0.1.test.csv",
+      "element n=10 splits/mf.index-val_elements-test_0.7-0.2-0.1.train.csv",
+      "element n=10 splits/mf.index-val_elements-test_0.7-0.2-0.1.validation.csv",
+      "element n=10 splits/mf.index-val_elements-test_0.8-0.0-0.2.json",
+      "element n=10 splits/mf.index-val_elements-test_0.8-0.0-0.2.summary.json",
+      "element n=10 splits/mf.index-val_elements-test_0.8-0.0-0.2.test.csv",
+      "element n=10 splits/mf.index-val_elements-test_0.8-0.0-0.2.train.csv",
+      "pointgroup splits n=10/mf.index-val_pointgroup-test_0.7-0.2-0.1.json",
+      "pointgroup splits n=10/mf.index-val_pointgroup-test_0.7-0.2-0.1.summary.json",
+      "pointgroup splits n=10/mf.index-val_pointgroup-test_0.7-0.2-0.1.test.csv",
+      "pointgroup splits n=10/mf.index-val_pointgroup-test_0.7-0.2-0.1.train.csv",
+      "pointgroup splits n=10/mf.index-val_pointgroup-test_0.7-0.2-0.1.validation.csv",
+      "pointgroup splits n=10/mf.index-val_pointgroup-test_0.8-0.0-0.2.json",
+      "pointgroup splits n=10/mf.index-val_pointgroup-test_0.8-0.0-0.2.summary.json",
+      "pointgroup splits n=10/mf.index-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+      "pointgroup splits n=10/mf.index-val_pointgroup-test_0.8-0.0-0.2.train.csv",
+      "sgnum splits n=10/mf.index-val_sgnum-test_0.7-0.2-0.1.json",
+      "sgnum splits n=10/mf.index-val_sgnum-test_0.7-0.2-0.1.summary.json",
+      "sgnum splits n=10/mf.index-val_sgnum-test_0.7-0.2-0.1.test.csv",
+      "sgnum splits n=10/mf.index-val_sgnum-test_0.7-0.2-0.1.train.csv",
+      "sgnum splits n=10/mf.index-val_sgnum-test_0.7-0.2-0.1.validation.csv",
+      "sgnum splits n=10/mf.index-val_sgnum-test_0.8-0.0-0.2.json",
+      "sgnum splits n=10/mf.index-val_sgnum-test_0.8-0.0-0.2.summary.json",
+      "sgnum splits n=10/mf.index-val_sgnum-test_0.8-0.0-0.2.test.csv",
+      "sgnum splits n=10/mf.index-val_sgnum-test_0.8-0.0-0.2.train.csv",
+      "split stats (all datasets csv files pre split)/chemsys_split_stats.csv",
+      "split stats (all datasets csv files pre split)/comp_split_stats.csv",
+      "split stats (all datasets csv files pre split)/crystalsys_split_stats.csv",
+      "split stats (all datasets csv files pre split)/elements_split_stats.csv",
+      "split stats (all datasets csv files pre split)/periodictablegroups_split_stats.csv",
+      "split stats (all datasets csv files pre split)/periodictablerows_split_stats.csv",
+      "split stats (all datasets csv files pre split)/pointgroup_split_stats.csv",
+      "split stats (all datasets csv files pre split)/sgnum_split_stats.csv"
+    ],
+    "split_types_found": [
+      "chemsys",
+      "composition",
+      "crystalsys",
+      "elements",
+      "groups",
+      "pointgroup",
+      "sgnum",
+      "periodictablegroups"
+    ],
+    "ratios_found": [
+      "0.7-0.2-0.1",
+      "0.8-0.0-0.2",
+      "80-20"
+    ],
+    "partitions_found": [
+      "train",
+      "validation",
+      "val",
+      "test"
+    ],
+    "has_structure_column": true,
+    "has_composition_column": true,
+    "structure_format": "UNKNOWN: Full Formula (Cu1)\nReduced Formula: Cu\nabc   :   2.289597  11.842895  22.747576\nangles: 101.935919  ",
+    "csv_columns_sample": {
+      "file": "Chemsys Splits/mf.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+      "columns": [
+        "mat_index",
+        "structure",
+        "e_form",
+        "composition"
+      ],
+      "shape": "13306 rows x 4 cols",
+      "dtypes": {
+        "mat_index": "object",
+        "structure": "object",
+        "e_form": "float64",
+        "composition": "object"
+      }
+    },
+    "json_files": [
+      {
+        "file": "Chemsys Splits/mf.index-val_chemsys-test_0.7-0.2-0.1.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "Chemsys Splits/mf.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+        "keys": [
+          "create_train_validation_test_splits",
+          "train_fraction_actual",
+          "validation_fraction_actual",
+          "test_fraction_actual",
+          "n_train",
+          "n_validation",
+          "n_test",
+          "naive_random_split_trainval_test",
+          "naive_random_split_train_val",
+          "n_train_set_labels"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "Chemsys Splits/mf.index-val_chemsys-test_0.8-0.0-0.2.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "Chemsys Splits/mf.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+        "keys": [
+          "create_train_validation_test_splits",
+          "train_fraction_actual",
+          "validation_fraction_actual",
+          "test_fraction_actual",
+          "n_train",
+          "n_validation",
+          "n_test",
+          "naive_random_split_trainval_test",
+          "naive_random_split_train_val",
+          "n_train_set_labels"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "Composition splits/mf.index-val_composition-test_0.8-0.0-0.2.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      }
+    ],
+    "issues": [
+      "Structure column format may be incorrect"
+    ],
+    "datasets_found": [],
+    "splits_inventory": {
+      "chemsys": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.json",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.json",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.train.csv"
+          ]
+        },
+        "unknown": {
+          "train": false,
+          "validation": false,
+          "test": false,
+          "files": [
+            "chemsys_split_stats.csv"
+          ]
+        }
+      },
+      "composition": {
+        "0.8-0.0-0.2": {
+          "train": false,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_composition-test_0.8-0.0-0.2.json",
+            "mf.index-val_composition-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_composition-test_0.8-0.0-0.2.test.csv"
+          ]
+        }
+      },
+      "groups": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.json",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.json",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.train.csv"
+          ]
+        },
+        "unknown": {
+          "train": false,
+          "validation": false,
+          "test": false,
+          "files": [
+            "periodictablegroups_split_stats.csv"
+          ]
+        }
+      },
+      "elements": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_elements-test_0.7-0.2-0.1.json",
+            "mf.index-val_elements-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_elements-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_elements-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_elements-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_elements-test_0.8-0.0-0.2.json",
+            "mf.index-val_elements-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_elements-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_elements-test_0.8-0.0-0.2.train.csv"
+          ]
+        },
+        "unknown": {
+          "train": false,
+          "validation": false,
+          "test": false,
+          "files": [
+            "elements_split_stats.csv"
+          ]
+        }
+      },
+      "pointgroup": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.json",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.json",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.train.csv"
+          ]
+        },
+        "unknown": {
+          "train": false,
+          "validation": false,
+          "test": false,
+          "files": [
+            "pointgroup_split_stats.csv"
+          ]
+        }
+      },
+      "sgnum": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.json",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.json",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.train.csv"
+          ]
+        },
+        "unknown": {
+          "train": false,
+          "validation": false,
+          "test": false,
+          "files": [
+            "sgnum_split_stats.csv"
+          ]
+        }
+      },
+      "crystalsys": {
+        "unknown": {
+          "train": false,
+          "validation": false,
+          "test": false,
+          "files": [
+            "crystalsys_split_stats.csv"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Coenradt",
+    "path": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Coenradt",
+    "total_files": 78,
+    "file_types": {
+      ".csv": 42,
+      ".json": 36
+    },
+    "folder_structure": [
+      "Splits - Initial",
+      "Splits - Initial/70-20-10 CSV",
+      "Splits - Initial/70-20-10 JSON",
+      "Splits - Initial/80-20 CSV",
+      "Splits - Initial/80-20 JSON",
+      "Splits - Updated",
+      "Splits - Updated/70-20-10 CSV",
+      "Splits - Updated/70-20-10 JSON",
+      "Splits - Updated/80-20 CSV",
+      "Splits - Updated/80-20 JSON"
+    ],
+    "all_filenames": [
+      "Splits - Initial/70-20-10 CSV/mf.chemsys-val_chemsys-test_0.7-0.2-0.1.test.csv",
+      "Splits - Initial/70-20-10 CSV/mf.chemsys-val_chemsys-test_0.7-0.2-0.1.train.csv",
+      "Splits - Initial/70-20-10 CSV/mf.chemsys-val_chemsys-test_0.7-0.2-0.1.validation.csv",
+      "Splits - Initial/70-20-10 CSV/mf.composition-val_composition-test_0.7-0.2-0.1.test.csv",
+      "Splits - Initial/70-20-10 CSV/mf.composition-val_composition-test_0.7-0.2-0.1.train.csv",
+      "Splits - Initial/70-20-10 CSV/mf.composition-val_composition-test_0.7-0.2-0.1.validation.csv",
+      "Splits - Initial/70-20-10 CSV/mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+      "Splits - Initial/70-20-10 CSV/mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+      "Splits - Initial/70-20-10 CSV/mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv",
+      "Splits - Initial/70-20-10 JSON/mf.chemsys-val_chemsys-test_0.7-0.2-0.1.json",
+      "Splits - Initial/70-20-10 JSON/mf.chemsys-val_chemsys-test_0.7-0.2-0.1.summary.json",
+      "Splits - Initial/70-20-10 JSON/mf.composition-val_composition-test_0.7-0.2-0.1.json",
+      "Splits - Initial/70-20-10 JSON/mf.composition-val_composition-test_0.7-0.2-0.1.summary.json",
+      "Splits - Initial/70-20-10 JSON/mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.json",
+      "Splits - Initial/70-20-10 JSON/mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.summary.json",
+      "Splits - Initial/80-20 CSV/mf.chemsys-val_chemsys-test_0.8-0.0-0.2.test.csv",
+      "Splits - Initial/80-20 CSV/mf.chemsys-val_chemsys-test_0.8-0.0-0.2.train.csv",
+      "Splits - Initial/80-20 CSV/mf.composition-val_composition-test_0.8-0.0-0.2.test.csv",
+      "Splits - Initial/80-20 CSV/mf.composition-val_composition-test_0.8-0.0-0.2.train.csv",
+      "Splits - Initial/80-20 CSV/mf.elements-val_elements-test_0.8-0.0-0.2.test.csv",
+      "Splits - Initial/80-20 CSV/mf.elements-val_elements-test_0.8-0.0-0.2.train.csv",
+      "Splits - Initial/80-20 CSV/mf.periodictablegroups-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+      "Splits - Initial/80-20 CSV/mf.periodictablegroups-val_periodictablegroups-test_0.8-0.0-0.2.train.csv",
+      "Splits - Initial/80-20 CSV/mf.pointgroup-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+      "Splits - Initial/80-20 CSV/mf.pointgroup-val_pointgroup-test_0.8-0.0-0.2.train.csv",
+      "Splits - Initial/80-20 CSV/mf.sgnum-val_sgnum-test_0.8-0.0-0.2.test.csv",
+      "Splits - Initial/80-20 CSV/mf.sgnum-val_sgnum-test_0.8-0.0-0.2.train.csv",
+      "Splits - Initial/80-20 JSON/mf.chemsys-val_chemsys-test_0.8-0.0-0.2.json",
+      "Splits - Initial/80-20 JSON/mf.chemsys-val_chemsys-test_0.8-0.0-0.2.summary.json",
+      "Splits - Initial/80-20 JSON/mf.composition-val_composition-test_0.8-0.0-0.2.json",
+      "Splits - Initial/80-20 JSON/mf.composition-val_composition-test_0.8-0.0-0.2.summary.json",
+      "Splits - Initial/80-20 JSON/mf.elements-val_elements-test_0.8-0.0-0.2.json",
+      "Splits - Initial/80-20 JSON/mf.elements-val_elements-test_0.8-0.0-0.2.summary.json",
+      "Splits - Initial/80-20 JSON/mf.periodictablegroups-val_periodictablegroups-test_0.8-0.0-0.2.json",
+      "Splits - Initial/80-20 JSON/mf.periodictablegroups-val_periodictablegroups-test_0.8-0.0-0.2.summary.json",
+      "Splits - Initial/80-20 JSON/mf.pointgroup-val_pointgroup-test_0.8-0.0-0.2.json",
+      "Splits - Initial/80-20 JSON/mf.pointgroup-val_pointgroup-test_0.8-0.0-0.2.summary.json",
+      "Splits - Initial/80-20 JSON/mf.sgnum-val_sgnum-test_0.8-0.0-0.2.json",
+      "Splits - Initial/80-20 JSON/mf.sgnum-val_sgnum-test_0.8-0.0-0.2.summary.json",
+      "Splits - Updated/70-20-10 CSV/mf.chemsys-val_chemsys-test_0.7-0.2-0.1.test.csv",
+      "Splits - Updated/70-20-10 CSV/mf.chemsys-val_chemsys-test_0.7-0.2-0.1.train.csv",
+      "Splits - Updated/70-20-10 CSV/mf.chemsys-val_chemsys-test_0.7-0.2-0.1.validation.csv",
+      "Splits - Updated/70-20-10 CSV/mf.composition-val_composition-test_0.7-0.2-0.1.test.csv",
+      "Splits - Updated/70-20-10 CSV/mf.composition-val_composition-test_0.7-0.2-0.1.train.csv",
+      "Splits - Updated/70-20-10 CSV/mf.composition-val_composition-test_0.7-0.2-0.1.validation.csv",
+      "Splits - Updated/70-20-10 CSV/mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+      "Splits - Updated/70-20-10 CSV/mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+      "Splits - Updated/70-20-10 CSV/mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv",
+      "Splits - Updated/70-20-10 JSON/mf.chemsys-val_chemsys-test_0.7-0.2-0.1.json",
+      "Splits - Updated/70-20-10 JSON/mf.chemsys-val_chemsys-test_0.7-0.2-0.1.summary.json",
+      "Splits - Updated/70-20-10 JSON/mf.composition-val_composition-test_0.7-0.2-0.1.json",
+      "Splits - Updated/70-20-10 JSON/mf.composition-val_composition-test_0.7-0.2-0.1.summary.json",
+      "Splits - Updated/70-20-10 JSON/mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.json",
+      "Splits - Updated/70-20-10 JSON/mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.summary.json",
+      "Splits - Updated/80-20 CSV/mf.chemsys-val_chemsys-test_0.8-0.0-0.2.test.csv",
+      "Splits - Updated/80-20 CSV/mf.chemsys-val_chemsys-test_0.8-0.0-0.2.train.csv",
+      "Splits - Updated/80-20 CSV/mf.composition-val_composition-test_0.8-0.0-0.2.test.csv",
+      "Splits - Updated/80-20 CSV/mf.composition-val_composition-test_0.8-0.0-0.2.train.csv",
+      "Splits - Updated/80-20 CSV/mf.elements-val_elements-test_0.8-0.0-0.2.test.csv",
+      "Splits - Updated/80-20 CSV/mf.elements-val_elements-test_0.8-0.0-0.2.train.csv",
+      "Splits - Updated/80-20 CSV/mf.periodictablegroups-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+      "Splits - Updated/80-20 CSV/mf.periodictablegroups-val_periodictablegroups-test_0.8-0.0-0.2.train.csv",
+      "Splits - Updated/80-20 CSV/mf.pointgroup-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+      "Splits - Updated/80-20 CSV/mf.pointgroup-val_pointgroup-test_0.8-0.0-0.2.train.csv",
+      "Splits - Updated/80-20 CSV/mf.sgnum-val_sgnum-test_0.8-0.0-0.2.test.csv",
+      "Splits - Updated/80-20 CSV/mf.sgnum-val_sgnum-test_0.8-0.0-0.2.train.csv",
+      "Splits - Updated/80-20 JSON/mf.chemsys-val_chemsys-test_0.8-0.0-0.2.json",
+      "Splits - Updated/80-20 JSON/mf.chemsys-val_chemsys-test_0.8-0.0-0.2.summary.json",
+      "Splits - Updated/80-20 JSON/mf.composition-val_composition-test_0.8-0.0-0.2.json",
+      "Splits - Updated/80-20 JSON/mf.composition-val_composition-test_0.8-0.0-0.2.summary.json",
+      "Splits - Updated/80-20 JSON/mf.elements-val_elements-test_0.8-0.0-0.2.json",
+      "Splits - Updated/80-20 JSON/mf.elements-val_elements-test_0.8-0.0-0.2.summary.json",
+      "Splits - Updated/80-20 JSON/mf.periodictablegroups-val_periodictablegroups-test_0.8-0.0-0.2.json",
+      "Splits - Updated/80-20 JSON/mf.periodictablegroups-val_periodictablegroups-test_0.8-0.0-0.2.summary.json",
+      "Splits - Updated/80-20 JSON/mf.pointgroup-val_pointgroup-test_0.8-0.0-0.2.json",
+      "Splits - Updated/80-20 JSON/mf.pointgroup-val_pointgroup-test_0.8-0.0-0.2.summary.json",
+      "Splits - Updated/80-20 JSON/mf.sgnum-val_sgnum-test_0.8-0.0-0.2.json",
+      "Splits - Updated/80-20 JSON/mf.sgnum-val_sgnum-test_0.8-0.0-0.2.summary.json"
+    ],
+    "split_types_found": [
+      "chemsys",
+      "composition",
+      "elements",
+      "groups",
+      "pointgroup",
+      "sgnum",
+      "periodictablegroups"
+    ],
+    "ratios_found": [
+      "0.7-0.2-0.1",
+      "0.8-0.0-0.2",
+      "70-20-10",
+      "80-20"
+    ],
+    "partitions_found": [
+      "train",
+      "validation",
+      "val",
+      "test"
+    ],
+    "has_structure_column": true,
+    "has_composition_column": true,
+    "structure_format": "UNKNOWN: Full Formula (Hf1 Te1 O3)\nReduced Formula: HfTeO3\nabc   :   4.289432   4.289432   4.289432\nangles:  ",
+    "csv_columns_sample": {
+      "file": "Splits - Initial/70-20-10 CSV/mf.chemsys-val_chemsys-test_0.7-0.2-0.1.test.csv",
+      "columns": [
+        "matbench_perovskites",
+        "structure",
+        "TARGET",
+        "composition"
+      ],
+      "shape": "1861 rows x 4 cols",
+      "dtypes": {
+        "matbench_perovskites": "object",
+        "structure": "object",
+        "TARGET": "float64",
+        "composition": "object"
+      }
+    },
+    "json_files": [
+      {
+        "file": "Splits - Initial/70-20-10 JSON/mf.chemsys-val_chemsys-test_0.7-0.2-0.1.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "Splits - Initial/70-20-10 JSON/mf.chemsys-val_chemsys-test_0.7-0.2-0.1.summary.json",
+        "keys": [
+          "create_train_validation_test_splits",
+          "train_fraction_actual",
+          "validation_fraction_actual",
+          "test_fraction_actual",
+          "n_train",
+          "n_validation",
+          "n_test",
+          "naive_random_split_trainval_test",
+          "naive_random_split_train_val",
+          "n_train_set_labels"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "Splits - Initial/70-20-10 JSON/mf.composition-val_composition-test_0.7-0.2-0.1.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "Splits - Initial/70-20-10 JSON/mf.composition-val_composition-test_0.7-0.2-0.1.summary.json",
+        "keys": [
+          "create_train_validation_test_splits",
+          "train_fraction_actual",
+          "validation_fraction_actual",
+          "test_fraction_actual",
+          "n_train",
+          "n_validation",
+          "n_test",
+          "naive_random_split_trainval_test",
+          "naive_random_split_train_val",
+          "n_train_set_labels"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "Splits - Initial/70-20-10 JSON/mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      }
+    ],
+    "issues": [
+      "Structure column format may be incorrect"
+    ],
+    "datasets_found": [],
+    "splits_inventory": {
+      "chemsys": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.chemsys-val_chemsys-test_0.7-0.2-0.1.test.csv",
+            "mf.chemsys-val_chemsys-test_0.7-0.2-0.1.train.csv",
+            "mf.chemsys-val_chemsys-test_0.7-0.2-0.1.validation.csv",
+            "mf.chemsys-val_chemsys-test_0.7-0.2-0.1.json",
+            "mf.chemsys-val_chemsys-test_0.7-0.2-0.1.summary.json",
+            "mf.chemsys-val_chemsys-test_0.7-0.2-0.1.test.csv",
+            "mf.chemsys-val_chemsys-test_0.7-0.2-0.1.train.csv",
+            "mf.chemsys-val_chemsys-test_0.7-0.2-0.1.validation.csv",
+            "mf.chemsys-val_chemsys-test_0.7-0.2-0.1.json",
+            "mf.chemsys-val_chemsys-test_0.7-0.2-0.1.summary.json"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.chemsys-val_chemsys-test_0.8-0.0-0.2.test.csv",
+            "mf.chemsys-val_chemsys-test_0.8-0.0-0.2.train.csv",
+            "mf.chemsys-val_chemsys-test_0.8-0.0-0.2.json",
+            "mf.chemsys-val_chemsys-test_0.8-0.0-0.2.summary.json",
+            "mf.chemsys-val_chemsys-test_0.8-0.0-0.2.test.csv",
+            "mf.chemsys-val_chemsys-test_0.8-0.0-0.2.train.csv",
+            "mf.chemsys-val_chemsys-test_0.8-0.0-0.2.json",
+            "mf.chemsys-val_chemsys-test_0.8-0.0-0.2.summary.json"
+          ]
+        }
+      },
+      "composition": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.composition-val_composition-test_0.7-0.2-0.1.test.csv",
+            "mf.composition-val_composition-test_0.7-0.2-0.1.train.csv",
+            "mf.composition-val_composition-test_0.7-0.2-0.1.validation.csv",
+            "mf.composition-val_composition-test_0.7-0.2-0.1.json",
+            "mf.composition-val_composition-test_0.7-0.2-0.1.summary.json",
+            "mf.composition-val_composition-test_0.7-0.2-0.1.test.csv",
+            "mf.composition-val_composition-test_0.7-0.2-0.1.train.csv",
+            "mf.composition-val_composition-test_0.7-0.2-0.1.validation.csv",
+            "mf.composition-val_composition-test_0.7-0.2-0.1.json",
+            "mf.composition-val_composition-test_0.7-0.2-0.1.summary.json"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.composition-val_composition-test_0.8-0.0-0.2.test.csv",
+            "mf.composition-val_composition-test_0.8-0.0-0.2.train.csv",
+            "mf.composition-val_composition-test_0.8-0.0-0.2.json",
+            "mf.composition-val_composition-test_0.8-0.0-0.2.summary.json",
+            "mf.composition-val_composition-test_0.8-0.0-0.2.test.csv",
+            "mf.composition-val_composition-test_0.8-0.0-0.2.train.csv",
+            "mf.composition-val_composition-test_0.8-0.0-0.2.json",
+            "mf.composition-val_composition-test_0.8-0.0-0.2.summary.json"
+          ]
+        }
+      },
+      "groups": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+            "mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+            "mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv",
+            "mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.json",
+            "mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.summary.json",
+            "mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+            "mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+            "mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv",
+            "mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.json",
+            "mf.periodictablegroups-val_periodictablegroups-test_0.7-0.2-0.1.summary.json"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.periodictablegroups-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+            "mf.periodictablegroups-val_periodictablegroups-test_0.8-0.0-0.2.train.csv",
+            "mf.periodictablegroups-val_periodictablegroups-test_0.8-0.0-0.2.json",
+            "mf.periodictablegroups-val_periodictablegroups-test_0.8-0.0-0.2.summary.json",
+            "mf.periodictablegroups-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+            "mf.periodictablegroups-val_periodictablegroups-test_0.8-0.0-0.2.train.csv",
+            "mf.periodictablegroups-val_periodictablegroups-test_0.8-0.0-0.2.json",
+            "mf.periodictablegroups-val_periodictablegroups-test_0.8-0.0-0.2.summary.json"
+          ]
+        }
+      },
+      "elements": {
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.elements-val_elements-test_0.8-0.0-0.2.test.csv",
+            "mf.elements-val_elements-test_0.8-0.0-0.2.train.csv",
+            "mf.elements-val_elements-test_0.8-0.0-0.2.json",
+            "mf.elements-val_elements-test_0.8-0.0-0.2.summary.json",
+            "mf.elements-val_elements-test_0.8-0.0-0.2.test.csv",
+            "mf.elements-val_elements-test_0.8-0.0-0.2.train.csv",
+            "mf.elements-val_elements-test_0.8-0.0-0.2.json",
+            "mf.elements-val_elements-test_0.8-0.0-0.2.summary.json"
+          ]
+        }
+      },
+      "pointgroup": {
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.pointgroup-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+            "mf.pointgroup-val_pointgroup-test_0.8-0.0-0.2.train.csv",
+            "mf.pointgroup-val_pointgroup-test_0.8-0.0-0.2.json",
+            "mf.pointgroup-val_pointgroup-test_0.8-0.0-0.2.summary.json",
+            "mf.pointgroup-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+            "mf.pointgroup-val_pointgroup-test_0.8-0.0-0.2.train.csv",
+            "mf.pointgroup-val_pointgroup-test_0.8-0.0-0.2.json",
+            "mf.pointgroup-val_pointgroup-test_0.8-0.0-0.2.summary.json"
+          ]
+        }
+      },
+      "sgnum": {
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.sgnum-val_sgnum-test_0.8-0.0-0.2.test.csv",
+            "mf.sgnum-val_sgnum-test_0.8-0.0-0.2.train.csv",
+            "mf.sgnum-val_sgnum-test_0.8-0.0-0.2.json",
+            "mf.sgnum-val_sgnum-test_0.8-0.0-0.2.summary.json",
+            "mf.sgnum-val_sgnum-test_0.8-0.0-0.2.test.csv",
+            "mf.sgnum-val_sgnum-test_0.8-0.0-0.2.train.csv",
+            "mf.sgnum-val_sgnum-test_0.8-0.0-0.2.json",
+            "mf.sgnum-val_sgnum-test_0.8-0.0-0.2.summary.json"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Dan",
+    "path": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dan",
+    "total_files": 59,
+    "file_types": {
+      ".json": 26,
+      ".csv": 32,
+      ".png": 1
+    },
+    "folder_structure": [
+      "Chemsys",
+      "Composition",
+      "Crystalsys",
+      "Elements",
+      "Periodictablegroups",
+      "Pointgroup",
+      "Sgnum"
+    ],
+    "all_filenames": [
+      "Chemsys/mf.index-val_chemsys-test_0.7-0.2-0.1.json",
+      "Chemsys/mf.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+      "Chemsys/mf.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+      "Chemsys/mf.index-val_chemsys-test_0.7-0.2-0.1.train.csv",
+      "Chemsys/mf.index-val_chemsys-test_0.7-0.2-0.1.validation.csv",
+      "Chemsys/mf.index-val_chemsys-test_0.8-0.0-0.2.json",
+      "Chemsys/mf.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+      "Chemsys/mf.index-val_chemsys-test_0.8-0.0-0.2.test.csv",
+      "Chemsys/mf.index-val_chemsys-test_0.8-0.0-0.2.train.csv",
+      "Composition/mf.index-val_composition-test_0.7-0.2-0.1.json",
+      "Composition/mf.index-val_composition-test_0.7-0.2-0.1.summary.json",
+      "Composition/mf.index-val_composition-test_0.7-0.2-0.1.test.csv",
+      "Composition/mf.index-val_composition-test_0.7-0.2-0.1.train.csv",
+      "Composition/mf.index-val_composition-test_0.7-0.2-0.1.validation.csv",
+      "Composition/mf.index-val_composition-test_0.8-0.0-0.2.json",
+      "Composition/mf.index-val_composition-test_0.8-0.0-0.2.summary.json",
+      "Composition/mf.index-val_composition-test_0.8-0.0-0.2.test.csv",
+      "Composition/mf.index-val_composition-test_0.8-0.0-0.2.train.csv",
+      "Crystalsys/Screenshot 2025-12-05 190811.png",
+      "Crystalsys/mf.index-val_crystalsys-test_0.8-0.0-0.2.json",
+      "Crystalsys/mf.index-val_crystalsys-test_0.8-0.0-0.2.summary.json",
+      "Crystalsys/mf.index-val_crystalsys-test_0.8-0.0-0.2.test.csv",
+      "Crystalsys/mf.index-val_crystalsys-test_0.8-0.0-0.2.train.csv",
+      "Elements/mf.index-val_elements-test_0.7-0.2-0.1.json",
+      "Elements/mf.index-val_elements-test_0.7-0.2-0.1.summary.json",
+      "Elements/mf.index-val_elements-test_0.7-0.2-0.1.test.csv",
+      "Elements/mf.index-val_elements-test_0.7-0.2-0.1.train.csv",
+      "Elements/mf.index-val_elements-test_0.7-0.2-0.1.validation.csv",
+      "Elements/mf.index-val_elements-test_0.8-0.0-0.2.json",
+      "Elements/mf.index-val_elements-test_0.8-0.0-0.2.summary.json",
+      "Elements/mf.index-val_elements-test_0.8-0.0-0.2.test.csv",
+      "Elements/mf.index-val_elements-test_0.8-0.0-0.2.train.csv",
+      "Periodictablegroups/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.json",
+      "Periodictablegroups/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.summary.json",
+      "Periodictablegroups/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+      "Periodictablegroups/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+      "Periodictablegroups/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv",
+      "Periodictablegroups/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.json",
+      "Periodictablegroups/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.summary.json",
+      "Periodictablegroups/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+      "Periodictablegroups/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.train.csv",
+      "Pointgroup/mf.index-val_pointgroup-test_0.7-0.2-0.1.json",
+      "Pointgroup/mf.index-val_pointgroup-test_0.7-0.2-0.1.summary.json",
+      "Pointgroup/mf.index-val_pointgroup-test_0.7-0.2-0.1.test.csv",
+      "Pointgroup/mf.index-val_pointgroup-test_0.7-0.2-0.1.train.csv",
+      "Pointgroup/mf.index-val_pointgroup-test_0.7-0.2-0.1.validation.csv",
+      "Pointgroup/mf.index-val_pointgroup-test_0.8-0.0-0.2.json",
+      "Pointgroup/mf.index-val_pointgroup-test_0.8-0.0-0.2.summary.json",
+      "Pointgroup/mf.index-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+      "Pointgroup/mf.index-val_pointgroup-test_0.8-0.0-0.2.train.csv",
+      "Sgnum/mf.index-val_sgnum-test_0.7-0.2-0.1.json",
+      "Sgnum/mf.index-val_sgnum-test_0.7-0.2-0.1.summary.json",
+      "Sgnum/mf.index-val_sgnum-test_0.7-0.2-0.1.test.csv",
+      "Sgnum/mf.index-val_sgnum-test_0.7-0.2-0.1.train.csv",
+      "Sgnum/mf.index-val_sgnum-test_0.7-0.2-0.1.validation.csv",
+      "Sgnum/mf.index-val_sgnum-test_0.8-0.0-0.2.json",
+      "Sgnum/mf.index-val_sgnum-test_0.8-0.0-0.2.summary.json",
+      "Sgnum/mf.index-val_sgnum-test_0.8-0.0-0.2.test.csv",
+      "Sgnum/mf.index-val_sgnum-test_0.8-0.0-0.2.train.csv"
+    ],
+    "split_types_found": [
+      "chemsys",
+      "composition",
+      "crystalsys",
+      "elements",
+      "groups",
+      "pointgroup",
+      "sgnum",
+      "periodictablegroups"
+    ],
+    "ratios_found": [
+      "0.7-0.2-0.1",
+      "0.8-0.0-0.2"
+    ],
+    "partitions_found": [
+      "train",
+      "validation",
+      "val",
+      "test"
+    ],
+    "has_structure_column": true,
+    "has_composition_column": false,
+    "structure_format": "UNKNOWN: Full Formula (Li12 Co8 Ge12 O48)\nReduced Formula: Li3Co2(GeO4)3\nabc   :  10.272599  10.272599  10.27",
+    "csv_columns_sample": {
+      "file": "Chemsys/mf.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+      "columns": [
+        "mat_index",
+        "structure",
+        "TARGET"
+      ],
+      "shape": "11175 rows x 3 cols",
+      "dtypes": {
+        "mat_index": "object",
+        "structure": "object",
+        "TARGET": "float64"
+      }
+    },
+    "json_files": [
+      {
+        "file": "Chemsys/mf.index-val_chemsys-test_0.7-0.2-0.1.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "Chemsys/mf.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+        "keys": [
+          "create_train_validation_test_splits",
+          "train_fraction_actual",
+          "validation_fraction_actual",
+          "test_fraction_actual",
+          "n_train",
+          "n_validation",
+          "n_test",
+          "naive_random_split_trainval_test",
+          "naive_random_split_train_val",
+          "n_train_set_labels"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "Chemsys/mf.index-val_chemsys-test_0.8-0.0-0.2.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "Chemsys/mf.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+        "keys": [
+          "create_train_validation_test_splits",
+          "train_fraction_actual",
+          "validation_fraction_actual",
+          "test_fraction_actual",
+          "n_train",
+          "n_validation",
+          "n_test",
+          "naive_random_split_trainval_test",
+          "naive_random_split_train_val",
+          "n_train_set_labels"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "Composition/mf.index-val_composition-test_0.7-0.2-0.1.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      }
+    ],
+    "issues": [
+      "Structure column format may be incorrect"
+    ],
+    "datasets_found": [],
+    "splits_inventory": {
+      "chemsys": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.json",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.json",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "composition": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_composition-test_0.7-0.2-0.1.json",
+            "mf.index-val_composition-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_composition-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_composition-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_composition-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_composition-test_0.8-0.0-0.2.json",
+            "mf.index-val_composition-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_composition-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_composition-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "crystalsys": {
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_crystalsys-test_0.8-0.0-0.2.json",
+            "mf.index-val_crystalsys-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_crystalsys-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_crystalsys-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "elements": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_elements-test_0.7-0.2-0.1.json",
+            "mf.index-val_elements-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_elements-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_elements-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_elements-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_elements-test_0.8-0.0-0.2.json",
+            "mf.index-val_elements-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_elements-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_elements-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "groups": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.json",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.json",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "pointgroup": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.json",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.json",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "sgnum": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.json",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.json",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Dehang",
+    "path": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang",
+    "total_files": 301,
+    "file_types": {
+      ".ipynb": 2,
+      ".csv": 298,
+      ".json": 1
+    },
+    "folder_structure": [
+      "1207Dehang Li (splits)",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/chemsys_n_test_min_1",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/composition_n_test_min_1",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/crystalsys_n_test_min_1",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/elements_n_test_min_1",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/periodictablegroups_n_test_min_1",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/pointgroup_n_test_min_1",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/sgnum_n_test_min_1",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/chemsys_n_test_min_3",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/composition_n_test_min_3",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/elements_n_test_min_3",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/periodictablegroups_n_test_min_3",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/pointgroup_n_test_min_3",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/sgnum_n_test_min_3",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/chemsys_n_test_min_5",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/composition_n_test_min_5",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/elements_n_test_min_5",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/periodictablegroups_n_test_min_5",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/pointgroup_n_test_min_5",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/sgnum_n_test_min_5",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/chemsys_n_test_min_6",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/composition_n_test_min_6",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/elements_n_test_min_6",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/pointgroup_n_test_min_6",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/sgnum_n_test_min_6",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/chemsys_n_test_min_1",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/composition_n_test_min_1",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/crystalsys_n_test_min_1",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/elements_n_test_min_1",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/periodictablegroups_n_test_min_1",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/pointgroup_n_test_min_1",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/sgnum_n_test_min_1",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/chemsys_n_test_min_3",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/composition_n_test_min_3",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/crystalsys_n_test_min_3",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/elements_n_test_min_3",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/periodictablegroups_n_test_min_3",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/pointgroup_n_test_min_3",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/sgnum_n_test_min_3",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/chemsys_n_test_min_5",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/composition_n_test_min_5",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/elements_n_test_min_5",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/periodictablegroups_n_test_min_5",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/pointgroup_n_test_min_5",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/sgnum_n_test_min_5",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/chemsys_n_test_min_6",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/composition_n_test_min_6",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/elements_n_test_min_6",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/periodictablegroups_n_test_min_6",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/pointgroup_n_test_min_6",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/sgnum_n_test_min_6",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/chemsys_n_test_min_7",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/composition_n_test_min_7",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/elements_n_test_min_7",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/periodictablegroups_n_test_min_7",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/pointgroup_n_test_min_7",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/sgnum_n_test_min_7",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n8",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n8/chemsys_n_test_min_8",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n8/composition_n_test_min_8",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n8/pointgroup_n_test_min_8",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n8/sgnum_n_test_min_8",
+      "Dehang Li (splits)",
+      "Dehang Li (splits)/Assigenment_0-Dehang_Li-matbench_phonons_stats",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/chemsys_n_test_min_1",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/composition_n_test_min_1",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/crystalsys_n_test_min_1",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/elements_n_test_min_1",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/periodictablegroups_n_test_min_1",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/pointgroup_n_test_min_1",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/sgnum_n_test_min_1",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/chemsys_n_test_min_3",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/composition_n_test_min_3",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/elements_n_test_min_3",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/periodictablegroups_n_test_min_3",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/pointgroup_n_test_min_3",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/sgnum_n_test_min_3",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/chemsys_n_test_min_5",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/composition_n_test_min_5",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/elements_n_test_min_5",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/periodictablegroups_n_test_min_5",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/pointgroup_n_test_min_5",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/sgnum_n_test_min_5",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/chemsys_n_test_min_6",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/composition_n_test_min_6",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/elements_n_test_min_6",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/pointgroup_n_test_min_6",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/sgnum_n_test_min_6",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/chemsys_n_test_min_1",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/composition_n_test_min_1",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/crystalsys_n_test_min_1",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/elements_n_test_min_1",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/periodictablegroups_n_test_min_1",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/pointgroup_n_test_min_1",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/sgnum_n_test_min_1",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/chemsys_n_test_min_3",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/composition_n_test_min_3",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/crystalsys_n_test_min_3",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/elements_n_test_min_3",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/periodictablegroups_n_test_min_3",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/pointgroup_n_test_min_3",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/sgnum_n_test_min_3",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/chemsys_n_test_min_5",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/composition_n_test_min_5",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/elements_n_test_min_5",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/periodictablegroups_n_test_min_5",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/pointgroup_n_test_min_5",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/sgnum_n_test_min_5",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/chemsys_n_test_min_6",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/composition_n_test_min_6",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/elements_n_test_min_6",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/periodictablegroups_n_test_min_6",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/pointgroup_n_test_min_6",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/sgnum_n_test_min_6",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/chemsys_n_test_min_7",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/composition_n_test_min_7",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/elements_n_test_min_7",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/periodictablegroups_n_test_min_7",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/pointgroup_n_test_min_7",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/sgnum_n_test_min_7",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n8",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n8/chemsys_n_test_min_8",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n8/composition_n_test_min_8",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n8/elements_n_test_min_8",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n8/pointgroup_n_test_min_8",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n8/sgnum_n_test_min_8"
+    ],
+    "all_filenames": [
+      "1207Dehang Li (splits)/Assignment_0_Dehang-Li 1207copy.ipynb",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/chemsys_n_test_min_1/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/chemsys_n_test_min_1/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/chemsys_n_test_min_1/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/composition_n_test_min_1/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/composition_n_test_min_1/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/composition_n_test_min_1/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/crystalsys_n_test_min_1/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/crystalsys_n_test_min_1/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/crystalsys_n_test_min_1/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/elements_n_test_min_1/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/elements_n_test_min_1/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/elements_n_test_min_1/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/periodictablegroups_n_test_min_1/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/periodictablegroups_n_test_min_1/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/periodictablegroups_n_test_min_1/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/pointgroup_n_test_min_1/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/pointgroup_n_test_min_1/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/pointgroup_n_test_min_1/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/sgnum_n_test_min_1/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/sgnum_n_test_min_1/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/sgnum_n_test_min_1/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/chemsys_n_test_min_3/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/chemsys_n_test_min_3/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/chemsys_n_test_min_3/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/composition_n_test_min_3/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/composition_n_test_min_3/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/composition_n_test_min_3/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/elements_n_test_min_3/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/elements_n_test_min_3/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/elements_n_test_min_3/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/periodictablegroups_n_test_min_3/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/periodictablegroups_n_test_min_3/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/periodictablegroups_n_test_min_3/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/pointgroup_n_test_min_3/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/pointgroup_n_test_min_3/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/pointgroup_n_test_min_3/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/sgnum_n_test_min_3/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/sgnum_n_test_min_3/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/sgnum_n_test_min_3/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/chemsys_n_test_min_5/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/chemsys_n_test_min_5/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/chemsys_n_test_min_5/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/composition_n_test_min_5/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/composition_n_test_min_5/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/composition_n_test_min_5/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/elements_n_test_min_5/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/elements_n_test_min_5/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/elements_n_test_min_5/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/periodictablegroups_n_test_min_5/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/periodictablegroups_n_test_min_5/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/periodictablegroups_n_test_min_5/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/pointgroup_n_test_min_5/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/pointgroup_n_test_min_5/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/pointgroup_n_test_min_5/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/sgnum_n_test_min_5/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/sgnum_n_test_min_5/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/sgnum_n_test_min_5/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/chemsys_n_test_min_6/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/chemsys_n_test_min_6/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/chemsys_n_test_min_6/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/composition_n_test_min_6/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/composition_n_test_min_6/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/composition_n_test_min_6/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/elements_n_test_min_6/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/elements_n_test_min_6/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/elements_n_test_min_6/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/pointgroup_n_test_min_6/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/pointgroup_n_test_min_6/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/pointgroup_n_test_min_6/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/sgnum_n_test_min_6/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/sgnum_n_test_min_6/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/sgnum_n_test_min_6/val.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/chemsys_n_test_min_1/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/chemsys_n_test_min_1/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/composition_n_test_min_1/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/composition_n_test_min_1/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/crystalsys_n_test_min_1/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/crystalsys_n_test_min_1/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/elements_n_test_min_1/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/elements_n_test_min_1/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/periodictablegroups_n_test_min_1/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/periodictablegroups_n_test_min_1/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/pointgroup_n_test_min_1/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/pointgroup_n_test_min_1/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/sgnum_n_test_min_1/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n1/sgnum_n_test_min_1/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/chemsys_n_test_min_3/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/chemsys_n_test_min_3/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/composition_n_test_min_3/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/composition_n_test_min_3/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/crystalsys_n_test_min_3/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/crystalsys_n_test_min_3/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/elements_n_test_min_3/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/elements_n_test_min_3/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/periodictablegroups_n_test_min_3/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/periodictablegroups_n_test_min_3/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/pointgroup_n_test_min_3/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/pointgroup_n_test_min_3/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/sgnum_n_test_min_3/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n3/sgnum_n_test_min_3/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/chemsys_n_test_min_5/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/chemsys_n_test_min_5/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/composition_n_test_min_5/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/composition_n_test_min_5/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/elements_n_test_min_5/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/elements_n_test_min_5/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/periodictablegroups_n_test_min_5/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/periodictablegroups_n_test_min_5/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/pointgroup_n_test_min_5/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/pointgroup_n_test_min_5/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/sgnum_n_test_min_5/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n5/sgnum_n_test_min_5/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/chemsys_n_test_min_6/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/chemsys_n_test_min_6/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/composition_n_test_min_6/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/composition_n_test_min_6/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/elements_n_test_min_6/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/elements_n_test_min_6/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/periodictablegroups_n_test_min_6/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/periodictablegroups_n_test_min_6/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/pointgroup_n_test_min_6/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/pointgroup_n_test_min_6/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/sgnum_n_test_min_6/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n6/sgnum_n_test_min_6/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/chemsys_n_test_min_7/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/chemsys_n_test_min_7/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/composition_n_test_min_7/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/composition_n_test_min_7/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/elements_n_test_min_7/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/elements_n_test_min_7/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/periodictablegroups_n_test_min_7/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/periodictablegroups_n_test_min_7/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/pointgroup_n_test_min_7/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/pointgroup_n_test_min_7/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/sgnum_n_test_min_7/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n7/sgnum_n_test_min_7/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n8/chemsys_n_test_min_8/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n8/chemsys_n_test_min_8/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n8/composition_n_test_min_8/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n8/composition_n_test_min_8/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n8/pointgroup_n_test_min_8/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n8/pointgroup_n_test_min_8/train.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n8/sgnum_n_test_min_8/test.csv",
+      "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_80_20_n8/sgnum_n_test_min_8/train.csv",
+      "Dehang Li (splits)/Assignment_0_Dehang-Li.ipynb",
+      "Dehang Li (splits)/Assigenment_0-Dehang_Li-matbench_phonons_stats/all_stats.json",
+      "Dehang Li (splits)/Assigenment_0-Dehang_Li-matbench_phonons_stats/chemsys_freq.csv",
+      "Dehang Li (splits)/Assigenment_0-Dehang_Li-matbench_phonons_stats/composition_freq.csv",
+      "Dehang Li (splits)/Assigenment_0-Dehang_Li-matbench_phonons_stats/crystalsys_freq.csv",
+      "Dehang Li (splits)/Assigenment_0-Dehang_Li-matbench_phonons_stats/elements_freq.csv",
+      "Dehang Li (splits)/Assigenment_0-Dehang_Li-matbench_phonons_stats/periodictablegroups_freq.csv",
+      "Dehang Li (splits)/Assigenment_0-Dehang_Li-matbench_phonons_stats/periodictablerows_freq.csv",
+      "Dehang Li (splits)/Assigenment_0-Dehang_Li-matbench_phonons_stats/pointgroup_freq.csv",
+      "Dehang Li (splits)/Assigenment_0-Dehang_Li-matbench_phonons_stats/sgnum_freq.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/chemsys_n_test_min_1/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/chemsys_n_test_min_1/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/chemsys_n_test_min_1/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/composition_n_test_min_1/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/composition_n_test_min_1/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/composition_n_test_min_1/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/crystalsys_n_test_min_1/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/crystalsys_n_test_min_1/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/crystalsys_n_test_min_1/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/elements_n_test_min_1/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/elements_n_test_min_1/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/elements_n_test_min_1/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/periodictablegroups_n_test_min_1/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/periodictablegroups_n_test_min_1/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/periodictablegroups_n_test_min_1/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/pointgroup_n_test_min_1/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/pointgroup_n_test_min_1/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/pointgroup_n_test_min_1/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/sgnum_n_test_min_1/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/sgnum_n_test_min_1/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/sgnum_n_test_min_1/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/chemsys_n_test_min_3/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/chemsys_n_test_min_3/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/chemsys_n_test_min_3/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/composition_n_test_min_3/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/composition_n_test_min_3/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/composition_n_test_min_3/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/elements_n_test_min_3/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/elements_n_test_min_3/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/elements_n_test_min_3/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/periodictablegroups_n_test_min_3/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/periodictablegroups_n_test_min_3/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/periodictablegroups_n_test_min_3/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/pointgroup_n_test_min_3/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/pointgroup_n_test_min_3/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/pointgroup_n_test_min_3/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/sgnum_n_test_min_3/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/sgnum_n_test_min_3/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n3/sgnum_n_test_min_3/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/chemsys_n_test_min_5/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/chemsys_n_test_min_5/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/chemsys_n_test_min_5/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/composition_n_test_min_5/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/composition_n_test_min_5/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/composition_n_test_min_5/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/elements_n_test_min_5/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/elements_n_test_min_5/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/elements_n_test_min_5/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/periodictablegroups_n_test_min_5/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/periodictablegroups_n_test_min_5/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/periodictablegroups_n_test_min_5/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/pointgroup_n_test_min_5/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/pointgroup_n_test_min_5/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/pointgroup_n_test_min_5/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/sgnum_n_test_min_5/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/sgnum_n_test_min_5/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n5/sgnum_n_test_min_5/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/chemsys_n_test_min_6/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/chemsys_n_test_min_6/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/chemsys_n_test_min_6/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/composition_n_test_min_6/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/composition_n_test_min_6/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/composition_n_test_min_6/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/elements_n_test_min_6/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/elements_n_test_min_6/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/elements_n_test_min_6/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/pointgroup_n_test_min_6/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/pointgroup_n_test_min_6/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/pointgroup_n_test_min_6/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/sgnum_n_test_min_6/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/sgnum_n_test_min_6/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_70_20_10_n6/sgnum_n_test_min_6/val.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/chemsys_n_test_min_1/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/chemsys_n_test_min_1/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/composition_n_test_min_1/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/composition_n_test_min_1/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/crystalsys_n_test_min_1/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/crystalsys_n_test_min_1/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/elements_n_test_min_1/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/elements_n_test_min_1/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/periodictablegroups_n_test_min_1/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/periodictablegroups_n_test_min_1/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/pointgroup_n_test_min_1/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/pointgroup_n_test_min_1/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/sgnum_n_test_min_1/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n1/sgnum_n_test_min_1/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/chemsys_n_test_min_3/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/chemsys_n_test_min_3/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/composition_n_test_min_3/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/composition_n_test_min_3/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/crystalsys_n_test_min_3/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/crystalsys_n_test_min_3/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/elements_n_test_min_3/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/elements_n_test_min_3/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/periodictablegroups_n_test_min_3/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/periodictablegroups_n_test_min_3/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/pointgroup_n_test_min_3/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/pointgroup_n_test_min_3/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/sgnum_n_test_min_3/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n3/sgnum_n_test_min_3/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/chemsys_n_test_min_5/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/chemsys_n_test_min_5/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/composition_n_test_min_5/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/composition_n_test_min_5/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/elements_n_test_min_5/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/elements_n_test_min_5/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/periodictablegroups_n_test_min_5/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/periodictablegroups_n_test_min_5/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/pointgroup_n_test_min_5/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/pointgroup_n_test_min_5/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/sgnum_n_test_min_5/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n5/sgnum_n_test_min_5/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/chemsys_n_test_min_6/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/chemsys_n_test_min_6/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/composition_n_test_min_6/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/composition_n_test_min_6/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/elements_n_test_min_6/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/elements_n_test_min_6/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/periodictablegroups_n_test_min_6/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/periodictablegroups_n_test_min_6/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/pointgroup_n_test_min_6/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/pointgroup_n_test_min_6/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/sgnum_n_test_min_6/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n6/sgnum_n_test_min_6/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/chemsys_n_test_min_7/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/chemsys_n_test_min_7/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/composition_n_test_min_7/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/composition_n_test_min_7/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/elements_n_test_min_7/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/elements_n_test_min_7/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/periodictablegroups_n_test_min_7/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/periodictablegroups_n_test_min_7/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/pointgroup_n_test_min_7/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/pointgroup_n_test_min_7/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/sgnum_n_test_min_7/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n7/sgnum_n_test_min_7/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n8/chemsys_n_test_min_8/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n8/chemsys_n_test_min_8/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n8/composition_n_test_min_8/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n8/composition_n_test_min_8/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n8/elements_n_test_min_8/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n8/elements_n_test_min_8/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n8/pointgroup_n_test_min_8/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n8/pointgroup_n_test_min_8/train.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n8/sgnum_n_test_min_8/test.csv",
+      "Dehang Li (splits)/Dehang_Li_matbench_phonons_statssplits_80_20_n8/sgnum_n_test_min_8/train.csv"
+    ],
+    "split_types_found": [
+      "chemsys",
+      "composition",
+      "crystalsys",
+      "elements",
+      "groups",
+      "pointgroup",
+      "sgnum",
+      "periodictablegroups"
+    ],
+    "ratios_found": [],
+    "partitions_found": [
+      "train",
+      "val",
+      "test"
+    ],
+    "has_structure_column": true,
+    "has_composition_column": true,
+    "structure_format": "pymatgen_dict (CORRECT)",
+    "csv_columns_sample": {
+      "file": "1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/chemsys_n_test_min_1/test.csv",
+      "columns": [
+        "mat_index",
+        "structure",
+        "TARGET",
+        "composition"
+      ],
+      "shape": "129 rows x 4 cols",
+      "dtypes": {
+        "mat_index": "object",
+        "structure": "object",
+        "TARGET": "float64",
+        "composition": "object"
+      }
+    },
+    "json_files": [
+      {
+        "file": "Dehang Li (splits)/Assigenment_0-Dehang_Li-matbench_phonons_stats/all_stats.json",
+        "keys": [
+          "composition",
+          "chemsys",
+          "sgnum",
+          "pointgroup",
+          "crystalsys",
+          "elements",
+          "periodictablerows",
+          "periodictablegroups"
+        ],
+        "type": "dict"
+      }
+    ],
+    "issues": [],
+    "datasets_found": [
+      "phonons"
+    ],
+    "splits_inventory": {
+      "chemsys": {
+        "unknown": {
+          "train": false,
+          "validation": false,
+          "test": false,
+          "files": [
+            "chemsys_freq.csv"
+          ]
+        }
+      },
+      "composition": {
+        "unknown": {
+          "train": false,
+          "validation": false,
+          "test": false,
+          "files": [
+            "composition_freq.csv"
+          ]
+        }
+      },
+      "crystalsys": {
+        "unknown": {
+          "train": false,
+          "validation": false,
+          "test": false,
+          "files": [
+            "crystalsys_freq.csv"
+          ]
+        }
+      },
+      "elements": {
+        "unknown": {
+          "train": false,
+          "validation": false,
+          "test": false,
+          "files": [
+            "elements_freq.csv"
+          ]
+        }
+      },
+      "groups": {
+        "unknown": {
+          "train": false,
+          "validation": false,
+          "test": false,
+          "files": [
+            "periodictablegroups_freq.csv"
+          ]
+        }
+      },
+      "pointgroup": {
+        "unknown": {
+          "train": false,
+          "validation": false,
+          "test": false,
+          "files": [
+            "pointgroup_freq.csv"
+          ]
+        }
+      },
+      "sgnum": {
+        "unknown": {
+          "train": false,
+          "validation": false,
+          "test": false,
+          "files": [
+            "sgnum_freq.csv"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Lianghe",
+    "path": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Lianghe",
+    "total_files": 58,
+    "file_types": {
+      ".json": 26,
+      ".csv": 32
+    },
+    "folder_structure": [
+      "matbench_mp_is_metal_70-20-10_splits",
+      "matbench_mp_is_metal_80-0-20_splits"
+    ],
+    "all_filenames": [
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_chemsys.ntest1.index-val_chemsys-test_0.7-0.2-0.1.json",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_chemsys.ntest1.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_chemsys.ntest1.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_chemsys.ntest1.index-val_chemsys-test_0.7-0.2-0.1.train.csv",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_chemsys.ntest1.index-val_chemsys-test_0.7-0.2-0.1.validation.csv",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_composition.ntest1.index-val_composition-test_0.7-0.2-0.1.json",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_composition.ntest1.index-val_composition-test_0.7-0.2-0.1.summary.json",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_composition.ntest1.index-val_composition-test_0.7-0.2-0.1.test.csv",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_composition.ntest1.index-val_composition-test_0.7-0.2-0.1.train.csv",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_composition.ntest1.index-val_composition-test_0.7-0.2-0.1.validation.csv",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_elements.ntest10.index-val_elements-test_0.7-0.2-0.1.json",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_elements.ntest10.index-val_elements-test_0.7-0.2-0.1.summary.json",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_elements.ntest10.index-val_elements-test_0.7-0.2-0.1.test.csv",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_elements.ntest10.index-val_elements-test_0.7-0.2-0.1.train.csv",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_elements.ntest10.index-val_elements-test_0.7-0.2-0.1.validation.csv",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.7-0.2-0.1.json",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.7-0.2-0.1.summary.json",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.7-0.2-0.1.test.csv",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.7-0.2-0.1.train.csv",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.7-0.2-0.1.validation.csv",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.7-0.2-0.1.json",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.7-0.2-0.1.summary.json",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_sgnum.ntest10.index-val_sgnum-test_0.7-0.2-0.1.json",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_sgnum.ntest10.index-val_sgnum-test_0.7-0.2-0.1.summary.json",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_sgnum.ntest10.index-val_sgnum-test_0.7-0.2-0.1.test.csv",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_sgnum.ntest10.index-val_sgnum-test_0.7-0.2-0.1.train.csv",
+      "matbench_mp_is_metal_70-20-10_splits/mf.index_sgnum.ntest10.index-val_sgnum-test_0.7-0.2-0.1.validation.csv",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_chemsys.ntest1.index-val_chemsys-test_0.8-0.0-0.2.json",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_chemsys.ntest1.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_chemsys.ntest1.index-val_chemsys-test_0.8-0.0-0.2.test.csv",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_chemsys.ntest1.index-val_chemsys-test_0.8-0.0-0.2.train.csv",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_composition.ntest1.index-val_composition-test_0.8-0.0-0.2.json",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_composition.ntest1.index-val_composition-test_0.8-0.0-0.2.summary.json",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_composition.ntest1.index-val_composition-test_0.8-0.0-0.2.test.csv",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_composition.ntest1.index-val_composition-test_0.8-0.0-0.2.train.csv",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_crystalsys.ntest10.index-val_crystalsys-test_0.8-0.0-0.2.json",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_crystalsys.ntest10.index-val_crystalsys-test_0.8-0.0-0.2.summary.json",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_crystalsys.ntest10.index-val_crystalsys-test_0.8-0.0-0.2.test.csv",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_crystalsys.ntest10.index-val_crystalsys-test_0.8-0.0-0.2.train.csv",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_elements.ntest8.index-val_elements-test_0.8-0.0-0.2.json",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_elements.ntest8.index-val_elements-test_0.8-0.0-0.2.summary.json",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_elements.ntest8.index-val_elements-test_0.8-0.0-0.2.test.csv",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_elements.ntest8.index-val_elements-test_0.8-0.0-0.2.train.csv",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.8-0.0-0.2.json",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.8-0.0-0.2.summary.json",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.8-0.0-0.2.train.csv",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.8-0.0-0.2.json",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.8-0.0-0.2.summary.json",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.8-0.0-0.2.train.csv",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_sgnum.ntest10.index-val_sgnum-test_0.8-0.0-0.2.json",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_sgnum.ntest10.index-val_sgnum-test_0.8-0.0-0.2.summary.json",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_sgnum.ntest10.index-val_sgnum-test_0.8-0.0-0.2.test.csv",
+      "matbench_mp_is_metal_80-0-20_splits/mf.index_sgnum.ntest10.index-val_sgnum-test_0.8-0.0-0.2.train.csv"
+    ],
+    "split_types_found": [
+      "chemsys",
+      "composition",
+      "crystalsys",
+      "elements",
+      "groups",
+      "pointgroup",
+      "sgnum",
+      "periodictablegroups"
+    ],
+    "ratios_found": [
+      "0.7-0.2-0.1",
+      "0.8-0.0-0.2",
+      "70-20-10"
+    ],
+    "partitions_found": [
+      "train",
+      "validation",
+      "val",
+      "test"
+    ],
+    "has_structure_column": true,
+    "has_composition_column": false,
+    "structure_format": "pymatgen_dict (CORRECT)",
+    "csv_columns_sample": {
+      "file": "matbench_mp_is_metal_70-20-10_splits/mf.index_chemsys.ntest1.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+      "columns": [
+        "mat_index",
+        "structure",
+        "is_metal"
+      ],
+      "shape": "11175 rows x 3 cols",
+      "dtypes": {
+        "mat_index": "object",
+        "structure": "object",
+        "is_metal": "bool"
+      }
+    },
+    "json_files": [
+      {
+        "file": "matbench_mp_is_metal_70-20-10_splits/mf.index_chemsys.ntest1.index-val_chemsys-test_0.7-0.2-0.1.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "matbench_mp_is_metal_70-20-10_splits/mf.index_chemsys.ntest1.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+        "keys": [
+          "create_train_validation_test_splits",
+          "train_fraction_actual",
+          "validation_fraction_actual",
+          "test_fraction_actual",
+          "n_train",
+          "n_validation",
+          "n_test",
+          "naive_random_split_trainval_test",
+          "naive_random_split_train_val",
+          "n_train_set_labels"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "matbench_mp_is_metal_70-20-10_splits/mf.index_composition.ntest1.index-val_composition-test_0.7-0.2-0.1.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "matbench_mp_is_metal_70-20-10_splits/mf.index_composition.ntest1.index-val_composition-test_0.7-0.2-0.1.summary.json",
+        "keys": [
+          "create_train_validation_test_splits",
+          "train_fraction_actual",
+          "validation_fraction_actual",
+          "test_fraction_actual",
+          "n_train",
+          "n_validation",
+          "n_test",
+          "naive_random_split_trainval_test",
+          "naive_random_split_train_val",
+          "n_train_set_labels"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "matbench_mp_is_metal_70-20-10_splits/mf.index_elements.ntest10.index-val_elements-test_0.7-0.2-0.1.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      }
+    ],
+    "issues": [],
+    "datasets_found": [
+      "mp_is_metal"
+    ],
+    "splits_inventory": {
+      "chemsys": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index_chemsys.ntest1.index-val_chemsys-test_0.7-0.2-0.1.json",
+            "mf.index_chemsys.ntest1.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+            "mf.index_chemsys.ntest1.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+            "mf.index_chemsys.ntest1.index-val_chemsys-test_0.7-0.2-0.1.train.csv",
+            "mf.index_chemsys.ntest1.index-val_chemsys-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index_chemsys.ntest1.index-val_chemsys-test_0.8-0.0-0.2.json",
+            "mf.index_chemsys.ntest1.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+            "mf.index_chemsys.ntest1.index-val_chemsys-test_0.8-0.0-0.2.test.csv",
+            "mf.index_chemsys.ntest1.index-val_chemsys-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "composition": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index_composition.ntest1.index-val_composition-test_0.7-0.2-0.1.json",
+            "mf.index_composition.ntest1.index-val_composition-test_0.7-0.2-0.1.summary.json",
+            "mf.index_composition.ntest1.index-val_composition-test_0.7-0.2-0.1.test.csv",
+            "mf.index_composition.ntest1.index-val_composition-test_0.7-0.2-0.1.train.csv",
+            "mf.index_composition.ntest1.index-val_composition-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index_composition.ntest1.index-val_composition-test_0.8-0.0-0.2.json",
+            "mf.index_composition.ntest1.index-val_composition-test_0.8-0.0-0.2.summary.json",
+            "mf.index_composition.ntest1.index-val_composition-test_0.8-0.0-0.2.test.csv",
+            "mf.index_composition.ntest1.index-val_composition-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "elements": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index_elements.ntest10.index-val_elements-test_0.7-0.2-0.1.json",
+            "mf.index_elements.ntest10.index-val_elements-test_0.7-0.2-0.1.summary.json",
+            "mf.index_elements.ntest10.index-val_elements-test_0.7-0.2-0.1.test.csv",
+            "mf.index_elements.ntest10.index-val_elements-test_0.7-0.2-0.1.train.csv",
+            "mf.index_elements.ntest10.index-val_elements-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index_elements.ntest8.index-val_elements-test_0.8-0.0-0.2.json",
+            "mf.index_elements.ntest8.index-val_elements-test_0.8-0.0-0.2.summary.json",
+            "mf.index_elements.ntest8.index-val_elements-test_0.8-0.0-0.2.test.csv",
+            "mf.index_elements.ntest8.index-val_elements-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "pointgroup": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.7-0.2-0.1.json",
+            "mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.7-0.2-0.1.summary.json",
+            "mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.7-0.2-0.1.test.csv",
+            "mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.7-0.2-0.1.train.csv",
+            "mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.8-0.0-0.2.json",
+            "mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.8-0.0-0.2.summary.json",
+            "mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+            "mf.index_pointgroup.ntest10.index-val_pointgroup-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "groups": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.7-0.2-0.1.json",
+            "mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.7-0.2-0.1.summary.json",
+            "mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+            "mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+            "mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.8-0.0-0.2.json",
+            "mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.8-0.0-0.2.summary.json",
+            "mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+            "mf.index_ptgroups.ntest1.index-val_periodictablegroups-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "sgnum": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index_sgnum.ntest10.index-val_sgnum-test_0.7-0.2-0.1.json",
+            "mf.index_sgnum.ntest10.index-val_sgnum-test_0.7-0.2-0.1.summary.json",
+            "mf.index_sgnum.ntest10.index-val_sgnum-test_0.7-0.2-0.1.test.csv",
+            "mf.index_sgnum.ntest10.index-val_sgnum-test_0.7-0.2-0.1.train.csv",
+            "mf.index_sgnum.ntest10.index-val_sgnum-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index_sgnum.ntest10.index-val_sgnum-test_0.8-0.0-0.2.json",
+            "mf.index_sgnum.ntest10.index-val_sgnum-test_0.8-0.0-0.2.summary.json",
+            "mf.index_sgnum.ntest10.index-val_sgnum-test_0.8-0.0-0.2.test.csv",
+            "mf.index_sgnum.ntest10.index-val_sgnum-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "crystalsys": {
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index_crystalsys.ntest10.index-val_crystalsys-test_0.8-0.0-0.2.json",
+            "mf.index_crystalsys.ntest10.index-val_crystalsys-test_0.8-0.0-0.2.summary.json",
+            "mf.index_crystalsys.ntest10.index-val_crystalsys-test_0.8-0.0-0.2.test.csv",
+            "mf.index_crystalsys.ntest10.index-val_crystalsys-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Sarah",
+    "path": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Sarah",
+    "total_files": 126,
+    "file_types": {
+      ".json": 56,
+      ".csv": 70
+    },
+    "folder_structure": [
+      "new splits- with structure column",
+      "new splits- with structure column/70-20-10",
+      "new splits- with structure column/80-0-20"
+    ],
+    "all_filenames": [
+      "mf.index-val_chemsys-test_0.7-0.2-0.1.json",
+      "mf.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+      "mf.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+      "mf.index-val_chemsys-test_0.7-0.2-0.1.train.csv",
+      "mf.index-val_chemsys-test_0.7-0.2-0.1.validation.csv",
+      "mf.index-val_chemsys-test_0.8-0.0-0.2.json",
+      "mf.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+      "mf.index-val_chemsys-test_0.8-0.0-0.2.test.csv",
+      "mf.index-val_chemsys-test_0.8-0.0-0.2.train.csv",
+      "mf.index-val_composition-test_0.7-0.2-0.1.json",
+      "mf.index-val_composition-test_0.7-0.2-0.1.summary.json",
+      "mf.index-val_composition-test_0.7-0.2-0.1.test.csv",
+      "mf.index-val_composition-test_0.7-0.2-0.1.train.csv",
+      "mf.index-val_composition-test_0.7-0.2-0.1.validation.csv",
+      "mf.index-val_composition-test_0.8-0.0-0.2.json",
+      "mf.index-val_composition-test_0.8-0.0-0.2.summary.json",
+      "mf.index-val_composition-test_0.8-0.0-0.2.test.csv",
+      "mf.index-val_composition-test_0.8-0.0-0.2.train.csv",
+      "mf.index-val_crystalsys-test_0.8-0.0-0.2.json",
+      "mf.index-val_crystalsys-test_0.8-0.0-0.2.summary.json",
+      "mf.index-val_crystalsys-test_0.8-0.0-0.2.test.csv",
+      "mf.index-val_crystalsys-test_0.8-0.0-0.2.train.csv",
+      "mf.index-val_elements-test_0.7-0.2-0.1.json",
+      "mf.index-val_elements-test_0.7-0.2-0.1.summary.json",
+      "mf.index-val_elements-test_0.7-0.2-0.1.test.csv",
+      "mf.index-val_elements-test_0.7-0.2-0.1.train.csv",
+      "mf.index-val_elements-test_0.7-0.2-0.1.validation.csv",
+      "mf.index-val_elements-test_0.8-0.0-0.2.json",
+      "mf.index-val_elements-test_0.8-0.0-0.2.summary.json",
+      "mf.index-val_elements-test_0.8-0.0-0.2.test.csv",
+      "mf.index-val_elements-test_0.8-0.0-0.2.train.csv",
+      "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.json",
+      "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.summary.json",
+      "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+      "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+      "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv",
+      "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.json",
+      "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.summary.json",
+      "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+      "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.train.csv",
+      "mf.index-val_periodictablerows-test_0.7-0.2-0.1.json",
+      "mf.index-val_periodictablerows-test_0.7-0.2-0.1.summary.json",
+      "mf.index-val_periodictablerows-test_0.7-0.2-0.1.test.csv",
+      "mf.index-val_periodictablerows-test_0.7-0.2-0.1.train.csv",
+      "mf.index-val_periodictablerows-test_0.7-0.2-0.1.validation.csv",
+      "mf.index-val_pointgroup-test_0.7-0.2-0.1.json",
+      "mf.index-val_pointgroup-test_0.7-0.2-0.1.summary.json",
+      "mf.index-val_pointgroup-test_0.7-0.2-0.1.test.csv",
+      "mf.index-val_pointgroup-test_0.7-0.2-0.1.train.csv",
+      "mf.index-val_pointgroup-test_0.7-0.2-0.1.validation.csv",
+      "mf.index-val_pointgroup-test_0.8-0.0-0.2.json",
+      "mf.index-val_pointgroup-test_0.8-0.0-0.2.summary.json",
+      "mf.index-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+      "mf.index-val_pointgroup-test_0.8-0.0-0.2.train.csv",
+      "mf.index-val_sgnum-test_0.7-0.2-0.1.json",
+      "mf.index-val_sgnum-test_0.7-0.2-0.1.summary.json",
+      "mf.index-val_sgnum-test_0.7-0.2-0.1.test.csv",
+      "mf.index-val_sgnum-test_0.7-0.2-0.1.train.csv",
+      "mf.index-val_sgnum-test_0.7-0.2-0.1.validation.csv",
+      "mf.index-val_sgnum-test_0.8-0.0-0.2.json",
+      "mf.index-val_sgnum-test_0.8-0.0-0.2.summary.json",
+      "mf.index-val_sgnum-test_0.8-0.0-0.2.test.csv",
+      "mf.index-val_sgnum-test_0.8-0.0-0.2.train.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_chemsys-test_0.7-0.2-0.1.json",
+      "new splits- with structure column/70-20-10/mf.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+      "new splits- with structure column/70-20-10/mf.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_chemsys-test_0.7-0.2-0.1.train.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_chemsys-test_0.7-0.2-0.1.validation.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_composition-test_0.7-0.2-0.1.json",
+      "new splits- with structure column/70-20-10/mf.index-val_composition-test_0.7-0.2-0.1.summary.json",
+      "new splits- with structure column/70-20-10/mf.index-val_composition-test_0.7-0.2-0.1.test.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_composition-test_0.7-0.2-0.1.train.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_composition-test_0.7-0.2-0.1.validation.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_elements-test_0.7-0.2-0.1.json",
+      "new splits- with structure column/70-20-10/mf.index-val_elements-test_0.7-0.2-0.1.summary.json",
+      "new splits- with structure column/70-20-10/mf.index-val_elements-test_0.7-0.2-0.1.test.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_elements-test_0.7-0.2-0.1.train.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_elements-test_0.7-0.2-0.1.validation.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.json",
+      "new splits- with structure column/70-20-10/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.summary.json",
+      "new splits- with structure column/70-20-10/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_periodictablerows-test_0.7-0.2-0.1.json",
+      "new splits- with structure column/70-20-10/mf.index-val_periodictablerows-test_0.7-0.2-0.1.summary.json",
+      "new splits- with structure column/70-20-10/mf.index-val_periodictablerows-test_0.7-0.2-0.1.test.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_periodictablerows-test_0.7-0.2-0.1.train.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_periodictablerows-test_0.7-0.2-0.1.validation.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_pointgroup-test_0.7-0.2-0.1.json",
+      "new splits- with structure column/70-20-10/mf.index-val_pointgroup-test_0.7-0.2-0.1.summary.json",
+      "new splits- with structure column/70-20-10/mf.index-val_pointgroup-test_0.7-0.2-0.1.test.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_pointgroup-test_0.7-0.2-0.1.train.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_pointgroup-test_0.7-0.2-0.1.validation.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_sgnum-test_0.7-0.2-0.1.json",
+      "new splits- with structure column/70-20-10/mf.index-val_sgnum-test_0.7-0.2-0.1.summary.json",
+      "new splits- with structure column/70-20-10/mf.index-val_sgnum-test_0.7-0.2-0.1.test.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_sgnum-test_0.7-0.2-0.1.train.csv",
+      "new splits- with structure column/70-20-10/mf.index-val_sgnum-test_0.7-0.2-0.1.validation.csv",
+      "new splits- with structure column/80-0-20/mf.index-val_chemsys-test_0.8-0.0-0.2.json",
+      "new splits- with structure column/80-0-20/mf.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+      "new splits- with structure column/80-0-20/mf.index-val_chemsys-test_0.8-0.0-0.2.test.csv",
+      "new splits- with structure column/80-0-20/mf.index-val_chemsys-test_0.8-0.0-0.2.train.csv",
+      "new splits- with structure column/80-0-20/mf.index-val_composition-test_0.8-0.0-0.2.json",
+      "new splits- with structure column/80-0-20/mf.index-val_composition-test_0.8-0.0-0.2.summary.json",
+      "new splits- with structure column/80-0-20/mf.index-val_composition-test_0.8-0.0-0.2.test.csv",
+      "new splits- with structure column/80-0-20/mf.index-val_composition-test_0.8-0.0-0.2.train.csv",
+      "new splits- with structure column/80-0-20/mf.index-val_crystalsys-test_0.8-0.0-0.2.json",
+      "new splits- with structure column/80-0-20/mf.index-val_crystalsys-test_0.8-0.0-0.2.summary.json",
+      "new splits- with structure column/80-0-20/mf.index-val_crystalsys-test_0.8-0.0-0.2.test.csv",
+      "new splits- with structure column/80-0-20/mf.index-val_crystalsys-test_0.8-0.0-0.2.train.csv",
+      "new splits- with structure column/80-0-20/mf.index-val_elements-test_0.8-0.0-0.2.json",
+      "new splits- with structure column/80-0-20/mf.index-val_elements-test_0.8-0.0-0.2.summary.json",
+      "new splits- with structure column/80-0-20/mf.index-val_elements-test_0.8-0.0-0.2.test.csv",
+      "new splits- with structure column/80-0-20/mf.index-val_elements-test_0.8-0.0-0.2.train.csv",
+      "new splits- with structure column/80-0-20/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.json",
+      "new splits- with structure column/80-0-20/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.summary.json",
+      "new splits- with structure column/80-0-20/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+      "new splits- with structure column/80-0-20/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.train.csv",
+      "new splits- with structure column/80-0-20/mf.index-val_pointgroup-test_0.8-0.0-0.2.json",
+      "new splits- with structure column/80-0-20/mf.index-val_pointgroup-test_0.8-0.0-0.2.summary.json",
+      "new splits- with structure column/80-0-20/mf.index-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+      "new splits- with structure column/80-0-20/mf.index-val_pointgroup-test_0.8-0.0-0.2.train.csv",
+      "new splits- with structure column/80-0-20/mf.index-val_sgnum-test_0.8-0.0-0.2.json",
+      "new splits- with structure column/80-0-20/mf.index-val_sgnum-test_0.8-0.0-0.2.summary.json",
+      "new splits- with structure column/80-0-20/mf.index-val_sgnum-test_0.8-0.0-0.2.test.csv",
+      "new splits- with structure column/80-0-20/mf.index-val_sgnum-test_0.8-0.0-0.2.train.csv"
+    ],
+    "split_types_found": [
+      "chemsys",
+      "composition",
+      "crystalsys",
+      "elements",
+      "groups",
+      "pointgroup",
+      "sgnum",
+      "periodictablegroups"
+    ],
+    "ratios_found": [
+      "0.7-0.2-0.1",
+      "0.8-0.0-0.2",
+      "70-20-10"
+    ],
+    "partitions_found": [
+      "train",
+      "validation",
+      "val",
+      "test"
+    ],
+    "has_structure_column": false,
+    "has_composition_column": false,
+    "structure_format": null,
+    "csv_columns_sample": {
+      "file": "mf.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+      "columns": [
+        "mat_index",
+        "log10(K_VRH)"
+      ],
+      "shape": "1075 rows x 2 cols",
+      "dtypes": {
+        "mat_index": "object",
+        "log10(K_VRH)": "float64"
+      }
+    },
+    "json_files": [
+      {
+        "file": "mf.index-val_chemsys-test_0.7-0.2-0.1.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "mf.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+        "keys": [
+          "create_train_validation_test_splits",
+          "train_fraction_actual",
+          "validation_fraction_actual",
+          "test_fraction_actual",
+          "n_train",
+          "n_validation",
+          "n_test",
+          "naive_random_split_trainval_test",
+          "naive_random_split_train_val",
+          "n_train_set_labels"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "mf.index-val_chemsys-test_0.8-0.0-0.2.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "mf.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+        "keys": [
+          "create_train_validation_test_splits",
+          "train_fraction_actual",
+          "validation_fraction_actual",
+          "test_fraction_actual",
+          "n_train",
+          "n_validation",
+          "n_test",
+          "naive_random_split_trainval_test",
+          "naive_random_split_train_val",
+          "n_train_set_labels"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "mf.index-val_composition-test_0.7-0.2-0.1.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      }
+    ],
+    "issues": [],
+    "datasets_found": [],
+    "splits_inventory": {
+      "chemsys": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.json",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.validation.csv",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.json",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.json",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.train.csv",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.json",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "composition": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_composition-test_0.7-0.2-0.1.json",
+            "mf.index-val_composition-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_composition-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_composition-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_composition-test_0.7-0.2-0.1.validation.csv",
+            "mf.index-val_composition-test_0.7-0.2-0.1.json",
+            "mf.index-val_composition-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_composition-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_composition-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_composition-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_composition-test_0.8-0.0-0.2.json",
+            "mf.index-val_composition-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_composition-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_composition-test_0.8-0.0-0.2.train.csv",
+            "mf.index-val_composition-test_0.8-0.0-0.2.json",
+            "mf.index-val_composition-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_composition-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_composition-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "crystalsys": {
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_crystalsys-test_0.8-0.0-0.2.json",
+            "mf.index-val_crystalsys-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_crystalsys-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_crystalsys-test_0.8-0.0-0.2.train.csv",
+            "mf.index-val_crystalsys-test_0.8-0.0-0.2.json",
+            "mf.index-val_crystalsys-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_crystalsys-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_crystalsys-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "elements": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_elements-test_0.7-0.2-0.1.json",
+            "mf.index-val_elements-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_elements-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_elements-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_elements-test_0.7-0.2-0.1.validation.csv",
+            "mf.index-val_elements-test_0.7-0.2-0.1.json",
+            "mf.index-val_elements-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_elements-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_elements-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_elements-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_elements-test_0.8-0.0-0.2.json",
+            "mf.index-val_elements-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_elements-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_elements-test_0.8-0.0-0.2.train.csv",
+            "mf.index-val_elements-test_0.8-0.0-0.2.json",
+            "mf.index-val_elements-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_elements-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_elements-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "groups": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.json",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.json",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.json",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.train.csv",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.json",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "pointgroup": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.json",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.validation.csv",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.json",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.json",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.train.csv",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.json",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "sgnum": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.json",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.validation.csv",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.json",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.json",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.train.csv",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.json",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      }
+    }
+  },
+  {
+    "name": "Yue",
+    "path": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue",
+    "total_files": 54,
+    "file_types": {
+      ".json": 24,
+      ".csv": 30
+    },
+    "folder_structure": [],
+    "all_filenames": [
+      "mf.index-val_chemsys-test_0.7-0.2-0.1.json",
+      "mf.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+      "mf.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+      "mf.index-val_chemsys-test_0.7-0.2-0.1.train.csv",
+      "mf.index-val_chemsys-test_0.7-0.2-0.1.validation.csv",
+      "mf.index-val_chemsys-test_0.8-0.0-0.2.json",
+      "mf.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+      "mf.index-val_chemsys-test_0.8-0.0-0.2.test.csv",
+      "mf.index-val_chemsys-test_0.8-0.0-0.2.train.csv",
+      "mf.index-val_composition-test_0.7-0.2-0.1.json",
+      "mf.index-val_composition-test_0.7-0.2-0.1.summary.json",
+      "mf.index-val_composition-test_0.7-0.2-0.1.test.csv",
+      "mf.index-val_composition-test_0.7-0.2-0.1.train.csv",
+      "mf.index-val_composition-test_0.7-0.2-0.1.validation.csv",
+      "mf.index-val_composition-test_0.8-0.0-0.2.json",
+      "mf.index-val_composition-test_0.8-0.0-0.2.summary.json",
+      "mf.index-val_composition-test_0.8-0.0-0.2.test.csv",
+      "mf.index-val_composition-test_0.8-0.0-0.2.train.csv",
+      "mf.index-val_elements-test_0.7-0.2-0.1.json",
+      "mf.index-val_elements-test_0.7-0.2-0.1.summary.json",
+      "mf.index-val_elements-test_0.7-0.2-0.1.test.csv",
+      "mf.index-val_elements-test_0.7-0.2-0.1.train.csv",
+      "mf.index-val_elements-test_0.7-0.2-0.1.validation.csv",
+      "mf.index-val_elements-test_0.8-0.0-0.2.json",
+      "mf.index-val_elements-test_0.8-0.0-0.2.summary.json",
+      "mf.index-val_elements-test_0.8-0.0-0.2.test.csv",
+      "mf.index-val_elements-test_0.8-0.0-0.2.train.csv",
+      "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.json",
+      "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.summary.json",
+      "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+      "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+      "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv",
+      "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.json",
+      "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.summary.json",
+      "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+      "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.train.csv",
+      "mf.index-val_pointgroup-test_0.7-0.2-0.1.json",
+      "mf.index-val_pointgroup-test_0.7-0.2-0.1.summary.json",
+      "mf.index-val_pointgroup-test_0.7-0.2-0.1.test.csv",
+      "mf.index-val_pointgroup-test_0.7-0.2-0.1.train.csv",
+      "mf.index-val_pointgroup-test_0.7-0.2-0.1.validation.csv",
+      "mf.index-val_pointgroup-test_0.8-0.0-0.2.json",
+      "mf.index-val_pointgroup-test_0.8-0.0-0.2.summary.json",
+      "mf.index-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+      "mf.index-val_pointgroup-test_0.8-0.0-0.2.train.csv",
+      "mf.index-val_sgnum-test_0.7-0.2-0.1.json",
+      "mf.index-val_sgnum-test_0.7-0.2-0.1.summary.json",
+      "mf.index-val_sgnum-test_0.7-0.2-0.1.test.csv",
+      "mf.index-val_sgnum-test_0.7-0.2-0.1.train.csv",
+      "mf.index-val_sgnum-test_0.7-0.2-0.1.validation.csv",
+      "mf.index-val_sgnum-test_0.8-0.0-0.2.json",
+      "mf.index-val_sgnum-test_0.8-0.0-0.2.summary.json",
+      "mf.index-val_sgnum-test_0.8-0.0-0.2.test.csv",
+      "mf.index-val_sgnum-test_0.8-0.0-0.2.train.csv"
+    ],
+    "split_types_found": [
+      "chemsys",
+      "composition",
+      "elements",
+      "groups",
+      "pointgroup",
+      "sgnum",
+      "periodictablegroups"
+    ],
+    "ratios_found": [
+      "0.7-0.2-0.1",
+      "0.8-0.0-0.2"
+    ],
+    "partitions_found": [
+      "train",
+      "validation",
+      "val",
+      "test"
+    ],
+    "has_structure_column": true,
+    "has_composition_column": false,
+    "structure_format": "pymatgen_dict (CORRECT)",
+    "csv_columns_sample": {
+      "file": "mf.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+      "columns": [
+        "mat_index",
+        "structure",
+        "exfoliation_en"
+      ],
+      "shape": "66 rows x 3 cols",
+      "dtypes": {
+        "mat_index": "object",
+        "structure": "object",
+        "exfoliation_en": "float64"
+      }
+    },
+    "json_files": [
+      {
+        "file": "mf.index-val_chemsys-test_0.7-0.2-0.1.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "mf.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+        "keys": [
+          "create_train_validation_test_splits",
+          "train_fraction_actual",
+          "validation_fraction_actual",
+          "test_fraction_actual",
+          "n_train",
+          "n_validation",
+          "n_test",
+          "naive_random_split_trainval_test",
+          "naive_random_split_train_val",
+          "n_train_set_labels"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "mf.index-val_chemsys-test_0.8-0.0-0.2.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "mf.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+        "keys": [
+          "create_train_validation_test_splits",
+          "train_fraction_actual",
+          "validation_fraction_actual",
+          "test_fraction_actual",
+          "n_train",
+          "n_validation",
+          "n_test",
+          "naive_random_split_trainval_test",
+          "naive_random_split_train_val",
+          "n_train_set_labels"
+        ],
+        "type": "dict"
+      },
+      {
+        "file": "mf.index-val_composition-test_0.7-0.2-0.1.json",
+        "keys": [
+          "MatFold",
+          "__init__",
+          "split_function_called",
+          "split_parameters"
+        ],
+        "type": "dict"
+      }
+    ],
+    "issues": [],
+    "datasets_found": [],
+    "splits_inventory": {
+      "chemsys": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.json",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_chemsys-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.json",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_chemsys-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "composition": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_composition-test_0.7-0.2-0.1.json",
+            "mf.index-val_composition-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_composition-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_composition-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_composition-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_composition-test_0.8-0.0-0.2.json",
+            "mf.index-val_composition-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_composition-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_composition-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "elements": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_elements-test_0.7-0.2-0.1.json",
+            "mf.index-val_elements-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_elements-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_elements-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_elements-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_elements-test_0.8-0.0-0.2.json",
+            "mf.index-val_elements-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_elements-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_elements-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "groups": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.json",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.json",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_periodictablegroups-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "pointgroup": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.json",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_pointgroup-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.json",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_pointgroup-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      },
+      "sgnum": {
+        "0.7-0.2-0.1": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.json",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.summary.json",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.test.csv",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.train.csv",
+            "mf.index-val_sgnum-test_0.7-0.2-0.1.validation.csv"
+          ]
+        },
+        "0.8-0.0-0.2": {
+          "train": true,
+          "validation": true,
+          "test": true,
+          "files": [
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.json",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.summary.json",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.test.csv",
+            "mf.index-val_sgnum-test_0.8-0.0-0.2.train.csv"
+          ]
+        }
+      }
+    }
+  }
+]

@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "dataset": "log_gvrh",
+    "split": "elements",
+    "model": "coNGN",
+    "split_ratio": "0.7-0.1-0.2",
+    "epochs": 600,
+    "batch_size": 64,
+    "lr_init": 0.0005,
+    "lr_final": 1e-05,
+    "lr_schedule": "PolynomialDecay (linear)",
+    "preprocessor": "VoronoiAsymmetricUnitCell(1e-6)",
+    "n_train": 6545,
+    "n_val": 935,
+    "n_test": 3503,
+    "train_time_s": 3027.767923593521
+  },
+  "train": {
+    "mae": 0.0004162722795658936,
+    "rmse": 0.0025041825614971654,
+    "r2": 0.999951197101808
+  },
+  "val": {
+    "mae": 0.07312540530182186,
+    "rmse": 0.11271691422087299,
+    "r2": 0.9054300407469439
+  },
+  "test": {
+    "mae": 0.09945568790369395,
+    "rmse": 0.1415785167626242,
+    "r2": 0.8634015611146755
+  }
+}

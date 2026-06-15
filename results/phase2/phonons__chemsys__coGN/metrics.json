@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "dataset": "phonons",
+    "split": "chemsys",
+    "model": "coGN",
+    "split_ratio": "0.7-0.1-0.2",
+    "epochs": 800,
+    "batch_size": 64,
+    "lr_init": 0.0005,
+    "lr_final": 1e-05,
+    "lr_schedule": "PolynomialDecay (linear)",
+    "preprocessor": "KNNAsymmetricUnitCell(24)",
+    "n_train": 885,
+    "n_val": 126,
+    "n_test": 254,
+    "train_time_s": 327.4687843322754
+  },
+  "train": {
+    "mae": 0.7350524872833244,
+    "rmse": 1.3306482246486577,
+    "r2": 0.999992952887212
+  },
+  "val": {
+    "mae": 34.95152288835883,
+    "rmse": 55.17542210767368,
+    "r2": 0.9865770681543329
+  },
+  "test": {
+    "mae": 43.15795054031421,
+    "rmse": 69.38064087513105,
+    "r2": 0.9784466725964589
+  }
+}

@@ -1,0 +1,61 @@
+=== jdft2d deep check ===
+
+Tag: jdft2d__index__coGN
+  epochs=800  batch=64
+  n_train=446  n_val=63  n_test=127
+  train_time_s=108.1s  = 1.80 min
+  train: MAE=0.7067  R²=0.9976
+  val:   MAE=27.4903  R²=0.3044
+  test:  MAE=50.5515  R²=0.1584
+  run.log: 1678 lines total
+  Last 6 lines of run.log:
+    train           0.7067        6.0479        0.9976
+    val            27.4903       56.2257        0.3044
+    test           50.5515      166.3094        0.1584
+    ======================================================================
+    
+    Saved to: results/phase2/jdft2d__index__coGN
+
+Tag: jdft2d__index__coNGN
+  epochs=600  batch=64
+  n_train=446  n_val=63  n_test=127
+  train_time_s=180.0s  = 3.00 min
+  train: MAE=0.1078  R²=1.0000
+  val:   MAE=25.1928  R²=0.3579
+  test:  MAE=49.5725  R²=0.1157
+  run.log: 1278 lines total
+  Last 6 lines of run.log:
+    train           0.1078        0.1503        1.0000
+    val            25.1928       54.0202        0.3579
+    test           49.5725      170.4787        0.1157
+    ======================================================================
+    
+    Saved to: results/phase2/jdft2d__index__coNGN
+
+Tag: jdft2d__chemsys__coGN
+  epochs=800  batch=64
+  n_train=448  n_val=63  n_test=125
+  train_time_s=109.4s  = 1.82 min
+  train: MAE=0.9674  R²=0.9972
+  val:   MAE=57.4975  R²=-0.0410
+  test:  MAE=35.0080  R²=0.2973
+  run.log: 1678 lines total
+  Last 6 lines of run.log:
+    train           0.9674        6.7447        0.9972
+    val            57.4975      206.7804       -0.0410
+    test           35.0080       92.8330        0.2973
+    ======================================================================
+    
+    Saved to: results/phase2/jdft2d__chemsys__coGN
+
+
+=== Other jdft2d splits (paper config, not re-run) for comparison ===
+  jdft2d__composition__coGN
+    epochs=800  train_time=3.7min
+    test MAE=27.6212  R²=0.4505
+  jdft2d__elements__coGN
+    epochs=800  train_time=3.5min
+    test MAE=32.2508  R²=0.3450
+  jdft2d__crystalsys__coGN
+    epochs=800  train_time=3.2min
+    test MAE=75.0794  R²=-0.0069

@@ -1,0 +1,256 @@
+Loading results...
+  Loaded 109 completed runs, 3 missing.
+
+
+==============================================================================
+  BATCH SUMMARY
+==============================================================================
+  Completed: 109 / 112
+  Missing:   3
+
+  Dataset         coGN    coNGN   Status
+  --------------  ------  ------  --------------------
+  jdft2d          8/8    8/8    ✅ complete
+  phonons         8/8    8/8    ✅ complete
+  log_gvrh        8/8    8/8    ✅ complete
+  log_kvrh        8/8    8/8    ✅ complete
+  perovskites     8/8    8/8    ✅ complete
+  mp_gap          8/8    8/8    ✅ complete
+  mp_e_form       7/8    6/8    ⚠️  partial
+
+  Missing runs (will be filled once final 3 runs complete):
+    - mp_e_form__pointgroup__coNGN
+    - mp_e_form__sgnum__coGN
+    - mp_e_form__sgnum__coNGN
+
+==============================================================================
+  MASTER RESULTS TABLE — Test MAE per (dataset, split, model)
+==============================================================================
+  Values are test-set MAE in dataset units. '—' = run not yet complete.
+
+  Dataset        Split                                c o G N               c o N G N
+  -----------------------------------------------------------------------------------
+
+  [jdft2d  (meV/atom)]
+    index                      47.2395     52.5906 ← i.i.d.
+    chemsys                    47.7605     37.5662
+    composition                27.6212     32.6285
+    crystalsys                 75.0794     66.6640
+    elements                   32.2508     23.8184
+    periodictablegroups        50.2131     41.9633
+    pointgroup                 65.8390     67.6690
+    sgnum                      33.6086     34.4012
+
+  [phonons  (cm⁻¹)]
+    index                      45.2454     29.1698 ← i.i.d.
+    chemsys                    43.1580     36.2685
+    composition                46.7568     44.9382
+    crystalsys                 58.8550     58.8430
+    elements                   95.3113     93.1409
+    periodictablegroups        78.6954     70.6295
+    pointgroup                 55.3755     54.9225
+    sgnum                      49.6307     49.5262
+
+  [log_gvrh  (log(GPa))]
+    index                       0.0744      0.0714 ← i.i.d.
+    chemsys                     0.0753      0.0700
+    composition                 0.0780      0.0723
+    crystalsys                  0.0880      0.0767
+    elements                    0.1091      0.0995
+    periodictablegroups         0.1300      0.1115
+    pointgroup                  0.1027      0.0901
+    sgnum                       0.1097      0.0995
+
+  [log_kvrh  (log(GPa))]
+    index                       0.0597      0.0507 ← i.i.d.
+    chemsys                     0.0573      0.0492
+    composition                 0.0605      0.0532
+    crystalsys                  0.0654      0.0525
+    elements                    0.0697      0.0603
+    periodictablegroups         0.1587      0.1079
+    pointgroup                  0.0684      0.0564
+    sgnum                       0.0690      0.0575
+
+  [perovskites  (eV/unit cell)]
+    index                       0.0285      0.0306 ← i.i.d.
+    chemsys                     0.0269      0.0295
+    composition                 0.0304      0.0321
+    crystalsys                  0.0884      0.0911
+    elements                    0.3584      0.3300
+    periodictablegroups         0.3610      0.3387
+    pointgroup                  0.1075      0.1028
+    sgnum                       0.0983      0.0909
+
+  [mp_gap  (eV)]
+    index                       0.1972      0.2001 ← i.i.d.
+    chemsys                     0.2290      0.2247
+    composition                 0.2337      0.2317
+    crystalsys                  0.3288      0.3043
+    elements                    0.4815      0.4855
+    periodictablegroups         0.4287      0.4850
+    pointgroup                  0.3124      0.2988
+    sgnum                       0.2935      0.2931
+
+  [mp_e_form  (eV/atom)]
+    index                       0.0216      0.0215 ← i.i.d.
+    chemsys                     0.0237      0.0233
+    composition                 0.0243      0.0228
+    crystalsys                  0.0484      0.0467
+    elements                    0.0595      0.0622
+    periodictablegroups         0.2198      0.2258
+    pointgroup                  0.0217           —
+    sgnum                            —           —
+
+==============================================================================
+  OOD DEGRADATION RATIOS — test MAE(OOD) / test MAE(i.i.d.)
+==============================================================================
+  Ratio > 1.0 means the model performs worse under OOD conditions.
+  Higher = more OOD degradation. i.i.d. baseline = index split.
+
+
+  [coGN]
+  Dataset          chemsys  composit crystalsy  elements  PTgroups  pointgrp     sgnum  avg
+  ----------------------------------------------------------------------------------------------------
+  jdft2d             1.01×     0.58×     1.59×     0.68×     1.06×     1.39×     0.71×  1.01×
+  phonons            0.95×     1.03×     1.30×     2.11×     1.74×     1.22×     1.10×  1.35×
+  log_gvrh           1.01×     1.05×     1.18×     1.47×     1.75×     1.38×     1.47×  1.33×
+  log_kvrh           0.96×     1.01×     1.10×     1.17×     2.66×     1.15×     1.16×  1.31×
+  perovskites        0.94×     1.07×     3.10×    12.59×    12.68×     3.77×     3.45×  5.37×
+  mp_gap             1.16×     1.19×     1.67×     2.44×     2.17×     1.58×     1.49×  1.67×
+  mp_e_form          1.10×     1.13×     2.24×     2.75×    10.17×     1.00×         —  3.06×
+
+  [coNGN]
+  Dataset          chemsys  composit crystalsy  elements  PTgroups  pointgrp     sgnum  avg
+  ----------------------------------------------------------------------------------------------------
+  jdft2d             0.71×     0.62×     1.27×     0.45×     0.80×     1.29×     0.65×  0.83×
+  phonons            1.24×     1.54×     2.02×     3.19×     2.42×     1.88×     1.70×  2.00×
+  log_gvrh           0.98×     1.01×     1.07×     1.39×     1.56×     1.26×     1.39×  1.24×
+  log_kvrh           0.97×     1.05×     1.04×     1.19×     2.13×     1.11×     1.13×  1.23×
+  perovskites        0.96×     1.05×     2.98×    10.78×    11.06×     3.36×     2.97×  4.74×
+  mp_gap             1.12×     1.16×     1.52×     2.43×     2.42×     1.49×     1.46×  1.66×
+  mp_e_form          1.08×     1.06×     2.17×     2.89×    10.50×         —         —  3.54×
+
+==============================================================================
+  ARCHITECTURE COMPARISON — coGN vs coNGN (test MAE)
+==============================================================================
+  For each (dataset, split): does coNGN outperform coGN?
+  Ratio = coNGN / coGN. < 1.0 means coNGN is better (lower MAE).
+
+  Dataset        Split                      coGN MAE    coNGN MAE    Ratio  Winner
+  --------------------------------------------------------------------------------
+  jdft2d         index                       47.2395      52.5906    1.11×  coGN
+  jdft2d         chemsys                     47.7605      37.5662    0.79×  coNGN
+  jdft2d         composition                 27.6212      32.6285    1.18×  coGN
+  jdft2d         crystalsys                  75.0794      66.6640    0.89×  coNGN
+  jdft2d         elements                    32.2508      23.8184    0.74×  coNGN
+  jdft2d         periodictablegroups         50.2131      41.9633    0.84×  coNGN
+  jdft2d         pointgroup                  65.8390      67.6690    1.03×  coGN
+  jdft2d         sgnum                       33.6086      34.4012    1.02×  coGN
+  phonons        index                       45.2454      29.1698    0.64×  coNGN
+  phonons        chemsys                     43.1580      36.2685    0.84×  coNGN
+  phonons        composition                 46.7568      44.9382    0.96×  coNGN
+  phonons        crystalsys                  58.8550      58.8430    1.00×  coNGN
+  phonons        elements                    95.3113      93.1409    0.98×  coNGN
+  phonons        periodictablegroups         78.6954      70.6295    0.90×  coNGN
+  phonons        pointgroup                  55.3755      54.9225    0.99×  coNGN
+  phonons        sgnum                       49.6307      49.5262    1.00×  coNGN
+  log_gvrh       index                        0.0744       0.0714    0.96×  coNGN
+  log_gvrh       chemsys                      0.0753       0.0700    0.93×  coNGN
+  log_gvrh       composition                  0.0780       0.0723    0.93×  coNGN
+  log_gvrh       crystalsys                   0.0880       0.0767    0.87×  coNGN
+  log_gvrh       elements                     0.1091       0.0995    0.91×  coNGN
+  log_gvrh       periodictablegroups          0.1300       0.1115    0.86×  coNGN
+  log_gvrh       pointgroup                   0.1027       0.0901    0.88×  coNGN
+  log_gvrh       sgnum                        0.1097       0.0995    0.91×  coNGN
+  log_kvrh       index                        0.0597       0.0507    0.85×  coNGN
+  log_kvrh       chemsys                      0.0573       0.0492    0.86×  coNGN
+  log_kvrh       composition                  0.0605       0.0532    0.88×  coNGN
+  log_kvrh       crystalsys                   0.0654       0.0525    0.80×  coNGN
+  log_kvrh       elements                     0.0697       0.0603    0.86×  coNGN
+  log_kvrh       periodictablegroups          0.1587       0.1079    0.68×  coNGN
+  log_kvrh       pointgroup                   0.0684       0.0564    0.82×  coNGN
+  log_kvrh       sgnum                        0.0690       0.0575    0.83×  coNGN
+  perovskites    index                        0.0285       0.0306    1.07×  coGN
+  perovskites    chemsys                      0.0269       0.0295    1.10×  coGN
+  perovskites    composition                  0.0304       0.0321    1.05×  coGN
+  perovskites    crystalsys                   0.0884       0.0911    1.03×  coGN
+  perovskites    elements                     0.3584       0.3300    0.92×  coNGN
+  perovskites    periodictablegroups          0.3610       0.3387    0.94×  coNGN
+  perovskites    pointgroup                   0.1075       0.1028    0.96×  coNGN
+  perovskites    sgnum                        0.0983       0.0909    0.92×  coNGN
+  mp_gap         index                        0.1972       0.2001    1.01×  coGN
+  mp_gap         chemsys                      0.2290       0.2247    0.98×  coNGN
+  mp_gap         composition                  0.2337       0.2317    0.99×  coNGN
+  mp_gap         crystalsys                   0.3288       0.3043    0.93×  coNGN
+  mp_gap         elements                     0.4815       0.4855    1.01×  coGN
+  mp_gap         periodictablegroups          0.4287       0.4850    1.13×  coGN
+  mp_gap         pointgroup                   0.3124       0.2988    0.96×  coNGN
+  mp_gap         sgnum                        0.2935       0.2931    1.00×  coNGN
+  mp_e_form      index                        0.0216       0.0215    1.00×  coNGN
+  mp_e_form      chemsys                      0.0237       0.0233    0.98×  coNGN
+  mp_e_form      composition                  0.0243       0.0228    0.94×  coNGN
+  mp_e_form      crystalsys                   0.0484       0.0467    0.97×  coNGN
+  mp_e_form      elements                     0.0595       0.0622    1.05×  coGN
+  mp_e_form      periodictablegroups          0.2198       0.2258    1.03×  coGN
+
+  Summary: coGN wins 13×, coNGN wins 41×, ties 0×, missing 2×
+  (out of 54 completed head-to-head comparisons)
+
+==============================================================================
+  SPLIT TYPE DIFFICULTY RANKING
+==============================================================================
+  Average OOD degradation ratio across all datasets and models.
+  Higher = harder OOD challenge (model degrades more).
+
+  Split                     Avg ratio      Min      Max    N
+  ------------------------------------------------------------
+  periodictablegroups           4.51×    0.80×   12.68×   14
+  elements                      3.25×    0.45×   12.59×   14
+  crystalsys                    1.73×    1.04×    3.10×   14
+  pointgroup                    1.68×    1.00×    3.77×   13
+  sgnum                         1.56×    0.65×    3.45×   12
+  composition                   1.04×    0.58×    1.54×   14
+  chemsys                       1.02×    0.71×    1.24×   14
+
+==============================================================================
+  KEY FINDINGS
+==============================================================================
+
+  Top 5 worst OOD degradations (largest ratio):
+    perovskites/periodictablegroups/coGN: 0.3610 vs i.i.d. 0.0285 → 12.68×
+    perovskites/elements/coGN: 0.3584 vs i.i.d. 0.0285 → 12.59×
+    perovskites/periodictablegroups/coNGN: 0.3387 vs i.i.d. 0.0306 → 11.06×
+    perovskites/elements/coNGN: 0.3300 vs i.i.d. 0.0306 → 10.78×
+    mp_e_form/periodictablegroups/coNGN: 0.2258 vs i.i.d. 0.0215 → 10.50×
+
+  Top 5 most robust (smallest ratio, closest to i.i.d.):
+    jdft2d/elements/coNGN: 23.8184 vs i.i.d. 52.5906 → 0.45×
+    jdft2d/composition/coGN: 27.6212 vs i.i.d. 47.2395 → 0.58×
+    jdft2d/composition/coNGN: 32.6285 vs i.i.d. 52.5906 → 0.62×
+    jdft2d/sgnum/coNGN: 34.4012 vs i.i.d. 52.5906 → 0.65×
+    jdft2d/elements/coGN: 32.2508 vs i.i.d. 47.2395 → 0.68×
+
+  i.i.d. baselines (index split, test MAE):
+    jdft2d/coGN: 47.2395 meV/atom
+    jdft2d/coNGN: 52.5906 meV/atom
+    phonons/coGN: 45.2454 cm⁻¹
+    phonons/coNGN: 29.1698 cm⁻¹
+    log_gvrh/coGN: 0.0744 log(GPa)
+    log_gvrh/coNGN: 0.0714 log(GPa)
+    log_kvrh/coGN: 0.0597 log(GPa)
+    log_kvrh/coNGN: 0.0507 log(GPa)
+    perovskites/coGN: 0.0285 eV/unit cell
+    perovskites/coNGN: 0.0306 eV/unit cell
+    mp_gap/coGN: 0.1972 eV
+    mp_gap/coNGN: 0.2001 eV
+    mp_e_form/coGN: 0.0216 eV/atom
+    mp_e_form/coNGN: 0.0215 eV/atom
+
+  Training time summary (total GPU-hours, completed runs):
+    Total training time across all completed runs: 437.4 GPU-hours
+
+  CSVs saved to results/phase2/analysis/
+    master_table.csv     — 109 rows
+    degradation_table.csv — 95 rows
+
+  Done. Re-run once the final 3 runs complete to get the full picture.

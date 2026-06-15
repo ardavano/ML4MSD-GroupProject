@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "dataset": "phonons",
+    "split": "pointgroup",
+    "model": "coNGN",
+    "split_ratio": "0.7-0.1-0.2",
+    "epochs": 600,
+    "batch_size": 64,
+    "lr_init": 0.0005,
+    "lr_final": 1e-05,
+    "lr_schedule": "PolynomialDecay (linear)",
+    "preprocessor": "VoronoiAsymmetricUnitCell(1e-6)",
+    "n_train": 938,
+    "n_val": 133,
+    "n_test": 194,
+    "train_time_s": 525.1526854038239
+  },
+  "train": {
+    "mae": 0.4350224354199469,
+    "rmse": 2.3716013027669285,
+    "r2": 0.9999778998660218
+  },
+  "val": {
+    "mae": 31.652210947378702,
+    "rmse": 48.10961162643314,
+    "r2": 0.9907593725064179
+  },
+  "test": {
+    "mae": 54.92250063053021,
+    "rmse": 112.84012948377003,
+    "r2": 0.9308600411224497
+  }
+}

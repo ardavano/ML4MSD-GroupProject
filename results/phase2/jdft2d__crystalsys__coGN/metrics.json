@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "dataset": "jdft2d",
+    "split": "crystalsys",
+    "model": "coGN",
+    "split_ratio": "0.7-0.1-0.2",
+    "epochs": 800,
+    "batch_size": 64,
+    "lr_init": 0.0005,
+    "lr_final": 1e-05,
+    "lr_schedule": "PolynomialDecay (linear)",
+    "preprocessor": "KNNAsymmetricUnitCell(24)",
+    "n_train": 478,
+    "n_val": 68,
+    "n_test": 90,
+    "train_time_s": 193.58011674880981
+  },
+  "train": {
+    "mae": 0.9783368443178396,
+    "rmse": 7.168542389393364,
+    "r2": 0.995051079254451
+  },
+  "val": {
+    "mae": 60.11560658527344,
+    "rmse": 185.57195742030575,
+    "r2": 0.12150547230596931
+  },
+  "test": {
+    "mae": 75.07944176512312,
+    "rmse": 203.63144199850603,
+    "r2": -0.00689849474453208
+  }
+}

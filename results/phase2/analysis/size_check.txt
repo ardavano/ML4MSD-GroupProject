@@ -1,0 +1,18 @@
+=== results/phase2/ total ===
+158M	/projects/d2r2/ardavan/ml4msd_group_project/results/phase2/
+
+=== Breakdown by content type ===
+208K	/projects/d2r2/ardavan/ml4msd_group_project/results/phase2/analysis/
+366K	/projects/d2r2/ardavan/ml4msd_group_project/scripts/
+
+=== metrics.json files only ===
+112	total
+
+=== prediction CSVs only ===
+150134	total
+
+=== run.log files only ===
+10813	total
+
+=== model checkpoints? ===
+(empty = no checkpoints saved)

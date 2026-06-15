@@ -1,49 +1,35 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
+# Large data files — not tracked
+data/.OneDrive_*.zip.*
+data/matbench_datasets/
+data/GroupProjectSplits/
+data/Splits-Yue/
 
-# C extensions
-*.so
+# Per-run outputs — only metrics and analysis go to git, not raw predictions
+results/phase2/*/predictions_*.csv
+results/phase2/*/run.log
+results/phase2/__pycache__/
 
-# Jupyter Notebook checkpoints
+# Python cache
+**/__pycache__/
+**/*.pyc
+**/*.pyo
 .ipynb_checkpoints/
 
-# Environment
-.env
-.venv
-env/
-venv/
-ENV/
+# Phase 1 historical outputs — not needed in repo
+results/coGN/
+results/coNGN/
+results/coGN_matfold/
+results/coNGN_matfold/
+results/MODNet/
+models/
+logs/
 
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
+# Cluster-specific
+*.err
+*.out
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Data files (better to keep on HPC)
-data/
-
-# Temporary scripts
-scripts/temp_*.py
-scripts/slurm_*.slurm
-
-# SLURM error files
-logs/*.err
-
-# Large files 
-*.h5
-*.hdf5
-*.pkl
-*.pickle
-
-# Don't ignore these
-!results/
-!results/**/*.json
-!results/**/*.csv
-!results/**/*_model/
+# Phase 2 per-run large files — not tracked (158MB total)
+results/phase2/*/predictions_*.csv
+results/phase2/*/run.log
+results/phase2/_*.log
+results/phase2/_*.tee.log

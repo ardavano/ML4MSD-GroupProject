@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "dataset": "log_kvrh",
+    "split": "chemsys",
+    "model": "coNGN",
+    "split_ratio": "0.7-0.1-0.2",
+    "epochs": 600,
+    "batch_size": 64,
+    "lr_init": 0.0005,
+    "lr_final": 1e-05,
+    "lr_schedule": "PolynomialDecay (linear)",
+    "preprocessor": "VoronoiAsymmetricUnitCell(1e-6)",
+    "n_train": 7682,
+    "n_val": 1097,
+    "n_test": 2204,
+    "train_time_s": 3940.1389520168304
+  },
+  "train": {
+    "mae": 0.0004039736181923174,
+    "rmse": 0.0021611030917682433,
+    "r2": 0.9999654031780073
+  },
+  "val": {
+    "mae": 0.052855090324506304,
+    "rmse": 0.1179841052733111,
+    "r2": 0.901863365201068
+  },
+  "test": {
+    "mae": 0.04915238963001038,
+    "rmse": 0.09970193449660286,
+    "r2": 0.9261243563206558
+  }
+}

@@ -1,0 +1,628 @@
+"""
+launch_batch.py — Phase 2 OOD batch launcher (production-grade, signal-safe).
+
+Designed for SLURM job on d4047: 2× L40S, runs inside a tmux session so the
+launcher survives ssh disconnects.
+
+Key features
+------------
+- **Per-dataset epoch policy**: paper-exact (coGN 800, coNGN 600) for all
+  datasets. Verbatim Ruff et al. 2024 / Matbench coGN/coNGN configuration.
+- **Resume-safe**: skips runs whose `metrics.json` already exists. Killing and
+  restarting the launcher loses at most the in-flight runs.
+- **Deadline-aware**: stops scheduling new jobs once remaining time drops below
+  the estimated runtime of the next job (with a safety buffer).
+- **Per-run timeout**: a hung subprocess can't burn an entire GPU.
+- **Circuit breaker**: stops if N consecutive runs fail (likely systemic).
+- **Atomic status writes**: status JSON cannot be observed mid-write.
+- **Signal handling (FIXED)**:
+    - Single Ctrl-C → graceful drain. Workers finish current jobs, then exit.
+      In-flight runs complete and write their metrics.json.
+    - Double Ctrl-C → force-kill. Children are explicitly killed via process
+      group. Their metrics.json won't be written, so they'll be re-run on
+      resume. Use this if the in-flight jobs are too slow to wait for.
+    - Each subprocess is started in its own process group via
+      `start_new_session=True`, so the shell-delivered SIGINT does NOT
+      propagate to children automatically.
+- **Per-dataset ETA**: uses observed run times for the same dataset+model,
+  falling back to conservative estimates when no history exists yet.
+
+Usage
+-----
+    conda activate /projects/d2r2/ardavan/conda_envs/cogn_gpu_env
+    python scripts/launch_batch.py --deadline-hours 100
+
+Outputs
+-------
+    results/phase2/_launcher.log       launcher log
+    results/phase2/_status.json        live status snapshot (atomic, every 10 min)
+    results/phase2/_queue.json         planned queue dumped at startup
+    results/phase2/{tag}/run.log       per-run log (stdout+stderr of run_experiment.py)
+    results/phase2/{tag}/metrics.json  per-run metrics (used for resume detection)
+"""
+
+import argparse
+import json
+import os
+import signal
+import subprocess
+import sys
+import threading
+import time
+from collections import defaultdict, deque
+from datetime import datetime
+from pathlib import Path
+
+# ============================================================================
+# CONFIG
+# ============================================================================
+
+PROJECT_ROOT = Path("/projects/d2r2/ardavan/ml4msd_group_project")
+RUN_SCRIPT   = PROJECT_ROOT / "scripts" / "run_experiment.py"
+RESULTS_DIR  = PROJECT_ROOT / "results" / "phase2"
+STATUS_FILE  = RESULTS_DIR / "_status.json"
+QUEUE_FILE   = RESULTS_DIR / "_queue.json"
+LAUNCHER_LOG = RESULTS_DIR / "_launcher.log"
+
+# Two L40S; one worker per GPU
+GPU_IDS = ["0", "1", "2"]
+
+# Datasets in size order (smallest first). All splits of one before moving on.
+DATASETS_IN_ORDER = [
+    "jdft2d", "phonons", "log_gvrh", "log_kvrh", "perovskites", "mp_gap", "mp_e_form",
+]
+
+# "index" first as i.i.d. baseline; OOD splits alphabetical after
+SPLITS_IN_ORDER = [
+    "index", "chemsys", "composition", "crystalsys",
+    "elements", "periodictablegroups", "pointgroup", "sgnum",
+]
+
+MODELS = ["coGN", "coNGN"]
+
+# Epoch policy per dataset.
+#   "paper":      A1 — Ruff et al. 2024 verbatim (coGN 800, coNGN 600)
+#   "compromise": A2 — reduced (300 / 300) — kept available but not used here
+DATASET_EPOCH_POLICY = {
+    "jdft2d":      "paper",
+    "phonons":     "paper",
+    "log_gvrh":    "paper",
+    "log_kvrh":    "paper",
+    "perovskites": "paper",
+    "mp_gap":      "paper",
+    "mp_e_form":   "paper",
+}
+EPOCHS_PAPER      = {"coGN": 800, "coNGN": 600}
+EPOCHS_COMPROMISE = {"coGN": 300, "coNGN": 300}
+
+# Per-run timeout (hours). Generous — only kicks in if a run truly hangs.
+RUN_TIMEOUT_HOURS = {
+    "jdft2d":      0.5,
+    "phonons":     1.0,
+    "log_gvrh":    3.0,
+    "log_kvrh":    3.0,
+    "perovskites": 5.0,
+    "mp_gap":      48.0,
+    "mp_e_form":   64.0,
+}
+
+# Conservative initial runtime estimate (hours) before we have history.
+# Used by deadline-aware scheduling to decide whether the next job will fit.
+INITIAL_RUNTIME_ESTIMATE_HOURS = {
+    "jdft2d":      0.1,
+    "phonons":     0.2,
+    "log_gvrh":    0.7,
+    "log_kvrh":    0.7,
+    "perovskites": 1.5,
+    "mp_gap":      4.0,
+    "mp_e_form":   6.0,
+}
+
+MAX_CONSECUTIVE_FAILURES = 3
+STATUS_INTERVAL_S        = 600       # 10 minutes
+DEFAULT_DEADLINE_HOURS   = 100.0     # set via --deadline-hours
+DEFAULT_BUFFER_HOURS     = 1.0       # don't start jobs in the last hour
+
+# ============================================================================
+# Concurrency state
+# ============================================================================
+
+queue           = deque()
+queue_lock      = threading.Lock()
+state_lock      = threading.Lock()
+in_progress     = {}              # gpu_id -> {tag, epochs, started_at, started_ts, pid}
+completed       = []              # list of result dicts
+shutdown_event  = threading.Event()
+dataset_runtime = defaultdict(list)   # (dataset, model) -> [observed durations in seconds]
+
+# Signal handling state — module level so the handler can read/mutate
+_sigint_count = 0
+
+
+# ============================================================================
+# Helpers
+# ============================================================================
+
+def now_iso():
+    return datetime.now().isoformat(timespec="seconds")
+
+
+def log(msg):
+    line = f"[{now_iso()}] {msg}"
+    print(line, flush=True)
+    try:
+        with open(LAUNCHER_LOG, "a") as f:
+            f.write(line + "\n")
+    except OSError:
+        pass
+
+
+def fmt_duration(seconds):
+    if seconds is None:
+        return "—"
+    if seconds < 60:
+        return f"{seconds:.0f}s"
+    if seconds < 3600:
+        return f"{seconds / 60:.1f}m"
+    if seconds < 86400:
+        return f"{seconds / 3600:.1f}h"
+    return f"{seconds / 86400:.1f}d"
+
+
+def atomic_write_json(path, data):
+    """Write JSON atomically: tmp file + rename. A reader cannot see a partial write."""
+    tmp = path.with_suffix(path.suffix + ".tmp")
+    with open(tmp, "w") as f:
+        json.dump(data, f, indent=2, default=str)
+    tmp.replace(path)
+
+
+def epochs_for(dataset, model):
+    table = EPOCHS_PAPER if DATASET_EPOCH_POLICY.get(dataset, "paper") == "paper" else EPOCHS_COMPROMISE
+    return table[model]
+
+
+def estimate_runtime_seconds(dataset, model):
+    """Estimated wall time for one run. Uses observed history if available."""
+    samples = dataset_runtime.get((dataset, model), [])
+    if samples:
+        return sum(samples) / len(samples)
+    return INITIAL_RUNTIME_ESTIMATE_HOURS[dataset] * 3600
+
+
+def time_left_seconds(deadline_ts, buffer_s):
+    return max(0.0, deadline_ts - time.time() - buffer_s)
+
+
+def build_queue():
+    """Walk dataset × split × model and skip anything already done."""
+    jobs, skipped = [], []
+    for dataset in DATASETS_IN_ORDER:
+        for split in SPLITS_IN_ORDER:
+            for model in MODELS:
+                tag = f"{dataset}__{split}__{model}"
+                if (RESULTS_DIR / tag / "metrics.json").exists():
+                    skipped.append(tag)
+                    continue
+                jobs.append({
+                    "dataset":   dataset,
+                    "split":     split,
+                    "model":     model,
+                    "tag":       tag,
+                    "epochs":    epochs_for(dataset, model),
+                    "policy":    DATASET_EPOCH_POLICY.get(dataset, "paper"),
+                    "timeout_s": int(RUN_TIMEOUT_HOURS[dataset] * 3600),
+                })
+    return jobs, skipped
+
+
+# ============================================================================
+# Status
+# ============================================================================
+
+def write_status(deadline_ts, buffer_s):
+    """Snapshot current state to STATUS_FILE atomically."""
+    with state_lock:
+        n_done    = len(completed)
+        n_failed  = sum(1 for r in completed if r["status"] != "ok")
+        ip_snap   = list(in_progress.items())
+        recent    = list(completed[-5:])
+
+    with queue_lock:
+        n_remaining = len(queue)
+        next_up = [
+            {"tag": j["tag"], "epochs": j["epochs"]}
+            for j in list(queue)[:8]
+        ]
+        # Aggregate ETA: sum estimated runtime over remaining, divide by parallelism
+        est_total = sum(estimate_runtime_seconds(j["dataset"], j["model"]) for j in queue)
+
+    eta_s = est_total / max(len(GPU_IDS), 1)
+    status = {
+        "timestamp":      now_iso(),
+        "deadline":       datetime.fromtimestamp(deadline_ts).isoformat(timespec="seconds"),
+        "time_remaining": fmt_duration(time_left_seconds(deadline_ts, buffer_s)),
+        "totals": {
+            "completed":   n_done,
+            "failed":      n_failed,
+            "in_progress": len(ip_snap),
+            "remaining":   n_remaining,
+        },
+        "in_progress": [
+            {
+                "gpu":        gpu,
+                "tag":        info["tag"],
+                "epochs":     info["epochs"],
+                "started_at": info["started_at"],
+                "elapsed":    fmt_duration(time.time() - info["started_ts"]),
+            }
+            for gpu, info in ip_snap
+        ],
+        "next_up": next_up,
+        "eta":     fmt_duration(eta_s) if eta_s else None,
+        "recent_completed": [
+            {
+                "tag":      r["tag"],
+                "duration": fmt_duration(r["duration_s"]),
+                "status":   r["status"],
+            }
+            for r in recent
+        ],
+    }
+    atomic_write_json(STATUS_FILE, status)
+
+
+def status_writer_thread(deadline_ts, buffer_s):
+    while not shutdown_event.is_set():
+        try:
+            write_status(deadline_ts, buffer_s)
+        except Exception as e:
+            log(f"[status] error: {e}")
+        shutdown_event.wait(timeout=STATUS_INTERVAL_S)
+    # Final snapshot on shutdown
+    try:
+        write_status(deadline_ts, buffer_s)
+    except Exception:
+        pass
+
+
+# ============================================================================
+# Subprocess runner
+# ============================================================================
+
+def run_one_job(job, gpu_id, deadline_ts, buffer_s):
+    """Spawn one subprocess for one (dataset, split, model). Returns status string."""
+    tag       = job["tag"]
+    run_dir   = RESULTS_DIR / tag
+    run_dir.mkdir(parents=True, exist_ok=True)
+    log_file  = run_dir / "run.log"
+    timeout_s = job["timeout_s"]
+
+    cmd = [
+        sys.executable, str(RUN_SCRIPT),
+        "--dataset", job["dataset"],
+        "--split",   job["split"],
+        "--model",   job["model"],
+        "--epochs",  str(job["epochs"]),
+    ]
+    env = os.environ.copy()
+    env["CUDA_VISIBLE_DEVICES"]      = gpu_id
+    env["TF_FORCE_GPU_ALLOW_GROWTH"] = "true"
+    env["TF_CPP_MIN_LOG_LEVEL"]      = "1"
+
+    started_ts  = time.time()
+    started_iso = now_iso()
+    with state_lock:
+        in_progress[gpu_id] = {
+            "tag":        tag,
+            "epochs":     job["epochs"],
+            "started_at": started_iso,
+            "started_ts": started_ts,
+            "pid":        None,   # filled in after Popen below
+        }
+
+    log(f"[GPU {gpu_id}] START {tag}  epochs={job['epochs']}  policy={job['policy']}  "
+        f"timeout={fmt_duration(timeout_s)}")
+
+    proc, status = None, "unknown"
+    try:
+        with open(log_file, "w") as f:
+            f.write(f"=== Launched {started_iso} on GPU {gpu_id}\n")
+            f.write(f"=== Command: {' '.join(cmd)}\n")
+            f.write(f"=== Epochs: {job['epochs']}  Timeout: {fmt_duration(timeout_s)}\n\n")
+            f.flush()
+            # `start_new_session=True` makes the child a process-group leader,
+            # so a SIGINT delivered to the launcher's foreground process group
+            # by the controlling terminal does NOT propagate to the child. The
+            # child only dies if we explicitly send it a signal (which we do
+            # only on second Ctrl-C, see signal_handler).
+            proc = subprocess.Popen(
+                cmd, env=env, cwd=str(PROJECT_ROOT),
+                stdout=f, stderr=subprocess.STDOUT,
+                start_new_session=True,
+            )
+            with state_lock:
+                if gpu_id in in_progress:
+                    in_progress[gpu_id]["pid"] = proc.pid
+            try:
+                rc = proc.wait(timeout=timeout_s)
+                status = "ok" if rc == 0 else f"failed_rc{rc}"
+            except subprocess.TimeoutExpired:
+                log(f"[GPU {gpu_id}] TIMEOUT {tag} after {fmt_duration(timeout_s)} — killing")
+                try:
+                    os.killpg(os.getpgid(proc.pid), signal.SIGTERM)
+                except (ProcessLookupError, PermissionError):
+                    pass
+                try:
+                    proc.wait(timeout=30)
+                except subprocess.TimeoutExpired:
+                    log(f"[GPU {gpu_id}] subprocess unkillable, abandoning")
+                status = "timeout"
+                f.write(f"\n=== KILLED by launcher after {fmt_duration(timeout_s)}\n")
+    except Exception as e:
+        status = f"exception:{type(e).__name__}"
+        log(f"[GPU {gpu_id}] EXCEPTION {tag}: {e}")
+        if proc is not None:
+            try:
+                os.killpg(os.getpgid(proc.pid), signal.SIGTERM)
+            except (ProcessLookupError, PermissionError):
+                pass
+
+    duration = time.time() - started_ts
+    with state_lock:
+        in_progress.pop(gpu_id, None)
+        completed.append({
+            "tag":         tag,
+            "gpu":         gpu_id,
+            "duration_s":  duration,
+            "status":      status,
+            "epochs":      job["epochs"],
+            "finished_at": now_iso(),
+        })
+        if status == "ok":
+            dataset_runtime[(job["dataset"], job["model"])].append(duration)
+
+    log(f"[GPU {gpu_id}] END   {tag}  status={status}  duration={fmt_duration(duration)}")
+
+    # Update status on every transition (cheap, atomic)
+    try:
+        write_status(deadline_ts, buffer_s)
+    except Exception:
+        pass
+    return status
+
+
+# ============================================================================
+# Worker
+# ============================================================================
+
+def worker_thread(gpu_id, deadline_ts, buffer_s):
+    log(f"[GPU {gpu_id}] worker started")
+    consecutive_failures = 0
+
+    while True:
+        if shutdown_event.is_set():
+            log(f"[GPU {gpu_id}] shutdown set, exiting")
+            return
+
+        # Pick next job, respecting deadline
+        with queue_lock:
+            if not queue:
+                log(f"[GPU {gpu_id}] queue empty, exiting")
+                return
+            time_left = time_left_seconds(deadline_ts, buffer_s)
+            if time_left <= 0:
+                log(f"[GPU {gpu_id}] deadline reached — draining queue")
+                queue.clear()
+                return
+
+            head = queue[0]
+            est = estimate_runtime_seconds(head["dataset"], head["model"])
+            if est <= time_left:
+                job = queue.popleft()
+            else:
+                fit_index = None
+                for i, j in enumerate(queue):
+                    if estimate_runtime_seconds(j["dataset"], j["model"]) <= time_left:
+                        fit_index = i
+                        break
+                if fit_index is None:
+                    log(f"[GPU {gpu_id}] no remaining job fits in {fmt_duration(time_left)} "
+                        f"(head '{head['tag']}' est {fmt_duration(est)}). Worker exiting.")
+                    return
+                queue.rotate(-fit_index)
+                job = queue.popleft()
+                queue.rotate(fit_index)
+                log(f"[GPU {gpu_id}] head won't fit; jumping ahead to '{job['tag']}' "
+                    f"(est {fmt_duration(estimate_runtime_seconds(job['dataset'], job['model'])) })")
+
+        status = run_one_job(job, gpu_id, deadline_ts, buffer_s)
+
+        if status == "ok":
+            consecutive_failures = 0
+        else:
+            consecutive_failures += 1
+            if consecutive_failures >= MAX_CONSECUTIVE_FAILURES:
+                log(f"[GPU {gpu_id}] {consecutive_failures} consecutive failures — "
+                    f"triggering global shutdown (likely systemic problem, investigate)")
+                shutdown_event.set()
+                return
+
+
+# ============================================================================
+# Signals
+# ============================================================================
+
+def install_signal_handlers():
+    """
+    Two-stage signal handling:
+      1st Ctrl-C → set shutdown_event. Workers stop picking new jobs but let
+                   current jobs finish. In-flight runs complete and write
+                   their metrics.json.
+      2nd Ctrl-C → force-kill children via process group SIGTERM. Children
+                   die without writing metrics.json; they'll be re-run on
+                   the next launch.
+    """
+    def handler(signum, frame):
+        global _sigint_count
+        _sigint_count += 1
+        if _sigint_count == 1:
+            log(f"Received signal {signum}; graceful shutdown requested. "
+                f"Workers will finish current jobs and exit; no new jobs will start. "
+                f"Press Ctrl-C again to force-kill in-flight jobs.")
+            shutdown_event.set()
+        else:
+            log(f"Second interrupt received — force-killing in-flight subprocesses.")
+            with state_lock:
+                ip_snap = list(in_progress.items())
+            for gpu_id, info in ip_snap:
+                pid = info.get("pid")
+                if not pid:
+                    continue
+                try:
+                    pgid = os.getpgid(pid)
+                    os.killpg(pgid, signal.SIGTERM)
+                    log(f"  Sent SIGTERM to process group {pgid} (GPU {gpu_id}, pid {pid})")
+                except (ProcessLookupError, PermissionError) as e:
+                    log(f"  Could not kill pid {pid} (GPU {gpu_id}): {e}")
+    signal.signal(signal.SIGINT,  handler)
+    signal.signal(signal.SIGTERM, handler)
+
+
+# ============================================================================
+# Pre-flight
+# ============================================================================
+
+def preflight_checks():
+    """Cheap sanity checks; returns True if OK to proceed."""
+    ok = True
+    if not RUN_SCRIPT.exists():
+        log(f"FATAL: run script not found at {RUN_SCRIPT}")
+        ok = False
+    ld = os.environ.get("LD_LIBRARY_PATH", "")
+    if "nvidia/cudnn" not in ld and "cudnn" not in ld.lower():
+        log("WARNING: LD_LIBRARY_PATH does not appear to include nvidia/cudnn libs. "
+            "If TF can't find cuDNN, runs will silently fall back to CPU and be ~10× slower. "
+            "Verify with: python -c \"import tensorflow as tf; print(tf.config.list_physical_devices('GPU'))\"")
+    return ok
+
+
+# ============================================================================
+# Main
+# ============================================================================
+
+def parse_args():
+    p = argparse.ArgumentParser(
+        description="Run the full Phase 2 OOD batch on 2 GPUs in parallel.")
+    p.add_argument("--deadline-hours", type=float, default=DEFAULT_DEADLINE_HOURS,
+                   help="Hours from now after which no new jobs are started. "
+                        "Set this conservatively below your SLURM time limit. "
+                        f"Default: {DEFAULT_DEADLINE_HOURS}")
+    p.add_argument("--buffer-hours", type=float, default=DEFAULT_BUFFER_HOURS,
+                   help="Reserve this much time before the deadline (no jobs started "
+                        f"if remaining < buffer). Default: {DEFAULT_BUFFER_HOURS}")
+    p.add_argument("--dry-run", action="store_true",
+                   help="Print the planned queue and exit without launching anything.")
+    return p.parse_args()
+
+
+def main():
+    args = parse_args()
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+
+    deadline_ts = time.time() + args.deadline_hours * 3600
+    buffer_s    = args.buffer_hours * 3600
+
+    log("=" * 76)
+    log("Phase 2 OOD batch launcher starting")
+    log(f"  Project root:    {PROJECT_ROOT}")
+    log(f"  Run script:      {RUN_SCRIPT}")
+    log(f"  Results dir:     {RESULTS_DIR}")
+    log(f"  GPUs:            {GPU_IDS}")
+    log(f"  Deadline:        {datetime.fromtimestamp(deadline_ts).isoformat(timespec='seconds')}  "
+        f"(in {fmt_duration(args.deadline_hours * 3600)})")
+    log(f"  Deadline buffer: {fmt_duration(buffer_s)}")
+    log("Per-dataset epoch policy:")
+    for d in DATASETS_IN_ORDER:
+        pol = DATASET_EPOCH_POLICY.get(d, "paper")
+        log(f"    {d:14s} -> {pol:11s} (coGN={epochs_for(d, 'coGN')}, "
+            f"coNGN={epochs_for(d, 'coNGN')})")
+
+    if not preflight_checks():
+        log("Pre-flight failed; aborting.")
+        sys.exit(1)
+
+    jobs, skipped = build_queue()
+    n_total = len(jobs) + len(skipped)
+    log(f"Queue: {len(jobs)} to run, {len(skipped)} already done, {n_total} total")
+    if skipped:
+        log(f"  Skipped (sample): {', '.join(skipped[:3])}"
+            + (f", ... ({len(skipped) - 3} more)" if len(skipped) > 3 else ""))
+
+    atomic_write_json(QUEUE_FILE, {
+        "timestamp":  now_iso(),
+        "deadline":   datetime.fromtimestamp(deadline_ts).isoformat(timespec="seconds"),
+        "policy":     DATASET_EPOCH_POLICY,
+        "queued":     jobs,
+        "skipped":    skipped,
+    })
+
+    if args.dry_run:
+        log("Dry-run: not launching. Sample of planned queue:")
+        for j in jobs[:12]:
+            log(f"    {j['tag']}  epochs={j['epochs']}  policy={j['policy']}  "
+                f"timeout={fmt_duration(j['timeout_s'])}")
+        if len(jobs) > 12:
+            log(f"    ... and {len(jobs) - 12} more")
+        est_total_s = sum(estimate_runtime_seconds(j["dataset"], j["model"]) for j in jobs)
+        log(f"Total estimated GPU-time:    {fmt_duration(est_total_s)}")
+        log(f"Wall-time (2 GPUs parallel): {fmt_duration(est_total_s / len(GPU_IDS))}")
+        log(f"Deadline budget:             {fmt_duration(args.deadline_hours * 3600)}")
+        return
+
+    if not jobs:
+        log("Nothing to run.")
+        return
+
+    queue.extend(jobs)
+    install_signal_handlers()
+
+    status_thr = threading.Thread(
+        target=status_writer_thread, args=(deadline_ts, buffer_s),
+        daemon=True, name="status",
+    )
+    status_thr.start()
+
+    workers = []
+    for gpu_id in GPU_IDS:
+        t = threading.Thread(
+            target=worker_thread, args=(gpu_id, deadline_ts, buffer_s),
+            name=f"gpu{gpu_id}",
+        )
+        t.start()
+        workers.append(t)
+
+    for t in workers:
+        t.join()
+
+    shutdown_event.set()
+    status_thr.join(timeout=15)
+
+    n_ok      = sum(1 for r in completed if r["status"] == "ok")
+    n_failed  = sum(1 for r in completed if r["status"] != "ok")
+    n_timeout = sum(1 for r in completed if r["status"] == "timeout")
+    total_s   = sum(r["duration_s"] for r in completed)
+
+    log("=" * 76)
+    log(f"Batch finished. {n_ok} ok, {n_failed} failed ({n_timeout} timeouts).")
+    log(f"Cumulative GPU time used: {fmt_duration(total_s)}")
+    log(f"Skipped (already done at start): {len(skipped)}")
+    if n_failed:
+        log("Failed runs:")
+        for r in completed:
+            if r["status"] != "ok":
+                log(f"  - {r['tag']}: {r['status']}  ({fmt_duration(r['duration_s'])})")
+
+
+if __name__ == "__main__":
+    main()

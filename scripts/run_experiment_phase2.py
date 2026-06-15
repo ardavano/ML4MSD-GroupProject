@@ -1,0 +1,337 @@
+"""
+run_experiment.py
+Single-run trainer for the Phase 2 OOD evaluation.
+
+Uses the verbatim Ruff et al. 2024 configuration:
+  coGN:  KNNAsymmetricUnitCell(k=24), 800 epochs
+  coNGN: VoronoiAsymmetricUnitCell(min_ridge_area=1e-6), 600 epochs
+  batch 64, polynomial LR decay 5e-4 -> 1e-5, MAE loss
+
+Reads 70-10-20 MatFold splits from /projects/d2r2/OOD/.
+Writes metrics.json + predictions_{train,val,test}.csv to results/phase2/{tag}/.
+"""
+
+import argparse
+import json
+import time
+from pathlib import Path
+
+import numpy as np
+import pandas as pd
+import tensorflow as tf
+import networkx as nx
+from pymatgen.core import Structure
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
+
+from kgcnn.literature.coGN import make_model, model_default, model_default_nested
+from kgcnn.crystal.preprocessor import (
+    KNNAsymmetricUnitCell,
+    VoronoiAsymmetricUnitCell,
+)
+from kgcnn.data.transform.scaler.standard import StandardScaler
+
+np.random.seed(42)
+tf.random.set_seed(42)
+
+
+# Dataset metadata: folder under /projects/d2r2/OOD/ and target column name
+OOD_ROOT = Path("/projects/d2r2/OOD")
+
+DATASETS = {
+    "jdft2d":      {"folder": "jdft2d",              "target": "exfoliation_en"},
+    "phonons":     {"folder": "phonons",             "target": "last phdos peak"},
+    "perovskites": {"folder": "perovskites",         "target": "e_form"},
+    "log_gvrh":    {"folder": "gvrh/validated",      "target": "log10(G_VRH)"},
+    "log_kvrh":    {"folder": "kvrh/validated",      "target": "log10(K_VRH)"},
+    "mp_gap":      {"folder": "mp_gap/validated",    "target": "gap pbe"},
+    "mp_e_form":   {"folder": "mp_e_form/validated", "target": "e_form"},
+}
+
+SPLIT_TYPES = [
+    "chemsys", "composition", "crystalsys", "elements",
+    "index", "periodictablegroups", "pointgroup", "sgnum",
+]
+
+SPLIT_RATIO    = "0.7-0.1-0.2"
+BATCH_SIZE     = 64
+LR_INIT        = 5e-4
+LR_FINAL       = 1e-5
+DEFAULT_EPOCHS = {"coGN": 800, "coNGN": 600}
+
+K_NEIGHBORS_COGN = 24
+MIN_RIDGE_AREA   = 1e-6
+
+
+def get_split_paths(dataset, split_type):
+    folder = OOD_ROOT / DATASETS[dataset]["folder"]
+    base   = f"mf.index-val_{split_type}-test_{SPLIT_RATIO}"
+    return (
+        folder / f"{base}.train.csv",
+        folder / f"{base}.validation.csv",
+        folder / f"{base}.test.csv",
+    )
+
+
+def load_split_file(filepath, target_col):
+    df = pd.read_csv(filepath)
+    structures = [Structure.from_dict(eval(s)) for s in df["structure"]]
+    targets    = df[target_col].values
+    mat_index  = df["mat_index"].values
+    return structures, targets, mat_index
+
+
+def get_preprocessor(model):
+    if model == "coGN":
+        return KNNAsymmetricUnitCell(K_NEIGHBORS_COGN)
+    elif model == "coNGN":
+        return VoronoiAsymmetricUnitCell(MIN_RIDGE_AREA)
+    else:
+        raise ValueError(f"Unknown model: {model}")
+
+
+def compute_line_graph_indices(edge_indices):
+    """Build nested line-graph edge indices for coNGN.
+    Connects edge (i,j) to edge (j,k) — needed for angular message passing.
+    """
+    if len(edge_indices) == 0:
+        return np.zeros((0, 2), dtype="int64")
+    targets = edge_indices[:, 1]
+    sources = edge_indices[:, 0]
+    a, b = np.where(targets[:, None] == sources[None, :])
+    return np.stack([a, b], axis=1).astype(np.int64)
+
+
+def graph_to_tensor_data(nx_graph, model):
+    """Extract node/edge arrays from a NetworkX graph returned by the preprocessor."""
+    n_nodes    = len(nx_graph.nodes)
+    nodes_z    = [nx_graph.nodes[n].get("atomic_number", 0) for n in range(n_nodes)]
+    nodes_mult = [nx_graph.nodes[n].get("multiplicity", 1)  for n in range(n_nodes)]
+
+    edges_u, edges_v, edges_offset, edges_ridge = [], [], [], []
+    for u, v, k, data in nx_graph.edges(keys=True, data=True):
+        edges_u.append(u)
+        edges_v.append(v)
+        edges_offset.append(data.get("offset", [0, 0, 0]))
+        if model == "coNGN":
+            edges_ridge.append(data.get("voronoi_ridge_area", 0.0))
+
+    edge_indices = np.array([edges_u, edges_v], dtype="int64").T
+
+    out = {
+        "atomic_number": np.array(nodes_z,    dtype="int32"),
+        "multiplicity":  np.array(nodes_mult, dtype="int32"),
+        "edge_indices":  edge_indices,
+        "offset":        np.array(edges_offset, dtype="float32"),
+    }
+    if model == "coNGN":
+        out["voronoi_ridge_area"]      = np.array(edges_ridge, dtype="float32")
+        out["line_graph_edge_indices"] = compute_line_graph_indices(edge_indices)
+    return out
+
+
+def convert_structures(structures, model):
+    """Run the preprocessor on a list of pymatgen Structures.
+    Skips structures that cause errors and returns valid indices.
+    """
+    preprocessor = get_preprocessor(model)
+    graphs, valid_idx = [], []
+    for i, s in enumerate(structures):
+        try:
+            g = preprocessor(s)
+            if isinstance(g, (nx.MultiDiGraph, nx.DiGraph, nx.Graph)):
+                graphs.append(graph_to_tensor_data(g, model))
+            else:
+                graphs.append(g)
+            valid_idx.append(i)
+        except Exception as e:
+            print(f"  Skipping structure {i}: {e}")
+    return graphs, valid_idx
+
+
+def make_input_dict(graph_list, model):
+    """Convert a list of graph dicts to ragged TF tensors for model.fit()."""
+    out = {
+        "atomic_number": tf.ragged.constant(
+            [g["atomic_number"] for g in graph_list], dtype=tf.int32, ragged_rank=1),
+        "multiplicity": tf.ragged.constant(
+            [g["multiplicity"]  for g in graph_list], dtype=tf.int32, ragged_rank=1),
+        "offset": tf.ragged.constant(
+            [g["offset"] for g in graph_list], dtype=tf.float32, ragged_rank=1),
+    }
+    e_idx = tf.ragged.constant(
+        [g["edge_indices"] for g in graph_list],
+        dtype=tf.int64, inner_shape=(2,), ragged_rank=1)
+    out["edge_indices"] = tf.cast(e_idx, dtype=tf.int32)
+
+    if model == "coNGN":
+        out["voronoi_ridge_area"] = tf.ragged.constant(
+            [g["voronoi_ridge_area"] for g in graph_list],
+            dtype=tf.float32, ragged_rank=1)
+        lg = tf.ragged.constant(
+            [g["line_graph_edge_indices"] for g in graph_list],
+            dtype=tf.int64, inner_shape=(2,), ragged_rank=1)
+        out["line_graph_edge_indices"] = tf.cast(lg, dtype=tf.int32)
+    return out
+
+
+def get_lr_schedule(n_train, batch_size, epochs):
+    """Polynomial decay from LR_INIT to LR_FINAL, matching Ruff et al. paper."""
+    steps = epochs * (n_train / batch_size)
+    return tf.keras.optimizers.schedules.PolynomialDecay(
+        initial_learning_rate=LR_INIT,
+        decay_steps=steps,
+        end_learning_rate=LR_FINAL,
+    )
+
+
+def compute_metrics(y_true, y_pred):
+    return {
+        "mae":  float(mean_absolute_error(y_true, y_pred)),
+        "rmse": float(np.sqrt(mean_squared_error(y_true, y_pred))),
+        "r2":   float(r2_score(y_true, y_pred)),
+    }
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--dataset",     required=True, choices=list(DATASETS))
+    parser.add_argument("--split",       required=True, choices=SPLIT_TYPES)
+    parser.add_argument("--model",       required=True, choices=["coGN", "coNGN"])
+    parser.add_argument("--epochs",      type=int, default=None,
+                        help="Override default epoch count (used for smoke tests).")
+    parser.add_argument("--results_dir", default="results/phase2")
+    args = parser.parse_args()
+
+    epochs     = args.epochs if args.epochs is not None else DEFAULT_EPOCHS[args.model]
+    target_col = DATASETS[args.dataset]["target"]
+    is_nested  = (args.model == "coNGN")
+    run_tag    = f"{args.dataset}__{args.split}__{args.model}"
+    out_dir    = Path(args.results_dir) / run_tag
+    out_dir.mkdir(parents=True, exist_ok=True)
+
+    print("=" * 70)
+    print(f"Run:    {run_tag}")
+    print(f"Target: {target_col}")
+    print(f"Config: epochs={epochs}, batch={BATCH_SIZE}, lr={LR_INIT}->{LR_FINAL}")
+    pp = (f"KNNAsymmetricUnitCell({K_NEIGHBORS_COGN})" if args.model == "coGN"
+          else f"VoronoiAsymmetricUnitCell({MIN_RIDGE_AREA})")
+    print(f"        preprocessor={pp}")
+    print("=" * 70)
+
+    # Load split files
+    train_file, val_file, test_file = get_split_paths(args.dataset, args.split)
+    print(f"\nLoading from {train_file.parent}")
+    train_structs, y_train, idx_train = load_split_file(train_file, target_col)
+    val_structs,   y_val,   idx_val   = load_split_file(val_file,   target_col)
+    test_structs,  y_test,  idx_test  = load_split_file(test_file,  target_col)
+    print(f"  Train: {len(train_structs)}  Val: {len(val_structs)}  Test: {len(test_structs)}")
+
+    # Graph conversion
+    print("\nConverting structures to graphs...")
+    t0 = time.time()
+    train_graphs, t_valid = convert_structures(train_structs, args.model)
+    val_graphs,   v_valid = convert_structures(val_structs,   args.model)
+    test_graphs,  e_valid = convert_structures(test_structs,  args.model)
+    y_train, idx_train = y_train[t_valid], idx_train[t_valid]
+    y_val,   idx_val   = y_val[v_valid],   idx_val[v_valid]
+    y_test,  idx_test  = y_test[e_valid],  idx_test[e_valid]
+    print(f"  Graph conversion: {time.time()-t0:.1f}s")
+    print(f"  After filtering — Train: {len(train_graphs)}  "
+          f"Val: {len(val_graphs)}  Test: {len(test_graphs)}")
+
+    # Build ragged tensor inputs
+    X_train = make_input_dict(train_graphs, args.model)
+    X_val   = make_input_dict(val_graphs,   args.model)
+    X_test  = make_input_dict(test_graphs,  args.model)
+
+    # Scale targets using train statistics only
+    scaler = StandardScaler()
+    yT, yV, yE = y_train.reshape(-1, 1), y_val.reshape(-1, 1), y_test.reshape(-1, 1)
+    scaler.fit(yT)
+
+    # Build model
+    base_cfg = model_default_nested if is_nested else model_default
+    cfg      = base_cfg.copy()
+    keep     = ["atomic_number", "multiplicity", "edge_indices", "offset"]
+    if is_nested:
+        keep += ["voronoi_ridge_area", "line_graph_edge_indices"]
+    cfg["inputs"] = {k: v for k, v in cfg["inputs"].items() if k in keep}
+
+    model = make_model(**cfg)
+    model.compile(
+        optimizer=tf.keras.optimizers.Adam(
+            learning_rate=get_lr_schedule(len(y_train), BATCH_SIZE, epochs)),
+        loss="mae",
+        metrics=["mae"],
+    )
+
+    # Train
+    print(f"\nTraining {args.model} ({epochs} epochs, batch={BATCH_SIZE})")
+    t0 = time.time()
+    model.fit(
+        X_train, scaler.transform(yT),
+        validation_data=(X_val, scaler.transform(yV)),
+        epochs=epochs, batch_size=BATCH_SIZE, verbose=2,
+    )
+    train_time = time.time() - t0
+
+    # Predict and inverse-transform
+    print("\nPredicting...")
+    pred_train = scaler.inverse_transform(model.predict(X_train, verbose=0)).ravel()
+    pred_val   = scaler.inverse_transform(model.predict(X_val,   verbose=0)).ravel()
+    pred_test  = scaler.inverse_transform(model.predict(X_test,  verbose=0)).ravel()
+
+    metrics = {
+        "train": compute_metrics(y_train, pred_train),
+        "val":   compute_metrics(y_val,   pred_val),
+        "test":  compute_metrics(y_test,  pred_test),
+    }
+
+    print(f"\n{'='*70}")
+    print(f"RESULTS — {run_tag}")
+    print(f"{'='*70}")
+    print(f"{'set':<8}{'MAE':>14}{'RMSE':>14}{'R^2':>14}")
+    for s in ["train", "val", "test"]:
+        m = metrics[s]
+        print(f"{s:<8}{m['mae']:>14.4f}{m['rmse']:>14.4f}{m['r2']:>14.4f}")
+    print(f"{'='*70}")
+
+    # Save metrics and predictions
+    out = {
+        "meta": {
+            "dataset":      args.dataset,
+            "split":        args.split,
+            "model":        args.model,
+            "split_ratio":  SPLIT_RATIO,
+            "epochs":       epochs,
+            "batch_size":   BATCH_SIZE,
+            "lr_init":      LR_INIT,
+            "lr_final":     LR_FINAL,
+            "lr_schedule":  "PolynomialDecay (linear)",
+            "preprocessor": pp,
+            "n_train":      len(train_graphs),
+            "n_val":        len(val_graphs),
+            "n_test":       len(test_graphs),
+            "train_time_s": train_time,
+        },
+        **metrics,
+    }
+    with open(out_dir / "metrics.json", "w") as f:
+        json.dump(out, f, indent=2)
+
+    for tag, idx, y_true, y_pred in [
+        ("train", idx_train, y_train, pred_train),
+        ("val",   idx_val,   y_val,   pred_val),
+        ("test",  idx_test,  y_test,  pred_test),
+    ]:
+        pd.DataFrame({
+            "mat_index": idx,
+            "y_true":    y_true,
+            "y_pred":    y_pred,
+        }).to_csv(out_dir / f"predictions_{tag}.csv", index=False)
+
+    print(f"\nSaved to: {out_dir}")
+
+
+if __name__ == "__main__":
+    main()

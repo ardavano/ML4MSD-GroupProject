@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "dataset": "jdft2d",
+    "split": "chemsys",
+    "model": "coNGN",
+    "split_ratio": "0.7-0.1-0.2",
+    "epochs": 600,
+    "batch_size": 64,
+    "lr_init": 0.0005,
+    "lr_final": 1e-05,
+    "lr_schedule": "PolynomialDecay (linear)",
+    "preprocessor": "VoronoiAsymmetricUnitCell(1e-6)",
+    "n_train": 448,
+    "n_val": 63,
+    "n_test": 125,
+    "train_time_s": 334.5683605670929
+  },
+  "train": {
+    "mae": 0.13298686856181113,
+    "rmse": 0.48107770019020446,
+    "r2": 0.999985822119733
+  },
+  "val": {
+    "mae": 56.207520523267036,
+    "rmse": 203.69136519145476,
+    "r2": -0.010165909946417084
+  },
+  "test": {
+    "mae": 37.56619806763806,
+    "rmse": 100.30868108074492,
+    "r2": 0.17952942931801852
+  }
+}

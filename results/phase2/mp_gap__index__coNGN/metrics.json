@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "dataset": "mp_gap",
+    "split": "index",
+    "model": "coNGN",
+    "split_ratio": "0.7-0.1-0.2",
+    "epochs": 600,
+    "batch_size": 64,
+    "lr_init": 0.0005,
+    "lr_final": 1e-05,
+    "lr_schedule": "PolynomialDecay (linear)",
+    "preprocessor": "VoronoiAsymmetricUnitCell(1e-6)",
+    "n_train": 74267,
+    "n_val": 10608,
+    "n_test": 21214,
+    "train_time_s": 80973.66467666626
+  },
+  "train": {
+    "mae": 0.008230547442551967,
+    "rmse": 0.0877225346823125,
+    "r2": 0.9969912104162358
+  },
+  "val": {
+    "mae": 0.19249875396303365,
+    "rmse": 0.4783336398283452,
+    "r2": 0.910881756643488
+  },
+  "test": {
+    "mae": 0.2001135973461035,
+    "rmse": 0.49657425137027555,
+    "r2": 0.9032693724778488
+  }
+}

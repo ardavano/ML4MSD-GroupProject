@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "dataset": "mp_gap",
+    "split": "chemsys",
+    "model": "coNGN",
+    "split_ratio": "0.7-0.1-0.2",
+    "epochs": 600,
+    "batch_size": 64,
+    "lr_init": 0.0005,
+    "lr_final": 1e-05,
+    "lr_schedule": "PolynomialDecay (linear)",
+    "preprocessor": "VoronoiAsymmetricUnitCell(1e-6)",
+    "n_train": 73807,
+    "n_val": 10543,
+    "n_test": 21739,
+    "train_time_s": 81179.59784150124
+  },
+  "train": {
+    "mae": 0.008911039257558184,
+    "rmse": 0.08392893030679115,
+    "r2": 0.9972798309548592
+  },
+  "val": {
+    "mae": 0.1913266742045998,
+    "rmse": 0.4674750765434288,
+    "r2": 0.9154232191104791
+  },
+  "test": {
+    "mae": 0.2247119814202969,
+    "rmse": 0.5148449159685248,
+    "r2": 0.8909028743471695
+  }
+}

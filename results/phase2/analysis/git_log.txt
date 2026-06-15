@@ -1,0 +1,67 @@
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   .gitignore
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	batch_launch.log
+	results/phase2/
+	results/splits_audit_report.json
+	results/splits_validation_report.json
+	run_exp_jdft2d_coNGN_gpu.log
+	scripts/analyze_all_splits.py
+	scripts/analyze_results.py
+	scripts/analyze_results_full.py
+	scripts/analyze_results_old.py
+	scripts/launch_batch.py
+	scripts/launch_batch.py.bak.20260502
+	scripts/launch_batch.py.bak.pre_cleanup
+	scripts/launch_batch_first run.py
+	scripts/launch_batch_phase2.py
+	scripts/run_MODNet.slurm
+	scripts/run_coGN.slurm
+	scripts/run_coGN_matfold.slurm
+	scripts/run_coGN_real.slurm
+	scripts/run_coGN_real_gpt.slurm
+	scripts/run_coNGN.slurm
+	scripts/run_coNGN_matfold.slurm
+	scripts/run_experiment.py
+	scripts/run_experiment.py.bak.pre_cleanup
+	scripts/run_experiment_1.py
+	scripts/run_experiment_phase2.py
+	scripts/setup_environments.sh
+	scripts/slurm_coGN_chemsys.slurm
+	scripts/slurm_coGN_composition.slurm
+	scripts/slurm_coGN_elements.slurm
+	scripts/slurm_coGN_periodictablegroups.slurm
+	scripts/slurm_coGN_pointgroup.slurm
+	scripts/slurm_coGN_sgnum.slurm
+	scripts/slurm_coNGN_composition.slurm
+	scripts/slurm_coNGN_elements.slurm
+	scripts/slurm_coNGN_periodictablegroups.slurm
+	scripts/slurm_coNGN_pointgroup.slurm
+	scripts/slurm_coNGN_sgnum.slurm
+	scripts/temp_coGN_chemsys.py
+	scripts/temp_coGN_composition.py
+	scripts/temp_coGN_elements.py
+	scripts/temp_coGN_periodictablegroups.py
+	scripts/temp_coGN_pointgroup.py
+	scripts/temp_coGN_sgnum.py
+	scripts/temp_coNGN_composition.py
+	scripts/temp_coNGN_elements.py
+	scripts/temp_coNGN_periodictablegroups.py
+	scripts/temp_coNGN_pointgroup.py
+	scripts/temp_coNGN_sgnum.py
+	scripts/test.py
+	scripts/test_MODNet.py
+	scripts/test_coGN.py
+	scripts/test_coGN_real_gpt.py
+	scripts/test_coGN_real_working.py
+	scripts/test_coGN_real_workingWithInference.py
+	scripts/test_coGN_simple.py
+	scripts/test_coNGN_working.py
+	scripts/validate_splits_for_models.py
+
+no changes added to commit (use "git add" and/or "git commit -a")

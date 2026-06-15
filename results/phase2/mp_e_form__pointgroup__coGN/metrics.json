@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "dataset": "mp_e_form",
+    "split": "pointgroup",
+    "model": "coGN",
+    "split_ratio": "0.7-0.1-0.2",
+    "epochs": 800,
+    "batch_size": 64,
+    "lr_init": 0.0005,
+    "lr_final": 1e-05,
+    "lr_schedule": "PolynomialDecay (linear)",
+    "preprocessor": "KNNAsymmetricUnitCell(24)",
+    "n_train": 93409,
+    "n_val": 13346,
+    "n_test": 25966,
+    "train_time_s": 14939.766943454742
+  },
+  "train": {
+    "mae": 0.0009759283133118291,
+    "rmse": 0.009716100583414542,
+    "r2": 0.9999303019806244
+  },
+  "val": {
+    "mae": 0.021270913145368227,
+    "rmse": 0.050933484465510284,
+    "r2": 0.9981157211375511
+  },
+  "test": {
+    "mae": 0.021706458078830638,
+    "rmse": 0.04859048078574222,
+    "r2": 0.9980604270373152
+  }
+}

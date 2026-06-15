@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "dataset": "perovskites",
+    "split": "chemsys",
+    "model": "coNGN",
+    "split_ratio": "0.7-0.1-0.2",
+    "epochs": 600,
+    "batch_size": 64,
+    "lr_init": 0.0005,
+    "lr_final": 1e-05,
+    "lr_schedule": "PolynomialDecay (linear)",
+    "preprocessor": "VoronoiAsymmetricUnitCell(1e-6)",
+    "n_train": 13249,
+    "n_val": 1892,
+    "n_test": 3787,
+    "train_time_s": 5840.506676673889
+  },
+  "train": {
+    "mae": 0.0007718022490024955,
+    "rmse": 0.0017068558556502808,
+    "r2": 0.9999947146693581
+  },
+  "val": {
+    "mae": 0.03164286895546802,
+    "rmse": 0.06310914122301456,
+    "r2": 0.993054892115168
+  },
+  "test": {
+    "mae": 0.02947229959543107,
+    "rmse": 0.04888320648777107,
+    "r2": 0.9955745260981073
+  }
+}

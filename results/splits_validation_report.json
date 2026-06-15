@@ -1,0 +1,662 @@
+{
+  "Yue": {
+    "70-20-10": {
+      "chemsys": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_chemsys-test_0.7-0.2-0.1.train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_chemsys-test_0.7-0.2-0.1.validation.csv",
+          "test": null
+        },
+        "rows": 444,
+        "columns": [
+          "mat_index",
+          "structure",
+          "exfoliation_en"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 444,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "Nb",
+            "S",
+            "S"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      },
+      "composition": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_composition-test_0.7-0.2-0.1.train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_composition-test_0.7-0.2-0.1.validation.csv",
+          "test": null
+        },
+        "rows": 444,
+        "columns": [
+          "mat_index",
+          "structure",
+          "exfoliation_en"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 444,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "Ti",
+            "Ti",
+            "Br"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      },
+      "elements": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_elements-test_0.7-0.2-0.1.train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_elements-test_0.7-0.2-0.1.validation.csv",
+          "test": null
+        },
+        "rows": 452,
+        "columns": [
+          "mat_index",
+          "structure",
+          "exfoliation_en"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 452,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "Sc",
+            "Sc",
+            "P"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      },
+      "pointgroup": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_pointgroup-test_0.7-0.2-0.1.train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_pointgroup-test_0.7-0.2-0.1.validation.csv",
+          "test": null
+        },
+        "rows": 428,
+        "columns": [
+          "mat_index",
+          "structure",
+          "exfoliation_en"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 428,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "Fe",
+            "Fe",
+            "S"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      },
+      "sgnum": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_sgnum-test_0.7-0.2-0.1.train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_sgnum-test_0.7-0.2-0.1.validation.csv",
+          "test": null
+        },
+        "rows": 467,
+        "columns": [
+          "mat_index",
+          "structure",
+          "exfoliation_en"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 467,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "Sr",
+            "O",
+            "O"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      },
+      "periodictablegroups": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_periodictablegroups-test_0.7-0.2-0.1.validation.csv",
+          "test": null
+        },
+        "rows": 427,
+        "columns": [
+          "mat_index",
+          "structure",
+          "exfoliation_en"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 427,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "Ca",
+            "I",
+            "I"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      }
+    },
+    "80-0-20": {
+      "chemsys": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_chemsys-test_0.8-0.0-0.2.train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_chemsys-test_0.8-0.0-0.2.test.csv",
+          "test": null
+        },
+        "rows": 505,
+        "columns": [
+          "mat_index",
+          "structure",
+          "exfoliation_en"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 505,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "I",
+            "I",
+            "Pb"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      },
+      "composition": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_composition-test_0.8-0.0-0.2.train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_composition-test_0.8-0.0-0.2.test.csv",
+          "test": null
+        },
+        "rows": 514,
+        "columns": [
+          "mat_index",
+          "structure",
+          "exfoliation_en"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 514,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "Sb",
+            "Sb",
+            "Te"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      },
+      "elements": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_elements-test_0.8-0.0-0.2.train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_elements-test_0.8-0.0-0.2.test.csv",
+          "test": null
+        },
+        "rows": 497,
+        "columns": [
+          "mat_index",
+          "structure",
+          "exfoliation_en"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 497,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "Hg",
+            "Hg",
+            "I"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      },
+      "pointgroup": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_pointgroup-test_0.8-0.0-0.2.train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_pointgroup-test_0.8-0.0-0.2.test.csv",
+          "test": null
+        },
+        "rows": 477,
+        "columns": [
+          "mat_index",
+          "structure",
+          "exfoliation_en"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 477,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "Sn",
+            "S",
+            "S"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      },
+      "sgnum": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_sgnum-test_0.8-0.0-0.2.train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_sgnum-test_0.8-0.0-0.2.test.csv",
+          "test": null
+        },
+        "rows": 546,
+        "columns": [
+          "mat_index",
+          "structure",
+          "exfoliation_en"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 546,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "Ta",
+            "Se",
+            "Se"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      },
+      "periodictablegroups": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Yue/mf.index-val_periodictablegroups-test_0.8-0.0-0.2.test.csv",
+          "test": null
+        },
+        "rows": 505,
+        "columns": [
+          "mat_index",
+          "structure",
+          "exfoliation_en"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 505,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "Pr",
+            "Pr",
+            "Pr"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      }
+    }
+  },
+  "Dehang": {
+    "70-20-10": {
+      "chemsys": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/chemsys_n_test_min_1/train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/chemsys_n_test_min_1/val.csv",
+          "test": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/chemsys_n_test_min_1/test.csv"
+        },
+        "rows": 884,
+        "columns": [
+          "mat_index",
+          "structure",
+          "TARGET",
+          "composition"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 884,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "Rh",
+            "Rh",
+            "Rh"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      },
+      "composition": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/composition_n_test_min_1/train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/composition_n_test_min_1/val.csv",
+          "test": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/composition_n_test_min_1/test.csv"
+        },
+        "rows": 888,
+        "columns": [
+          "mat_index",
+          "structure",
+          "TARGET",
+          "composition"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 888,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "K",
+            "K",
+            "Se"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      },
+      "elements": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/elements_n_test_min_1/train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/elements_n_test_min_1/val.csv",
+          "test": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/elements_n_test_min_1/test.csv"
+        },
+        "rows": 919,
+        "columns": [
+          "mat_index",
+          "structure",
+          "TARGET",
+          "composition"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 919,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "Li",
+            "Li",
+            "Be"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      },
+      "pointgroup": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/pointgroup_n_test_min_1/train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/pointgroup_n_test_min_1/val.csv",
+          "test": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/pointgroup_n_test_min_1/test.csv"
+        },
+        "rows": 913,
+        "columns": [
+          "mat_index",
+          "structure",
+          "TARGET",
+          "composition"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 913,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "C",
+            "Si"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      },
+      "sgnum": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/sgnum_n_test_min_1/train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/sgnum_n_test_min_1/val.csv",
+          "test": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/sgnum_n_test_min_1/test.csv"
+        },
+        "rows": 784,
+        "columns": [
+          "mat_index",
+          "structure",
+          "TARGET",
+          "composition"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 784,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "P",
+            "P",
+            "P"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      },
+      "periodictablegroups": {
+        "files_found": {
+          "train": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/periodictablegroups_n_test_min_1/train.csv",
+          "validation": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/periodictablegroups_n_test_min_1/val.csv",
+          "test": "/projects/d2r2/ardavan/ml4msd_group_project/data/GroupProjectSplits/Group Project Splits/Splits-Dehang/1207Dehang Li (splits)/1207_Dehang_Li_matbench_phonons_statssplits_70_20_10_n1/periodictablegroups_n_test_min_1/test.csv"
+        },
+        "rows": 840,
+        "columns": [
+          "mat_index",
+          "structure",
+          "TARGET",
+          "composition"
+        ],
+        "has_target": true,
+        "structure_parsing": {
+          "total": 840,
+          "tested": 5,
+          "success": 5,
+          "failures": [],
+          "sample_elements": [
+            "Se",
+            "Se",
+            "Rb"
+          ]
+        },
+        "graph_conversion": {
+          "tested": 3,
+          "success": 3,
+          "failures": []
+        },
+        "status": "OK"
+      }
+    },
+    "80-0-20": {
+      "status": "NOT AVAILABLE"
+    }
+  },
+  "Lianghe": {
+    "70-20-10": {
+      "chemsys": {
+        "status": "NO FILES FOUND"
+      },
+      "composition": {
+        "status": "NO FILES FOUND"
+      },
+      "elements": {
+        "status": "NO FILES FOUND"
+      },
+      "pointgroup": {
+        "status": "NO FILES FOUND"
+      },
+      "sgnum": {
+        "status": "NO FILES FOUND"
+      },
+      "periodictablegroups": {
+        "status": "NO FILES FOUND"
+      }
+    },
+    "80-0-20": {
+      "chemsys": {
+        "status": "NO FILES FOUND"
+      },
+      "composition": {
+        "status": "NO FILES FOUND"
+      },
+      "elements": {
+        "status": "NO FILES FOUND"
+      },
+      "pointgroup": {
+        "status": "NO FILES FOUND"
+      },
+      "sgnum": {
+        "status": "NO FILES FOUND"
+      },
+      "periodictablegroups": {
+        "status": "NO FILES FOUND"
+      }
+    }
+  },
+  "Coenradt (Updated)": {
+    "70-20-10": {
+      "chemsys": {
+        "status": "NO FILES FOUND"
+      },
+      "composition": {
+        "status": "NO FILES FOUND"
+      },
+      "elements": {
+        "status": "NO FILES FOUND"
+      },
+      "pointgroup": {
+        "status": "NO FILES FOUND"
+      },
+      "sgnum": {
+        "status": "NO FILES FOUND"
+      },
+      "periodictablegroups": {
+        "status": "NO FILES FOUND"
+      }
+    },
+    "80-0-20": {
+      "chemsys": {
+        "status": "NO FILES FOUND"
+      },
+      "composition": {
+        "status": "NO FILES FOUND"
+      },
+      "elements": {
+        "status": "NO FILES FOUND"
+      },
+      "pointgroup": {
+        "status": "NO FILES FOUND"
+      },
+      "sgnum": {
+        "status": "NO FILES FOUND"
+      },
+      "periodictablegroups": {
+        "status": "NO FILES FOUND"
+      }
+    }
+  }
+}

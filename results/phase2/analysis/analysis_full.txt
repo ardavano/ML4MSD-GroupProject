@@ -1,0 +1,952 @@
+Loading metrics.json files...
+  Loaded: 112  Missing: 0
+
+Loading prediction CSVs for error distribution analysis...
+  Loading prediction CSVs (sampling large datasets)...
+  Done. Loaded stats for 112 runs.
+
+Building degradation table...
+
+==============================================================================
+  SECTION 1: COMPLETE METRICS SUMMARY (MAE · RMSE · R²)
+==============================================================================
+  All three metrics on all three sets for every run.
+
+
+  [jdft2d  (meV/atom) ⚠️ small-n]
+  Split                   Model    trainMAE    valMAE   testMAE   trnRMSE  valRMSE  tstRMSE    trnR²   valR²   tstR²
+  --------------------------------------------------------------------------------------------------------------
+  index                   coGN       0.7067   27.4903   50.5515    6.0479  56.2257 166.3094    0.998   0.304   0.158
+  index                   coNGN      0.1078   25.1928   49.5725    0.1503  54.0202 170.4787    1.000   0.358   0.116
+  chemsys                 coGN       0.9674   57.4975   35.0080    6.7447 206.7804  92.8330    0.997  -0.041   0.297
+  chemsys                 coNGN      0.1330   56.2075   37.5662    0.4811 203.6914 100.3087    1.000  -0.010   0.180
+  composition             coGN       0.9034   46.0358   27.6212    5.7956 108.9292  58.9164    0.998   0.495   0.450
+  composition             coNGN      0.2266   42.0291   32.6285    0.9328 104.7047  73.5691    1.000   0.533   0.143
+  crystalsys              coGN       0.9783   60.1156   75.0794    7.1685 185.5720 203.6314    0.995   0.122  -0.007
+  crystalsys              coNGN      0.1899   55.1693   66.6640    0.9306 158.5511 197.1528    1.000   0.359   0.056
+  elements                coGN       1.1373   27.8069   32.2508    9.2753  59.0651  95.2518    0.996   0.674   0.345
+  elements                coNGN      0.2782   34.7921   23.8184    2.0999  70.1502  91.8702    1.000   0.540   0.391
+  periodictablegroups     coGN       0.4729   24.7220   50.2131    4.3402  51.2278 150.4694    0.999   0.901  -0.028
+  periodictablegroups     coNGN      0.1355   26.5239   41.9633    0.5196  67.6565 147.4847    1.000   0.827   0.012
+  pointgroup              coGN       0.3669   31.5958   65.8390    3.1132  57.6195 183.2981    0.999   0.537   0.081
+  pointgroup              coNGN      0.1282   24.8033   67.6690    0.4784  62.7149 181.2196    1.000   0.451   0.102
+  sgnum                   coGN       0.6272   51.4920   33.6086    4.9457 209.1786  74.7844    0.999  -0.080   0.470
+  sgnum                   coNGN      0.1287   52.2296   34.4012    0.3014 206.6820  86.5590    1.000  -0.054   0.289
+
+  [phonons  (cm⁻¹)]
+  Split                   Model    trainMAE    valMAE   testMAE   trnRMSE  valRMSE  tstRMSE    trnR²   valR²   tstR²
+  --------------------------------------------------------------------------------------------------------------
+  index                   coGN       0.8962   38.2920   45.2454    2.5270  62.7565 133.3875    1.000   0.984   0.885
+  index                   coNGN      0.4465   33.2146   29.1698    2.0814  65.6119  52.1300    1.000   0.982   0.982
+  chemsys                 coGN       0.7351   34.9515   43.1580    1.3306  55.1754  69.3806    1.000   0.987   0.978
+  chemsys                 coNGN      0.2908   29.1056   36.2685    0.4052  53.4062  66.2530    1.000   0.987   0.980
+  composition             coGN       0.7424   46.4770   46.7568    3.0873 117.9800 114.1628    1.000   0.937   0.947
+  composition             coNGN      0.4022   34.9869   44.9382    2.7104  75.4561 133.4757    1.000   0.974   0.928
+  crystalsys              coGN       0.7578   36.9042   58.8550    1.2943  78.7223 100.1131    1.000   0.962   0.968
+  crystalsys              coNGN      0.2877   33.2286   58.8430    0.4324  67.6613 136.8141    1.000   0.972   0.939
+  elements                coGN       0.9025   52.0637   95.3113    3.8644 109.4590 152.1657    1.000   0.968   0.887
+  elements                coNGN      0.4580   44.2654   93.1409    2.6733 108.1585 153.1603    1.000   0.969   0.885
+  periodictablegroups     coGN       1.2239   31.7259   78.6954    3.2225  50.2520 149.2708    1.000   0.987   0.890
+  periodictablegroups     coNGN      0.4158   26.4722   70.6295    2.0783  49.2270 113.9742    1.000   0.987   0.936
+  pointgroup              coGN       0.7520   36.4099   55.3755    3.0386  67.1175 106.3138    1.000   0.982   0.939
+  pointgroup              coNGN      0.4350   31.6522   54.9225    2.3716  48.1096 112.8401    1.000   0.991   0.931
+  sgnum                   coGN       1.0756   41.8781   49.6307    4.7794  68.4129 107.9820    1.000   0.979   0.927
+  sgnum                   coNGN      0.4870   30.5902   49.5262    2.3159  51.8534 106.8706    1.000   0.988   0.928
+
+  [log_gvrh  (log(GPa))]
+  Split                   Model    trainMAE    valMAE   testMAE   trnRMSE  valRMSE  tstRMSE    trnR²   valR²   tstR²
+  --------------------------------------------------------------------------------------------------------------
+  index                   coGN       0.0005    0.0792    0.0744    0.0035   0.1217   0.1154    1.000   0.893   0.899
+  index                   coNGN      0.0005    0.0746    0.0714    0.0027   0.1179   0.1140    1.000   0.899   0.902
+  chemsys                 coGN       0.0006    0.0739    0.0753    0.0042   0.1136   0.1139    1.000   0.908   0.906
+  chemsys                 coNGN      0.0006    0.0691    0.0700    0.0030   0.1072   0.1078    1.000   0.918   0.915
+  composition             coGN       0.0005    0.0739    0.0780    0.0037   0.1133   0.1177    1.000   0.902   0.899
+  composition             coNGN      0.0005    0.0716    0.0723    0.0031   0.1123   0.1105    1.000   0.904   0.911
+  crystalsys              coGN       0.0005    0.0760    0.0880    0.0031   0.1169   0.1228    1.000   0.896   0.909
+  crystalsys              coNGN      0.0005    0.0708    0.0767    0.0039   0.1119   0.1083    1.000   0.905   0.929
+  elements                coGN       0.0005    0.0757    0.1091    0.0027   0.1130   0.1524    1.000   0.905   0.842
+  elements                coNGN      0.0004    0.0731    0.0995    0.0025   0.1127   0.1416    1.000   0.905   0.863
+  periodictablegroups     coGN       0.0005    0.0746    0.1300    0.0038   0.1161   0.1702    1.000   0.892   0.714
+  periodictablegroups     coNGN      0.0005    0.0729    0.1115    0.0044   0.1141   0.1487    1.000   0.895   0.782
+  pointgroup              coGN       0.0009    0.0738    0.1027    0.0053   0.1126   0.1503    1.000   0.903   0.853
+  pointgroup              coNGN      0.0006    0.0690    0.0901    0.0042   0.1066   0.1282    1.000   0.913   0.893
+  sgnum                   coGN       0.0004    0.0728    0.1097    0.0031   0.1116   0.1551    1.000   0.913   0.828
+  sgnum                   coNGN      0.0005    0.0703    0.0995    0.0041   0.1104   0.1449    1.000   0.915   0.850
+
+  [log_kvrh  (log(GPa))]
+  Split                   Model    trainMAE    valMAE   testMAE   trnRMSE  valRMSE  tstRMSE    trnR²   valR²   tstR²
+  --------------------------------------------------------------------------------------------------------------
+  index                   coGN       0.0004    0.0564    0.0597    0.0050   0.1131   0.1211    1.000   0.908   0.896
+  index                   coNGN      0.0003    0.0506    0.0507    0.0010   0.1039   0.1087    1.000   0.923   0.916
+  chemsys                 coGN       0.0006    0.0623    0.0573    0.0107   0.1301   0.1125    0.999   0.881   0.906
+  chemsys                 coNGN      0.0004    0.0529    0.0492    0.0022   0.1180   0.0997    1.000   0.902   0.926
+  composition             coGN       0.0005    0.0547    0.0605    0.0091   0.1066   0.1137    0.999   0.910   0.910
+  composition             coNGN      0.0003    0.0505    0.0532    0.0018   0.1082   0.1053    1.000   0.908   0.922
+  crystalsys              coGN       0.0005    0.0577    0.0654    0.0087   0.1103   0.1119    0.999   0.915   0.922
+  crystalsys              coNGN      0.0004    0.0497    0.0525    0.0071   0.1033   0.0876    1.000   0.925   0.952
+  elements                coGN       0.0006    0.0662    0.0697    0.0099   0.1207   0.1280    0.999   0.894   0.868
+  elements                coNGN      0.0004    0.0585    0.0603    0.0014   0.1135   0.1141    1.000   0.907   0.895
+  periodictablegroups     coGN       0.0005    0.0493    0.1587    0.0096   0.1002   0.2503    0.999   0.897   0.674
+  periodictablegroups     coNGN      0.0003    0.0439    0.1079    0.0014   0.0935   0.1760    1.000   0.910   0.839
+  pointgroup              coGN       0.0004    0.0565    0.0684    0.0041   0.1155   0.1173    1.000   0.897   0.909
+  pointgroup              coNGN      0.0003    0.0513    0.0564    0.0035   0.1089   0.1013    1.000   0.909   0.932
+  sgnum                   coGN       0.0005    0.0530    0.0690    0.0100   0.0999   0.1164    0.999   0.923   0.900
+  sgnum                   coNGN      0.0004    0.0467    0.0575    0.0088   0.0927   0.0964    0.999   0.934   0.932
+
+  [perovskites  (eV/unit cell)]
+  Split                   Model    trainMAE    valMAE   testMAE   trnRMSE  valRMSE  tstRMSE    trnR²   valR²   tstR²
+  --------------------------------------------------------------------------------------------------------------
+  index                   coGN       0.0005    0.0294    0.0285    0.0006   0.0668   0.0573    1.000   0.992   0.994
+  index                   coNGN      0.0005    0.0310    0.0306    0.0007   0.0623   0.0601    1.000   0.993   0.993
+  chemsys                 coGN       0.0005    0.0301    0.0269    0.0017   0.0635   0.0460    1.000   0.993   0.996
+  chemsys                 coNGN      0.0008    0.0316    0.0295    0.0017   0.0631   0.0489    1.000   0.993   0.996
+  composition             coGN       0.0004    0.0289    0.0304    0.0005   0.0531   0.0656    1.000   0.995   0.992
+  composition             coNGN      0.0004    0.0308    0.0321    0.0005   0.0576   0.0656    1.000   0.994   0.992
+  crystalsys              coGN       0.0004    0.0253    0.0884    0.0005   0.0483   0.1303    1.000   0.995   0.980
+  crystalsys              coNGN      0.0004    0.0289    0.0911    0.0005   0.0556   0.1284    1.000   0.993   0.981
+  elements                coGN       0.0004    0.0285    0.3584    0.0005   0.0602   0.4557    1.000   0.993   0.694
+  elements                coNGN      0.0004    0.0321    0.3300    0.0008   0.0635   0.4129    1.000   0.992   0.749
+  periodictablegroups     coGN       0.0004    0.0262    0.3610    0.0005   0.0505   0.4525    1.000   0.996   0.537
+  periodictablegroups     coNGN      0.0004    0.0296    0.3387    0.0005   0.0531   0.4257    1.000   0.995   0.590
+  pointgroup              coGN       0.0004    0.0308    0.1075    0.0006   0.0686   0.1404    1.000   0.992   0.937
+  pointgroup              coNGN      0.0004    0.0344    0.1028    0.0006   0.0727   0.1351    1.000   0.991   0.941
+  sgnum                   coGN       0.0004    0.0312    0.0983    0.0019   0.0739   0.1267    1.000   0.990   0.949
+  sgnum                   coNGN      0.0005    0.0336    0.0909    0.0019   0.0707   0.1211    1.000   0.991   0.953
+
+  [mp_gap  (eV)]
+  Split                   Model    trainMAE    valMAE   testMAE   trnRMSE  valRMSE  tstRMSE    trnR²   valR²   tstR²
+  --------------------------------------------------------------------------------------------------------------
+  index                   coGN       0.0043    0.1920    0.1972    0.0471   0.4739   0.4762    0.999   0.913   0.911
+  index                   coNGN      0.0082    0.1925    0.2001    0.0877   0.4783   0.4966    0.997   0.911   0.903
+  chemsys                 coGN       0.0042    0.1884    0.2290    0.0468   0.4686   0.5154    0.999   0.915   0.891
+  chemsys                 coNGN      0.0089    0.1913    0.2247    0.0839   0.4675   0.5148    0.997   0.915   0.891
+  composition             coGN       0.0052    0.1886    0.2337    0.0627   0.4652   0.5773    0.998   0.911   0.876
+  composition             coNGN      0.0100    0.1944    0.2317    0.0912   0.4790   0.5859    0.997   0.906   0.873
+  crystalsys              coGN       0.0044    0.1760    0.3288    0.0512   0.4389   0.6360    0.999   0.924   0.837
+  crystalsys              coNGN      0.0057    0.1697    0.3043    0.0707   0.4296   0.6187    0.998   0.927   0.846
+  elements                coGN       0.0047    0.1818    0.4815    0.0571   0.4515   0.9013    0.999   0.920   0.715
+  elements                coNGN      0.0081    0.1727    0.4855    0.0840   0.4298   0.9428    0.997   0.927   0.688
+  periodictablegroups     coGN       0.0046    0.1963    0.4287    0.0556   0.4684   0.8571    0.999   0.918   0.577
+  periodictablegroups     coNGN      0.0071    0.1924    0.4850    0.0823   0.4679   0.9500    0.998   0.918   0.480
+  pointgroup              coGN       0.0040    0.1753    0.3124    0.0390   0.4497   0.6225    0.999   0.922   0.842
+  pointgroup              coNGN      0.0080    0.1761    0.2988    0.1004   0.4628   0.6091    0.996   0.918   0.849
+  sgnum                   coGN       0.0040    0.1795    0.2935    0.0490   0.4416   0.6332    0.999   0.922   0.843
+  sgnum                   coNGN      0.0079    0.1860    0.2931    0.0811   0.4711   0.6417    0.997   0.912   0.839
+
+  [mp_e_form  (eV/atom)]
+  Split                   Model    trainMAE    valMAE   testMAE   trnRMSE  valRMSE  tstRMSE    trnR²   valR²   tstR²
+  --------------------------------------------------------------------------------------------------------------
+  index                   coGN       0.0010    0.0220    0.0216    0.0090   0.0536   0.0526    1.000   0.998   0.998
+  index                   coNGN      0.0005    0.0222    0.0215    0.0078   0.0610   0.0536    1.000   0.997   0.998
+  chemsys                 coGN       0.0011    0.0222    0.0237    0.0082   0.0565   0.0593    1.000   0.998   0.997
+  chemsys                 coNGN      0.0005    0.0219    0.0233    0.0058   0.0582   0.0591    1.000   0.998   0.997
+  composition             coGN       0.0011    0.0215    0.0243    0.0091   0.0505   0.0579    1.000   0.998   0.998
+  composition             coNGN      0.0005    0.0210    0.0228    0.0065   0.0539   0.0572    1.000   0.998   0.998
+  crystalsys              coGN       0.0010    0.0202    0.0484    0.0081   0.0551   0.1139    1.000   0.998   0.990
+  crystalsys              coNGN      0.0005    0.0194    0.0467    0.0074   0.0478   0.1211    1.000   0.998   0.989
+  elements                coGN       0.0009    0.0195    0.0595    0.0067   0.0506   0.1141    1.000   0.998   0.986
+  elements                coNGN      0.0004    0.0183    0.0622    0.0043   0.0507   0.1224    1.000   0.998   0.984
+  periodictablegroups     coGN       0.0011    0.0213    0.2198    0.0087   0.0594   0.3420    1.000   0.997   0.922
+  periodictablegroups     coNGN      0.0005    0.0213    0.2258    0.0069   0.0666   0.3593    1.000   0.997   0.914
+  pointgroup              coGN       0.0010    0.0213    0.0217    0.0097   0.0509   0.0486    1.000   0.998   0.998
+  pointgroup              coNGN      0.0005    0.0217    0.0215    0.0075   0.0540   0.0485    1.000   0.998   0.998
+  sgnum                   coGN       0.0011    0.0208    0.0572    0.0083   0.0653   0.1497    1.000   0.997   0.988
+  sgnum                   coNGN      0.0005    0.0196    0.0586    0.0071   0.0627   0.1805    1.000   0.997   0.983
+
+==============================================================================
+  SECTION 2: GENERALIZATION GAP (train vs test)
+==============================================================================
+  overfitting_ratio = train_mae / test_mae
+  Near 0 = model memorizes training set but fails on test (severe overfitting).
+  Near 1 = train and test performance similar (good generalization).
+
+  Dataset        Split                  Model    trainMAE   testMAE    trnR²   tstR²    ratio  note
+  ----------------------------------------------------------------------------------------------------
+  jdft2d         index                  coGN       0.7067   50.5515    0.998   0.158    0.014  ← severe overfit
+  jdft2d         index                  coNGN      0.1078   49.5725    1.000   0.116    0.002  ← severe overfit
+  jdft2d         chemsys                coGN       0.9674   35.0080    0.997   0.297    0.028  ← severe overfit
+  jdft2d         chemsys                coNGN      0.1330   37.5662    1.000   0.180    0.004  ← severe overfit
+  jdft2d         composition            coGN       0.9034   27.6212    0.998   0.450    0.033  ← severe overfit
+  jdft2d         composition            coNGN      0.2266   32.6285    1.000   0.143    0.007  ← severe overfit
+  jdft2d         crystalsys             coGN       0.9783   75.0794    0.995  -0.007    0.013  ← severe overfit
+  jdft2d         crystalsys             coNGN      0.1899   66.6640    1.000   0.056    0.003  ← severe overfit
+  jdft2d         elements               coGN       1.1373   32.2508    0.996   0.345    0.035  ← severe overfit
+  jdft2d         elements               coNGN      0.2782   23.8184    1.000   0.391    0.012  ← severe overfit
+  jdft2d         periodictablegroups    coGN       0.4729   50.2131    0.999  -0.028    0.009  ← severe overfit
+  jdft2d         periodictablegroups    coNGN      0.1355   41.9633    1.000   0.012    0.003  ← severe overfit
+  jdft2d         pointgroup             coGN       0.3669   65.8390    0.999   0.081    0.006  ← severe overfit
+  jdft2d         pointgroup             coNGN      0.1282   67.6690    1.000   0.102    0.002  ← severe overfit
+  jdft2d         sgnum                  coGN       0.6272   33.6086    0.999   0.470    0.019  ← severe overfit
+  jdft2d         sgnum                  coNGN      0.1287   34.4012    1.000   0.289    0.004  ← severe overfit
+  phonons        index                  coGN       0.8962   45.2454    1.000   0.885    0.020  ← severe overfit
+  phonons        index                  coNGN      0.4465   29.1698    1.000   0.982    0.015  ← severe overfit
+  phonons        chemsys                coGN       0.7351   43.1580    1.000   0.978    0.017  ← severe overfit
+  phonons        chemsys                coNGN      0.2908   36.2685    1.000   0.980    0.008  ← severe overfit
+  phonons        composition            coGN       0.7424   46.7568    1.000   0.947    0.016  ← severe overfit
+  phonons        composition            coNGN      0.4022   44.9382    1.000   0.928    0.009  ← severe overfit
+  phonons        crystalsys             coGN       0.7578   58.8550    1.000   0.968    0.013  ← severe overfit
+  phonons        crystalsys             coNGN      0.2877   58.8430    1.000   0.939    0.005  ← severe overfit
+  phonons        elements               coGN       0.9025   95.3113    1.000   0.887    0.009  ← severe overfit
+  phonons        elements               coNGN      0.4580   93.1409    1.000   0.885    0.005  ← severe overfit
+  phonons        periodictablegroups    coGN       1.2239   78.6954    1.000   0.890    0.016  ← severe overfit
+  phonons        periodictablegroups    coNGN      0.4158   70.6295    1.000   0.936    0.006  ← severe overfit
+  phonons        pointgroup             coGN       0.7520   55.3755    1.000   0.939    0.014  ← severe overfit
+  phonons        pointgroup             coNGN      0.4350   54.9225    1.000   0.931    0.008  ← severe overfit
+  phonons        sgnum                  coGN       1.0756   49.6307    1.000   0.927    0.022  ← severe overfit
+  phonons        sgnum                  coNGN      0.4870   49.5262    1.000   0.928    0.010  ← severe overfit
+  log_gvrh       index                  coGN       0.0005    0.0744    1.000   0.899    0.007  ← severe overfit
+  log_gvrh       index                  coNGN      0.0005    0.0714    1.000   0.902    0.006  ← severe overfit
+  log_gvrh       chemsys                coGN       0.0006    0.0753    1.000   0.906    0.008  ← severe overfit
+  log_gvrh       chemsys                coNGN      0.0006    0.0700    1.000   0.915    0.008  ← severe overfit
+  log_gvrh       composition            coGN       0.0005    0.0780    1.000   0.899    0.007  ← severe overfit
+  log_gvrh       composition            coNGN      0.0005    0.0723    1.000   0.911    0.007  ← severe overfit
+  log_gvrh       crystalsys             coGN       0.0005    0.0880    1.000   0.909    0.005  ← severe overfit
+  log_gvrh       crystalsys             coNGN      0.0005    0.0767    1.000   0.929    0.007  ← severe overfit
+  log_gvrh       elements               coGN       0.0005    0.1091    1.000   0.842    0.004  ← severe overfit
+  log_gvrh       elements               coNGN      0.0004    0.0995    1.000   0.863    0.004  ← severe overfit
+  log_gvrh       periodictablegroups    coGN       0.0005    0.1300    1.000   0.714    0.004  ← severe overfit
+  log_gvrh       periodictablegroups    coNGN      0.0005    0.1115    1.000   0.782    0.004  ← severe overfit
+  log_gvrh       pointgroup             coGN       0.0009    0.1027    1.000   0.853    0.008  ← severe overfit
+  log_gvrh       pointgroup             coNGN      0.0006    0.0901    1.000   0.893    0.007  ← severe overfit
+  log_gvrh       sgnum                  coGN       0.0004    0.1097    1.000   0.828    0.004  ← severe overfit
+  log_gvrh       sgnum                  coNGN      0.0005    0.0995    1.000   0.850    0.005  ← severe overfit
+  log_kvrh       index                  coGN       0.0004    0.0597    1.000   0.896    0.007  ← severe overfit
+  log_kvrh       index                  coNGN      0.0003    0.0507    1.000   0.916    0.005  ← severe overfit
+  log_kvrh       chemsys                coGN       0.0006    0.0573    0.999   0.906    0.010  ← severe overfit
+  log_kvrh       chemsys                coNGN      0.0004    0.0492    1.000   0.926    0.008  ← severe overfit
+  log_kvrh       composition            coGN       0.0005    0.0605    0.999   0.910    0.008  ← severe overfit
+  log_kvrh       composition            coNGN      0.0003    0.0532    1.000   0.922    0.006  ← severe overfit
+  log_kvrh       crystalsys             coGN       0.0005    0.0654    0.999   0.922    0.007  ← severe overfit
+  log_kvrh       crystalsys             coNGN      0.0004    0.0525    1.000   0.952    0.007  ← severe overfit
+  log_kvrh       elements               coGN       0.0006    0.0697    0.999   0.868    0.009  ← severe overfit
+  log_kvrh       elements               coNGN      0.0004    0.0603    1.000   0.895    0.006  ← severe overfit
+  log_kvrh       periodictablegroups    coGN       0.0005    0.1587    0.999   0.674    0.003  ← severe overfit
+  log_kvrh       periodictablegroups    coNGN      0.0003    0.1079    1.000   0.839    0.003  ← severe overfit
+  log_kvrh       pointgroup             coGN       0.0004    0.0684    1.000   0.909    0.006  ← severe overfit
+  log_kvrh       pointgroup             coNGN      0.0003    0.0564    1.000   0.932    0.006  ← severe overfit
+  log_kvrh       sgnum                  coGN       0.0005    0.0690    0.999   0.900    0.007  ← severe overfit
+  log_kvrh       sgnum                  coNGN      0.0004    0.0575    0.999   0.932    0.006  ← severe overfit
+  perovskites    index                  coGN       0.0005    0.0285    1.000   0.994    0.016  ← severe overfit
+  perovskites    index                  coNGN      0.0005    0.0306    1.000   0.993    0.018  ← severe overfit
+  perovskites    chemsys                coGN       0.0005    0.0269    1.000   0.996    0.018  ← severe overfit
+  perovskites    chemsys                coNGN      0.0008    0.0295    1.000   0.996    0.026  ← severe overfit
+  perovskites    composition            coGN       0.0004    0.0304    1.000   0.992    0.014  ← severe overfit
+  perovskites    composition            coNGN      0.0004    0.0321    1.000   0.992    0.012  ← severe overfit
+  perovskites    crystalsys             coGN       0.0004    0.0884    1.000   0.980    0.004  ← severe overfit
+  perovskites    crystalsys             coNGN      0.0004    0.0911    1.000   0.981    0.004  ← severe overfit
+  perovskites    elements               coGN       0.0004    0.3584    1.000   0.694    0.001  ← severe overfit
+  perovskites    elements               coNGN      0.0004    0.3300    1.000   0.749    0.001  ← severe overfit
+  perovskites    periodictablegroups    coGN       0.0004    0.3610    1.000   0.537    0.001  ← severe overfit
+  perovskites    periodictablegroups    coNGN      0.0004    0.3387    1.000   0.590    0.001  ← severe overfit
+  perovskites    pointgroup             coGN       0.0004    0.1075    1.000   0.937    0.004  ← severe overfit
+  perovskites    pointgroup             coNGN      0.0004    0.1028    1.000   0.941    0.004  ← severe overfit
+  perovskites    sgnum                  coGN       0.0004    0.0983    1.000   0.949    0.004  ← severe overfit
+  perovskites    sgnum                  coNGN      0.0005    0.0909    1.000   0.953    0.005  ← severe overfit
+  mp_gap         index                  coGN       0.0043    0.1972    0.999   0.911    0.022  ← severe overfit
+  mp_gap         index                  coNGN      0.0082    0.2001    0.997   0.903    0.041  ← severe overfit
+  mp_gap         chemsys                coGN       0.0042    0.2290    0.999   0.891    0.018  ← severe overfit
+  mp_gap         chemsys                coNGN      0.0089    0.2247    0.997   0.891    0.040  ← severe overfit
+  mp_gap         composition            coGN       0.0052    0.2337    0.998   0.876    0.022  ← severe overfit
+  mp_gap         composition            coNGN      0.0100    0.2317    0.997   0.873    0.043  ← severe overfit
+  mp_gap         crystalsys             coGN       0.0044    0.3288    0.999   0.837    0.013  ← severe overfit
+  mp_gap         crystalsys             coNGN      0.0057    0.3043    0.998   0.846    0.019  ← severe overfit
+  mp_gap         elements               coGN       0.0047    0.4815    0.999   0.715    0.010  ← severe overfit
+  mp_gap         elements               coNGN      0.0081    0.4855    0.997   0.688    0.017  ← severe overfit
+  mp_gap         periodictablegroups    coGN       0.0046    0.4287    0.999   0.577    0.011  ← severe overfit
+  mp_gap         periodictablegroups    coNGN      0.0071    0.4850    0.998   0.480    0.015  ← severe overfit
+  mp_gap         pointgroup             coGN       0.0040    0.3124    0.999   0.842    0.013  ← severe overfit
+  mp_gap         pointgroup             coNGN      0.0080    0.2988    0.996   0.849    0.027  ← severe overfit
+  mp_gap         sgnum                  coGN       0.0040    0.2935    0.999   0.843    0.014  ← severe overfit
+  mp_gap         sgnum                  coNGN      0.0079    0.2931    0.997   0.839    0.027  ← severe overfit
+  mp_e_form      index                  coGN       0.0010    0.0216    1.000   0.998    0.047  ← severe overfit
+  mp_e_form      index                  coNGN      0.0005    0.0215    1.000   0.998    0.024  ← severe overfit
+  mp_e_form      chemsys                coGN       0.0011    0.0237    1.000   0.997    0.045  ← severe overfit
+  mp_e_form      chemsys                coNGN      0.0005    0.0233    1.000   0.997    0.020  ← severe overfit
+  mp_e_form      composition            coGN       0.0011    0.0243    1.000   0.998    0.046  ← severe overfit
+  mp_e_form      composition            coNGN      0.0005    0.0228    1.000   0.998    0.021  ← severe overfit
+  mp_e_form      crystalsys             coGN       0.0010    0.0484    1.000   0.990    0.022  ← severe overfit
+  mp_e_form      crystalsys             coNGN      0.0005    0.0467    1.000   0.989    0.010  ← severe overfit
+  mp_e_form      elements               coGN       0.0009    0.0595    1.000   0.986    0.015  ← severe overfit
+  mp_e_form      elements               coNGN      0.0004    0.0622    1.000   0.984    0.007  ← severe overfit
+  mp_e_form      periodictablegroups    coGN       0.0011    0.2198    1.000   0.922    0.005  ← severe overfit
+  mp_e_form      periodictablegroups    coNGN      0.0005    0.2258    1.000   0.914    0.002  ← severe overfit
+  mp_e_form      pointgroup             coGN       0.0010    0.0217    1.000   0.998    0.045  ← severe overfit
+  mp_e_form      pointgroup             coNGN      0.0005    0.0215    1.000   0.998    0.023  ← severe overfit
+  mp_e_form      sgnum                  coGN       0.0011    0.0572    1.000   0.988    0.019  ← severe overfit
+  mp_e_form      sgnum                  coNGN      0.0005    0.0586    1.000   0.983    0.009  ← severe overfit
+
+  Severe overfitting (ratio < 0.05): 112 runs
+    perovskites/elements/coGN: 0.0010
+    perovskites/periodictablegroups/coGN: 0.0012
+    perovskites/periodictablegroups/coNGN: 0.0012
+    perovskites/elements/coNGN: 0.0013
+    jdft2d/pointgroup/coNGN: 0.0019
+    jdft2d/index/coNGN: 0.0022
+    mp_e_form/periodictablegroups/coNGN: 0.0022
+    log_kvrh/periodictablegroups/coNGN: 0.0027
+    jdft2d/crystalsys/coNGN: 0.0028
+    log_kvrh/periodictablegroups/coGN: 0.0031
+    jdft2d/periodictablegroups/coNGN: 0.0032
+    jdft2d/chemsys/coNGN: 0.0035
+    jdft2d/sgnum/coNGN: 0.0037
+    perovskites/crystalsys/coGN: 0.0040
+    perovskites/pointgroup/coGN: 0.0040
+    log_gvrh/sgnum/coGN: 0.0041
+    log_gvrh/periodictablegroups/coGN: 0.0041
+    log_gvrh/elements/coNGN: 0.0042
+    perovskites/sgnum/coGN: 0.0042
+    perovskites/pointgroup/coNGN: 0.0043
+    perovskites/crystalsys/coNGN: 0.0044
+    log_gvrh/elements/coGN: 0.0045
+    log_gvrh/periodictablegroups/coNGN: 0.0045
+    log_gvrh/sgnum/coNGN: 0.0047
+    phonons/crystalsys/coNGN: 0.0049
+    phonons/elements/coNGN: 0.0049
+    mp_e_form/periodictablegroups/coGN: 0.0051
+    log_kvrh/index/coNGN: 0.0052
+    perovskites/sgnum/coNGN: 0.0054
+    log_gvrh/crystalsys/coGN: 0.0055
+    jdft2d/pointgroup/coGN: 0.0056
+    phonons/periodictablegroups/coNGN: 0.0059
+    log_kvrh/elements/coNGN: 0.0060
+    log_kvrh/composition/coNGN: 0.0060
+    log_kvrh/pointgroup/coNGN: 0.0060
+    log_kvrh/pointgroup/coGN: 0.0063
+    log_gvrh/index/coNGN: 0.0064
+    log_kvrh/sgnum/coNGN: 0.0065
+    log_gvrh/composition/coGN: 0.0066
+    log_gvrh/composition/coNGN: 0.0067
+    mp_e_form/elements/coNGN: 0.0067
+    log_kvrh/sgnum/coGN: 0.0068
+    log_gvrh/pointgroup/coNGN: 0.0068
+    log_gvrh/crystalsys/coNGN: 0.0069
+    jdft2d/composition/coNGN: 0.0069
+    log_kvrh/crystalsys/coGN: 0.0070
+    log_gvrh/index/coGN: 0.0070
+    log_kvrh/index/coGN: 0.0071
+    log_kvrh/crystalsys/coNGN: 0.0073
+    phonons/pointgroup/coNGN: 0.0079
+    log_kvrh/composition/coGN: 0.0079
+    phonons/chemsys/coNGN: 0.0080
+    log_gvrh/chemsys/coNGN: 0.0081
+    log_kvrh/chemsys/coNGN: 0.0082
+    log_gvrh/pointgroup/coGN: 0.0084
+    log_gvrh/chemsys/coGN: 0.0085
+    mp_e_form/sgnum/coNGN: 0.0086
+    log_kvrh/elements/coGN: 0.0088
+    phonons/composition/coNGN: 0.0089
+    jdft2d/periodictablegroups/coGN: 0.0094
+    phonons/elements/coGN: 0.0095
+    phonons/sgnum/coNGN: 0.0098
+    mp_gap/elements/coGN: 0.0099
+    mp_e_form/crystalsys/coNGN: 0.0099
+    log_kvrh/chemsys/coGN: 0.0105
+    mp_gap/periodictablegroups/coGN: 0.0106
+    jdft2d/elements/coNGN: 0.0117
+    perovskites/composition/coNGN: 0.0118
+    mp_gap/pointgroup/coGN: 0.0128
+    phonons/crystalsys/coGN: 0.0129
+    jdft2d/crystalsys/coGN: 0.0130
+    mp_gap/crystalsys/coGN: 0.0134
+    phonons/pointgroup/coGN: 0.0136
+    mp_gap/sgnum/coGN: 0.0137
+    perovskites/composition/coGN: 0.0139
+    jdft2d/index/coGN: 0.0140
+    mp_gap/periodictablegroups/coNGN: 0.0146
+    mp_e_form/elements/coGN: 0.0152
+    phonons/index/coNGN: 0.0153
+    phonons/periodictablegroups/coGN: 0.0156
+    phonons/composition/coGN: 0.0159
+    perovskites/index/coGN: 0.0162
+    mp_gap/elements/coNGN: 0.0168
+    phonons/chemsys/coGN: 0.0170
+    perovskites/chemsys/coGN: 0.0177
+    perovskites/index/coNGN: 0.0177
+    mp_gap/chemsys/coGN: 0.0181
+    jdft2d/sgnum/coGN: 0.0187
+    mp_gap/crystalsys/coNGN: 0.0187
+    mp_e_form/sgnum/coGN: 0.0188
+    mp_e_form/chemsys/coNGN: 0.0196
+    phonons/index/coGN: 0.0198
+    mp_e_form/composition/coNGN: 0.0206
+    mp_e_form/crystalsys/coGN: 0.0215
+    mp_gap/index/coGN: 0.0216
+    phonons/sgnum/coGN: 0.0217
+    mp_gap/composition/coGN: 0.0222
+    mp_e_form/pointgroup/coNGN: 0.0231
+    mp_e_form/index/coNGN: 0.0241
+    perovskites/chemsys/coNGN: 0.0262
+    mp_gap/sgnum/coNGN: 0.0268
+    mp_gap/pointgroup/coNGN: 0.0269
+    jdft2d/chemsys/coGN: 0.0276
+    jdft2d/composition/coGN: 0.0327
+    jdft2d/elements/coGN: 0.0353
+    mp_gap/chemsys/coNGN: 0.0397
+    mp_gap/index/coNGN: 0.0411
+    mp_gap/composition/coNGN: 0.0431
+    mp_e_form/pointgroup/coGN: 0.0450
+    mp_e_form/chemsys/coGN: 0.0454
+    mp_e_form/composition/coGN: 0.0455
+    mp_e_form/index/coGN: 0.0471
+
+==============================================================================
+  SECTION 3: RMSE/MAE RATIO (error distribution structure)
+==============================================================================
+  RMSE/MAE ratio = 1.0: all errors equal (uniform distribution)
+  RMSE/MAE ratio >> 1.0: a few large outlier errors dominate RMSE
+  Practical threshold: ratio > 2.0 = outlier-dominated errors
+
+  Dataset        Split                  Model    test_MAE  test_RMSE   RMSE/MAE  note
+  --------------------------------------------------------------------------------
+  jdft2d         index                  coGN      50.5515   166.3094      3.290  ← outlier-dominated
+  jdft2d         index                  coNGN     49.5725   170.4787      3.439  ← outlier-dominated
+  jdft2d         chemsys                coGN      35.0080    92.8330      2.652  ← outlier-dominated
+  jdft2d         chemsys                coNGN     37.5662   100.3087      2.670  ← outlier-dominated
+  jdft2d         composition            coGN      27.6212    58.9164      2.133  ← outlier-dominated
+  jdft2d         composition            coNGN     32.6285    73.5691      2.255  ← outlier-dominated
+  jdft2d         crystalsys             coGN      75.0794   203.6314      2.712  ← outlier-dominated
+  jdft2d         crystalsys             coNGN     66.6640   197.1528      2.957  ← outlier-dominated
+  jdft2d         elements               coGN      32.2508    95.2518      2.953  ← outlier-dominated
+  jdft2d         elements               coNGN     23.8184    91.8702      3.857  ← outlier-dominated
+  jdft2d         periodictablegroups    coGN      50.2131   150.4694      2.997  ← outlier-dominated
+  jdft2d         periodictablegroups    coNGN     41.9633   147.4847      3.515  ← outlier-dominated
+  jdft2d         pointgroup             coGN      65.8390   183.2981      2.784  ← outlier-dominated
+  jdft2d         pointgroup             coNGN     67.6690   181.2196      2.678  ← outlier-dominated
+  jdft2d         sgnum                  coGN      33.6086    74.7844      2.225  ← outlier-dominated
+  jdft2d         sgnum                  coNGN     34.4012    86.5590      2.516  ← outlier-dominated
+  phonons        index                  coGN      45.2454   133.3875      2.948  ← outlier-dominated
+  phonons        index                  coNGN     29.1698    52.1300      1.787
+  phonons        chemsys                coGN      43.1580    69.3806      1.608
+  phonons        chemsys                coNGN     36.2685    66.2530      1.827
+  phonons        composition            coGN      46.7568   114.1628      2.442  ← outlier-dominated
+  phonons        composition            coNGN     44.9382   133.4757      2.970  ← outlier-dominated
+  phonons        crystalsys             coGN      58.8550   100.1131      1.701
+  phonons        crystalsys             coNGN     58.8430   136.8141      2.325  ← outlier-dominated
+  phonons        elements               coGN      95.3113   152.1657      1.597
+  phonons        elements               coNGN     93.1409   153.1603      1.644
+  phonons        periodictablegroups    coGN      78.6954   149.2708      1.897
+  phonons        periodictablegroups    coNGN     70.6295   113.9742      1.614
+  phonons        pointgroup             coGN      55.3755   106.3138      1.920
+  phonons        pointgroup             coNGN     54.9225   112.8401      2.055  ← outlier-dominated
+  phonons        sgnum                  coGN      49.6307   107.9820      2.176  ← outlier-dominated
+  phonons        sgnum                  coNGN     49.5262   106.8706      2.158  ← outlier-dominated
+  log_gvrh       index                  coGN       0.0744     0.1154      1.551
+  log_gvrh       index                  coNGN      0.0714     0.1140      1.597
+  log_gvrh       chemsys                coGN       0.0753     0.1139      1.513
+  log_gvrh       chemsys                coNGN      0.0700     0.1078      1.540
+  log_gvrh       composition            coGN       0.0780     0.1177      1.509
+  log_gvrh       composition            coNGN      0.0723     0.1105      1.528
+  log_gvrh       crystalsys             coGN       0.0880     0.1228      1.396
+  log_gvrh       crystalsys             coNGN      0.0767     0.1083      1.413
+  log_gvrh       elements               coGN       0.1091     0.1524      1.397
+  log_gvrh       elements               coNGN      0.0995     0.1416      1.424
+  log_gvrh       periodictablegroups    coGN       0.1300     0.1702      1.310
+  log_gvrh       periodictablegroups    coNGN      0.1115     0.1487      1.333
+  log_gvrh       pointgroup             coGN       0.1027     0.1503      1.463
+  log_gvrh       pointgroup             coNGN      0.0901     0.1282      1.423
+  log_gvrh       sgnum                  coGN       0.1097     0.1551      1.414
+  log_gvrh       sgnum                  coNGN      0.0995     0.1449      1.456
+  log_kvrh       index                  coGN       0.0597     0.1211      2.029  ← outlier-dominated
+  log_kvrh       index                  coNGN      0.0507     0.1087      2.146  ← outlier-dominated
+  log_kvrh       chemsys                coGN       0.0573     0.1125      1.962
+  log_kvrh       chemsys                coNGN      0.0492     0.0997      2.028  ← outlier-dominated
+  log_kvrh       composition            coGN       0.0605     0.1137      1.879
+  log_kvrh       composition            coNGN      0.0532     0.1053      1.979
+  log_kvrh       crystalsys             coGN       0.0654     0.1119      1.711
+  log_kvrh       crystalsys             coNGN      0.0525     0.0876      1.669
+  log_kvrh       elements               coGN       0.0697     0.1280      1.836
+  log_kvrh       elements               coNGN      0.0603     0.1141      1.893
+  log_kvrh       periodictablegroups    coGN       0.1587     0.2503      1.577
+  log_kvrh       periodictablegroups    coNGN      0.1079     0.1760      1.631
+  log_kvrh       pointgroup             coGN       0.0684     0.1173      1.715
+  log_kvrh       pointgroup             coNGN      0.0564     0.1013      1.798
+  log_kvrh       sgnum                  coGN       0.0690     0.1164      1.687
+  log_kvrh       sgnum                  coNGN      0.0575     0.0964      1.677
+  perovskites    index                  coGN       0.0285     0.0573      2.011  ← outlier-dominated
+  perovskites    index                  coNGN      0.0306     0.0601      1.964
+  perovskites    chemsys                coGN       0.0269     0.0460      1.710
+  perovskites    chemsys                coNGN      0.0295     0.0489      1.659
+  perovskites    composition            coGN       0.0304     0.0656      2.155  ← outlier-dominated
+  perovskites    composition            coNGN      0.0321     0.0656      2.046  ← outlier-dominated
+  perovskites    crystalsys             coGN       0.0884     0.1303      1.474
+  perovskites    crystalsys             coNGN      0.0911     0.1284      1.409
+  perovskites    elements               coGN       0.3584     0.4557      1.271
+  perovskites    elements               coNGN      0.3300     0.4129      1.251
+  perovskites    periodictablegroups    coGN       0.3610     0.4525      1.254
+  perovskites    periodictablegroups    coNGN      0.3387     0.4257      1.257
+  perovskites    pointgroup             coGN       0.1075     0.1404      1.306
+  perovskites    pointgroup             coNGN      0.1028     0.1351      1.315
+  perovskites    sgnum                  coGN       0.0983     0.1267      1.289
+  perovskites    sgnum                  coNGN      0.0909     0.1211      1.332
+  mp_gap         index                  coGN       0.1972     0.4762      2.415  ← outlier-dominated
+  mp_gap         index                  coNGN      0.2001     0.4966      2.481  ← outlier-dominated
+  mp_gap         chemsys                coGN       0.2290     0.5154      2.251  ← outlier-dominated
+  mp_gap         chemsys                coNGN      0.2247     0.5148      2.291  ← outlier-dominated
+  mp_gap         composition            coGN       0.2337     0.5773      2.471  ← outlier-dominated
+  mp_gap         composition            coNGN      0.2317     0.5859      2.528  ← outlier-dominated
+  mp_gap         crystalsys             coGN       0.3288     0.6360      1.934
+  mp_gap         crystalsys             coNGN      0.3043     0.6187      2.033  ← outlier-dominated
+  mp_gap         elements               coGN       0.4815     0.9013      1.872
+  mp_gap         elements               coNGN      0.4855     0.9428      1.942
+  mp_gap         periodictablegroups    coGN       0.4287     0.8571      1.999
+  mp_gap         periodictablegroups    coNGN      0.4850     0.9500      1.959
+  mp_gap         pointgroup             coGN       0.3124     0.6225      1.993
+  mp_gap         pointgroup             coNGN      0.2988     0.6091      2.039  ← outlier-dominated
+  mp_gap         sgnum                  coGN       0.2935     0.6332      2.158  ← outlier-dominated
+  mp_gap         sgnum                  coNGN      0.2931     0.6417      2.190  ← outlier-dominated
+  mp_e_form      index                  coGN       0.0216     0.0526      2.435  ← outlier-dominated
+  mp_e_form      index                  coNGN      0.0215     0.0536      2.490  ← outlier-dominated
+  mp_e_form      chemsys                coGN       0.0237     0.0593      2.500  ← outlier-dominated
+  mp_e_form      chemsys                coNGN      0.0233     0.0591      2.533  ← outlier-dominated
+  mp_e_form      composition            coGN       0.0243     0.0579      2.381  ← outlier-dominated
+  mp_e_form      composition            coNGN      0.0228     0.0572      2.512  ← outlier-dominated
+  mp_e_form      crystalsys             coGN       0.0484     0.1139      2.355  ← outlier-dominated
+  mp_e_form      crystalsys             coNGN      0.0467     0.1211      2.591  ← outlier-dominated
+  mp_e_form      elements               coGN       0.0595     0.1141      1.919
+  mp_e_form      elements               coNGN      0.0622     0.1224      1.966
+  mp_e_form      periodictablegroups    coGN       0.2198     0.3420      1.556
+  mp_e_form      periodictablegroups    coNGN      0.2258     0.3593      1.591
+  mp_e_form      pointgroup             coGN       0.0217     0.0486      2.239  ← outlier-dominated
+  mp_e_form      pointgroup             coNGN      0.0215     0.0485      2.258  ← outlier-dominated
+  mp_e_form      sgnum                  coGN       0.0572     0.1497      2.619  ← outlier-dominated
+  mp_e_form      sgnum                  coNGN      0.0586     0.1805      3.080  ← outlier-dominated
+
+  --- Average RMSE/MAE ratio by split type ---
+  Split                    avg ratio    median
+  --------------------------------------------------
+  index                        2.327     2.281
+  chemsys                      2.053     1.995
+  composition                  2.199     2.205
+  crystalsys                   1.977     1.822
+  elements                     1.916     1.854
+  periodictablegroups          1.821     1.602
+  pointgroup                   1.927     1.956
+  sgnum                        1.998     2.158
+
+  --- Average RMSE/MAE ratio by dataset ---
+  Dataset          avg ratio    median
+  ----------------------------------------
+  jdft2d               2.852     2.748
+  phonons              2.042     1.908
+  log_gvrh             1.454     1.440
+  log_kvrh             1.826     1.817
+  perovskites          1.544     1.371
+  mp_gap               2.160     2.098
+  mp_e_form            2.314     2.408
+
+==============================================================================
+  SECTION 4: OOD DEGRADATION ON ALL METRICS
+==============================================================================
+  MAE_ratio  = test_mae(OOD)  / test_mae(i.i.d.)
+  RMSE_ratio = test_rmse(OOD) / test_rmse(i.i.d.)
+  ΔR²        = test_r2(i.i.d.) - test_r2(OOD)   (positive = degradation)
+
+  Dataset        Split                  Model    MAE_ratio  RMSE_ratio      ΔR²
+  --------------------------------------------------------------------------------
+  jdft2d         chemsys                coGN         0.69×       0.56×   -0.139
+  jdft2d         chemsys                coNGN        0.76×       0.59×   -0.064
+  jdft2d         composition            coGN         0.55×       0.35×   -0.292
+  jdft2d         composition            coNGN        0.66×       0.43×   -0.027
+  jdft2d         crystalsys             coGN         1.49×       1.22×    0.165
+  jdft2d         crystalsys             coNGN        1.34×       1.16×    0.060
+  jdft2d         elements               coGN         0.64×       0.57×   -0.187
+  jdft2d         elements               coNGN        0.48×       0.54×   -0.275
+  jdft2d         periodictablegroups    coGN         0.99×       0.90×    0.187
+  jdft2d         periodictablegroups    coNGN        0.85×       0.87×    0.104
+  jdft2d         pointgroup             coGN         1.30×       1.10×    0.077
+  jdft2d         pointgroup             coNGN        1.37×       1.06×    0.014
+  jdft2d         sgnum                  coGN         0.66×       0.45×   -0.311
+  jdft2d         sgnum                  coNGN        0.69×       0.51×   -0.174
+  phonons        chemsys                coGN         0.95×       0.52×   -0.094
+  phonons        chemsys                coNGN        1.24×       1.27×    0.002
+  phonons        composition            coGN         1.03×       0.86×   -0.062
+  phonons        composition            coNGN        1.54×       2.56×    0.055
+  phonons        crystalsys             coGN         1.30×       0.75×   -0.083
+  phonons        crystalsys             coNGN        2.02×       2.62×    0.043
+  phonons        elements               coGN         2.11×       1.14×   -0.002
+  phonons        elements               coNGN        3.19×       2.94×    0.097
+  phonons        periodictablegroups    coGN         1.74×       1.12×   -0.005
+  phonons        periodictablegroups    coNGN        2.42×       2.19×    0.047
+  phonons        pointgroup             coGN         1.22×       0.80×   -0.054
+  phonons        pointgroup             coNGN        1.88×       2.16×    0.052
+  phonons        sgnum                  coGN         1.10×       0.81×   -0.042
+  phonons        sgnum                  coNGN        1.70×       2.05×    0.054
+  log_gvrh       chemsys                coGN         1.01×       0.99×   -0.006
+  log_gvrh       chemsys                coNGN        0.98×       0.95×   -0.014
+  log_gvrh       composition            coGN         1.05×       1.02×    0.000
+  log_gvrh       composition            coNGN        1.01×       0.97×   -0.009
+  log_gvrh       crystalsys             coGN         1.18×       1.06×   -0.010
+  log_gvrh       crystalsys             coNGN        1.07×       0.95×   -0.028
+  log_gvrh       elements               coGN         1.47×       1.32×    0.057
+  log_gvrh       elements               coNGN        1.39×       1.24×    0.038
+  log_gvrh       periodictablegroups    coGN         1.75×       1.47×    0.185
+  log_gvrh       periodictablegroups    coNGN        1.56×       1.30×    0.120
+  log_gvrh       pointgroup             coGN         1.38×       1.30×    0.046
+  log_gvrh       pointgroup             coNGN        1.26×       1.12×    0.008
+  log_gvrh       sgnum                  coGN         1.47×       1.34×    0.071
+  log_gvrh       sgnum                  coNGN        1.39×       1.27×    0.052
+  log_kvrh       chemsys                coGN         0.96×       0.93×   -0.010
+  log_kvrh       chemsys                coNGN        0.97×       0.92×   -0.010
+  log_kvrh       composition            coGN         1.01×       0.94×   -0.014
+  log_kvrh       composition            coNGN        1.05×       0.97×   -0.006
+  log_kvrh       crystalsys             coGN         1.10×       0.92×   -0.026
+  log_kvrh       crystalsys             coNGN        1.04×       0.81×   -0.036
+  log_kvrh       elements               coGN         1.17×       1.06×    0.027
+  log_kvrh       elements               coNGN        1.19×       1.05×    0.021
+  log_kvrh       periodictablegroups    coGN         2.66×       2.07×    0.222
+  log_kvrh       periodictablegroups    coNGN        2.13×       1.62×    0.077
+  log_kvrh       pointgroup             coGN         1.15×       0.97×   -0.013
+  log_kvrh       pointgroup             coNGN        1.11×       0.93×   -0.016
+  log_kvrh       sgnum                  coGN         1.16×       0.96×   -0.004
+  log_kvrh       sgnum                  coNGN        1.13×       0.89×   -0.016
+  perovskites    chemsys                coGN         0.94×       0.80×   -0.002
+  perovskites    chemsys                coNGN        0.96×       0.81×   -0.002
+  perovskites    composition            coGN         1.07×       1.14×    0.001
+  perovskites    composition            coNGN        1.05×       1.09×    0.001
+  perovskites    crystalsys             coGN         3.10×       2.27×    0.013
+  perovskites    crystalsys             coNGN        2.98×       2.14×    0.012
+  perovskites    elements               coGN        12.59×       7.96×    0.300
+  perovskites    elements               coNGN       10.78×       6.87×    0.244
+  perovskites    periodictablegroups    coGN        12.68×       7.90×    0.457
+  perovskites    periodictablegroups    coNGN       11.06×       7.08×    0.403
+  perovskites    pointgroup             coGN         3.77×       2.45×    0.057
+  perovskites    pointgroup             coNGN        3.36×       2.25×    0.052
+  perovskites    sgnum                  coGN         3.45×       2.21×    0.045
+  perovskites    sgnum                  coNGN        2.97×       2.01×    0.040
+  mp_gap         chemsys                coGN         1.16×       1.08×    0.020
+  mp_gap         chemsys                coNGN        1.12×       1.04×    0.012
+  mp_gap         composition            coGN         1.19×       1.21×    0.035
+  mp_gap         composition            coNGN        1.16×       1.18×    0.031
+  mp_gap         crystalsys             coGN         1.67×       1.34×    0.074
+  mp_gap         crystalsys             coNGN        1.52×       1.25×    0.057
+  mp_gap         elements               coGN         2.44×       1.89×    0.196
+  mp_gap         elements               coNGN        2.43×       1.90×    0.215
+  mp_gap         periodictablegroups    coGN         2.17×       1.80×    0.334
+  mp_gap         periodictablegroups    coNGN        2.42×       1.91×    0.423
+  mp_gap         pointgroup             coGN         1.58×       1.31×    0.069
+  mp_gap         pointgroup             coNGN        1.49×       1.23×    0.054
+  mp_gap         sgnum                  coGN         1.49×       1.33×    0.068
+  mp_gap         sgnum                  coNGN        1.46×       1.29×    0.065
+  mp_e_form      chemsys                coGN         1.10×       1.13×    0.001
+  mp_e_form      chemsys                coNGN        1.08×       1.10×    0.001
+  mp_e_form      composition            coGN         1.13×       1.10×    0.000
+  mp_e_form      composition            coNGN        1.06×       1.07×    0.000
+  mp_e_form      crystalsys             coGN         2.24×       2.16×    0.008
+  mp_e_form      crystalsys             coNGN        2.17×       2.26×    0.009
+  mp_e_form      elements               coGN         2.75×       2.17×    0.012
+  mp_e_form      elements               coNGN        2.89×       2.28×    0.014
+  mp_e_form      periodictablegroups    coGN        10.17×       6.50×    0.076
+  mp_e_form      periodictablegroups    coNGN       10.50×       6.71×    0.084
+  mp_e_form      pointgroup             coGN         1.00×       0.92×   -0.000
+  mp_e_form      pointgroup             coNGN        1.00×       0.91×   -0.000
+  mp_e_form      sgnum                  coGN         2.65×       2.84×    0.010
+  mp_e_form      sgnum                  coNGN        2.72×       3.37×    0.015
+
+  --- Average degradation per split type (excluding jdft2d) ---
+  Split                    avg MAE_ratio  avg RMSE_ratio   avg ΔR²
+  ----------------------------------------------------------------------
+  chemsys                          1.04×           0.96×    -0.009
+  composition                      1.11×           1.18×     0.003
+  crystalsys                       1.78×           1.54×     0.003
+  elements                         3.70×           2.65×     0.102
+  periodictablegroups              5.10×           3.47×     0.202
+  pointgroup                       1.68×           1.36×     0.021
+  sgnum                            1.89×           1.70×     0.030
+
+==============================================================================
+  SECTION 5: VAL-TEST ASYMMETRY (full quantification)
+==============================================================================
+  val_ratio  = val_mae(OOD)  / test_mae(i.i.d.)
+  test_ratio = test_mae(OOD) / test_mae(i.i.d.)
+  gap        = test_ratio - val_ratio
+  Large gap: validation masked the OOD failure — reporting val would mislead.
+
+  Tag                                             val/iid   test/iid      gap  assessment
+  ------------------------------------------------------------------------------------------
+  perovskites/periodictablegroups/coGN              0.92×     12.68×    11.76  SEVERE: val hides collapse
+  perovskites/elements/coGN                         1.00×     12.59×    11.58  SEVERE: val hides collapse
+  perovskites/periodictablegroups/coNGN             0.97×     11.06×    10.09  SEVERE: val hides collapse
+  perovskites/elements/coNGN                        1.05×     10.78×     9.73  SEVERE: val hides collapse
+  mp_e_form/periodictablegroups/coNGN               0.99×     10.50×     9.50  SEVERE: val hides collapse
+  mp_e_form/periodictablegroups/coGN                0.99×     10.17×     9.18  SEVERE: val hides collapse
+  perovskites/pointgroup/coGN                       1.08×      3.77×     2.69  LARGE: val misleading
+  perovskites/sgnum/coGN                            1.10×      3.45×     2.36  LARGE: val misleading
+  perovskites/pointgroup/coNGN                      1.12×      3.36×     2.23  LARGE: val misleading
+  perovskites/crystalsys/coGN                       0.89×      3.10×     2.21  LARGE: val misleading
+  mp_e_form/elements/coNGN                          0.85×      2.89×     2.04  LARGE: val misleading
+  perovskites/crystalsys/coNGN                      0.94×      2.98×     2.03  LARGE: val misleading
+  perovskites/sgnum/coNGN                           1.10×      2.97×     1.87  moderate gap
+  mp_e_form/elements/coGN                           0.90×      2.75×     1.85  moderate gap
+  log_kvrh/periodictablegroups/coGN                 0.83×      2.66×     1.83  moderate gap
+  mp_e_form/sgnum/coNGN                             0.91×      2.72×     1.81  moderate gap
+  mp_e_form/sgnum/coGN                              0.96×      2.65×     1.68  moderate gap
+  phonons/elements/coNGN                            1.52×      3.19×     1.68  moderate gap
+  mp_gap/elements/coNGN                             0.86×      2.43×     1.56  moderate gap
+  mp_gap/elements/coGN                              0.92×      2.44×     1.52  moderate gap
+  phonons/periodictablegroups/coNGN                 0.91×      2.42×     1.51  moderate gap
+  mp_gap/periodictablegroups/coNGN                  0.96×      2.42×     1.46  moderate gap
+  mp_e_form/crystalsys/coGN                         0.93×      2.24×     1.30  moderate gap
+  mp_e_form/crystalsys/coNGN                        0.90×      2.17×     1.27  moderate gap
+  log_kvrh/periodictablegroups/coNGN                0.87×      2.13×     1.26  moderate gap
+  mp_gap/periodictablegroups/coGN                   1.00×      2.17×     1.18  moderate gap
+  phonons/periodictablegroups/coGN                  0.70×      1.74×     1.04  moderate gap
+  phonons/elements/coGN                             1.15×      2.11×     0.96  moderate gap
+  phonons/crystalsys/coNGN                          1.14×      2.02×     0.88  moderate gap
+  phonons/pointgroup/coNGN                          1.09×      1.88×     0.80  moderate gap
+  mp_gap/crystalsys/coGN                            0.89×      1.67×     0.78  moderate gap
+  log_gvrh/periodictablegroups/coGN                 1.00×      1.75×     0.74  moderate gap
+  mp_gap/pointgroup/coGN                            0.89×      1.58×     0.70  moderate gap
+  mp_gap/crystalsys/coNGN                           0.85×      1.52×     0.67  moderate gap
+  phonons/sgnum/coNGN                               1.05×      1.70×     0.65  moderate gap
+  mp_gap/pointgroup/coNGN                           0.88×      1.49×     0.61  moderate gap
+  mp_gap/sgnum/coGN                                 0.91×      1.49×     0.58  moderate gap
+  log_gvrh/periodictablegroups/coNGN                1.02×      1.56×     0.54  moderate gap
+  mp_gap/sgnum/coNGN                                0.93×      1.46×     0.54  moderate gap
+  log_gvrh/sgnum/coGN                               0.98×      1.47×     0.50  consistent
+  phonons/crystalsys/coGN                           0.82×      1.30×     0.49  consistent
+  log_gvrh/elements/coGN                            1.02×      1.47×     0.45  consistent
+  phonons/pointgroup/coGN                           0.80×      1.22×     0.42  consistent
+  log_gvrh/sgnum/coNGN                              0.99×      1.39×     0.41  consistent
+  log_gvrh/pointgroup/coGN                          0.99×      1.38×     0.39  consistent
+  log_gvrh/elements/coNGN                           1.02×      1.39×     0.37  consistent
+  phonons/composition/coNGN                         1.20×      1.54×     0.34  consistent
+  log_gvrh/pointgroup/coNGN                         0.97×      1.26×     0.30  consistent
+  log_kvrh/sgnum/coGN                               0.89×      1.16×     0.27  consistent
+  phonons/chemsys/coNGN                             1.00×      1.24×     0.25  consistent
+  mp_gap/composition/coGN                           0.96×      1.19×     0.23  consistent
+  log_kvrh/sgnum/coNGN                              0.92×      1.13×     0.21  consistent
+  mp_gap/chemsys/coGN                               0.96×      1.16×     0.21  consistent
+  log_kvrh/pointgroup/coGN                          0.95×      1.15×     0.20  consistent
+  mp_gap/composition/coNGN                          0.97×      1.16×     0.19  consistent
+  phonons/chemsys/coGN                              0.77×      0.95×     0.18  consistent
+  phonons/sgnum/coGN                                0.93×      1.10×     0.17  consistent
+  mp_gap/chemsys/coNGN                              0.96×      1.12×     0.17  consistent
+  log_gvrh/crystalsys/coGN                          1.02×      1.18×     0.16  consistent
+  mp_e_form/composition/coGN                        1.00×      1.13×     0.13  consistent
+  log_kvrh/crystalsys/coGN                          0.97×      1.10×     0.13  consistent
+  log_kvrh/pointgroup/coNGN                         1.01×      1.11×     0.10  consistent
+  log_kvrh/composition/coGN                         0.92×      1.01×     0.10  consistent
+  mp_e_form/composition/coNGN                       0.97×      1.06×     0.08  consistent
+  log_gvrh/crystalsys/coNGN                         0.99×      1.07×     0.08  consistent
+  mp_e_form/chemsys/coGN                            1.03×      1.10×     0.07  consistent
+  mp_e_form/chemsys/coNGN                           1.02×      1.08×     0.07  consistent
+  log_kvrh/elements/coGN                            1.11×      1.17×     0.06  consistent
+  log_gvrh/composition/coGN                         0.99×      1.05×     0.06  consistent
+  log_kvrh/crystalsys/coNGN                         0.98×      1.04×     0.05  consistent
+  log_kvrh/composition/coNGN                        1.00×      1.05×     0.05  consistent
+  perovskites/composition/coGN                      1.02×      1.07×     0.05  consistent
+  perovskites/composition/coNGN                     1.01×      1.05×     0.04  consistent
+  log_kvrh/elements/coNGN                           1.15×      1.19×     0.04  consistent
+  mp_e_form/pointgroup/coGN                         0.98×      1.00×     0.02  consistent
+  log_gvrh/chemsys/coGN                             0.99×      1.01×     0.02  consistent
+  log_gvrh/chemsys/coNGN                            0.97×      0.98×     0.01  consistent
+  log_gvrh/composition/coNGN                        1.00×      1.01×     0.01  consistent
+  phonons/composition/coGN                          1.03×      1.03×     0.01  consistent
+  mp_e_form/pointgroup/coNGN                        1.01×      1.00×    -0.01  consistent
+  perovskites/chemsys/coNGN                         1.03×      0.96×    -0.07  consistent
+  log_kvrh/chemsys/coNGN                            1.04×      0.97×    -0.07  consistent
+  log_kvrh/chemsys/coGN                             1.04×      0.96×    -0.08  consistent
+  perovskites/chemsys/coGN                          1.06×      0.94×    -0.11  consistent
+
+  --- Summary statistics of val-test gap ---
+  Mean gap:   1.350
+  Median gap: 0.434
+  Max gap:    11.756 — perovskites/periodictablegroups/coGN
+  Cases with gap > 2.0: 12
+  Cases with gap > 5.0: 6
+
+==============================================================================
+  SECTION 6: ERROR DISTRIBUTION (from prediction CSVs)
+==============================================================================
+  signed_bias   = mean(y_pred - y_true)  positive=overestimate
+  rmse_mae      = RMSE/MAE ratio from raw predictions (sanity check)
+  p90_err       = 90th percentile of |y_pred - y_true|
+  p95_err       = 95th percentile of |y_pred - y_true|
+  pct_2mae      = % predictions within 2×MAE of true value
+
+  Tag                                           set         bias  RMSE/MAE   p90_err   p95_err  pct_2mae
+  ---------------------------------------------------------------------------------------------------------
+  jdft2d/index/coGN    test    -21.0561     3.290   81.1369  148.8400      91.3%
+  jdft2d/index/coNGN   test    -32.5794     3.439   94.6029  290.9419      90.6%
+  jdft2d/elements/coGN    test      0.5161     2.953   60.4125  120.5735      90.6%
+  jdft2d/elements/coNGN   test     -7.9682     3.857   42.8567   50.8422      93.7%
+  jdft2d/periodictablegroups/coGN    test    -13.8191     2.997   99.6942  239.7921      90.3%
+  jdft2d/periodictablegroups/coNGN   test    -23.3481     3.515   94.3228  161.0598      89.0%
+  phonons/index/coGN    test     14.5077     2.948   80.8495  125.3402      91.3%
+  phonons/index/coNGN   test      5.6579     1.787   64.1148   93.2512      87.7%
+  phonons/elements/coGN    test     29.5310     1.597  213.6714  262.7842      88.3%
+  phonons/elements/coNGN   test     48.8321     1.644  193.2600  231.2941      89.8%
+  phonons/periodictablegroups/coGN    test    -55.4390     1.897  180.2392  350.4048      88.7%
+  phonons/periodictablegroups/coNGN   test    -22.0574     1.614  134.1064  249.7362      90.0%
+  log_gvrh/index/coGN    test      0.0013     1.551    0.1723    0.2319      86.8%
+  log_gvrh/index/coNGN   test      0.0032     1.597    0.1647    0.2303      86.8%
+  log_gvrh/elements/coGN    test     -0.0082     1.397    0.2399    0.3135      87.7%
+  log_gvrh/elements/coNGN   test     -0.0032     1.424    0.2242    0.2864      87.5%
+  log_gvrh/periodictablegroups/coGN    test     -0.0601     1.310    0.2725    0.3304      88.5%
+  log_gvrh/periodictablegroups/coNGN   test     -0.0369     1.333    0.2324    0.2913      88.7%
+  log_kvrh/index/coGN    test      0.0018     2.029    0.1347    0.2324      88.3%
+  log_kvrh/index/coNGN   test      0.0030     2.146    0.1095    0.1773      88.6%
+  log_kvrh/elements/coGN    test      0.0083     1.836    0.1495    0.2473      89.1%
+  log_kvrh/elements/coNGN   test     -0.0003     1.893    0.1261    0.2077      89.1%
+  log_kvrh/periodictablegroups/coGN    test      0.0927     1.577    0.3999    0.5790      85.0%
+  log_kvrh/periodictablegroups/coNGN   test     -0.0004     1.631    0.2653    0.3754      86.6%
+  perovskites/index/coGN    test     -0.0011     2.011    0.0570    0.0804      90.0%
+  perovskites/index/coNGN   test     -0.0030     1.964    0.0640    0.0922      89.1%
+  perovskites/elements/coGN    test      0.0168     1.271    0.7467    0.9406      88.7%
+  perovskites/elements/coNGN   test     -0.0082     1.251    0.6896    0.8484      88.7%
+  perovskites/periodictablegroups/coGN    test      0.0815     1.254    0.7487    0.9151      88.5%
+  perovskites/periodictablegroups/coNGN   test      0.0785     1.257    0.7057    0.8573      88.0%
+  mp_gap/index/coGN    test      0.0355     2.470    0.5243    0.8901      86.6%
+  mp_gap/index/coNGN   test      0.0213     2.492    0.5205    0.8339      86.5%
+  mp_gap/elements/coGN    test      0.0654     1.876    1.4609    2.1987      82.7%
+  mp_gap/elements/coNGN   test      0.0253     1.927    1.5499    2.2008      82.1%
+  mp_gap/periodictablegroups/coGN    test     -0.0943     2.023    1.4388    2.0580      81.9%
+  mp_gap/periodictablegroups/coNGN   test     -0.1754     1.975    1.7497    2.3384      81.1%
+  mp_e_form/index/coGN    test     -0.0034     2.588    0.0499    0.0882      88.8%
+  mp_e_form/index/coNGN   test     -0.0046     2.693    0.0510    0.0865      88.8%
+  mp_e_form/elements/coGN    test     -0.0009     1.853    0.1364    0.2051      87.6%
+  mp_e_form/elements/coNGN   test     -0.0007     1.871    0.1440    0.2187      87.6%
+  mp_e_form/periodictablegroups/coGN    test      0.0851     1.569    0.5615    0.7662      84.8%
+  mp_e_form/periodictablegroups/coNGN   test      0.0968     1.574    0.5875    0.8237      85.1%
+
+  --- Systematic bias summary by split type (test set, all datasets/models) ---
+  elements              : mean_bias=   5.0718  overestimate 7/14  underestimate 7/14
+  periodictablegroups   : mean_bias=  -8.1854  overestimate 5/14  underestimate 9/14
+
+==============================================================================
+  SECTION 7: ARCHITECTURE COMPARISON — QUANTIFIED
+==============================================================================
+  Beyond win/loss: how large is the advantage, and where?
+
+  coGN wins:   14 cases  avg advantage:   5.81%  max:  18.13%
+  coNGN wins:  42 cases  avg advantage:   9.41%  max:  35.53%
+
+  --- coNGN improvement over coGN by dataset (test MAE, all splits averaged) ---
+  jdft2d        : avg improvement    +3.1%  coNGN better in 4/8 splits
+  phonons       : avg improvement    +8.6%  coNGN better in 8/8 splits
+  log_gvrh      : avg improvement    +9.5%  coNGN better in 8/8 splits
+  log_kvrh      : avg improvement   +17.6%  coNGN better in 8/8 splits
+  perovskites   : avg improvement    +0.1%  coNGN better in 4/8 splits
+  mp_gap        : avg improvement    -0.1%  coNGN better in 5/8 splits
+  mp_e_form     : avg improvement    +0.4%  coNGN better in 5/8 splits
+
+  --- coNGN improvement over coGN by split type (all datasets averaged) ---
+  index                 : avg improvement    +6.9%
+  chemsys               : avg improvement    +3.4%
+  composition           : avg improvement    +1.0%
+  crystalsys            : avg improvement    +7.4%
+  elements              : avg improvement    +7.6%
+  periodictablegroups   : avg improvement    +9.0%
+  pointgroup            : avg improvement    +5.4%
+  sgnum                 : avg improvement    +4.1%
+
+  --- Where coNGN advantage is largest (top 10 cases by improvement %) ---
+  phonons/index: coGN=45.2454 → coNGN=29.1698  (+35.5% improvement)
+  log_kvrh/periodictablegroups: coGN=0.1587 → coNGN=0.1079  (+32.0% improvement)
+  jdft2d/elements: coGN=32.2508 → coNGN=23.8184  (+26.1% improvement)
+  log_kvrh/crystalsys: coGN=0.0654 → coNGN=0.0525  (+19.7% improvement)
+  log_kvrh/pointgroup: coGN=0.0684 → coNGN=0.0564  (+17.6% improvement)
+  log_kvrh/sgnum: coGN=0.0690 → coNGN=0.0575  (+16.7% improvement)
+  jdft2d/periodictablegroups: coGN=50.2131 → coNGN=41.9633  (+16.4% improvement)
+  phonons/chemsys: coGN=43.1580 → coNGN=36.2685  (+16.0% improvement)
+  log_kvrh/index: coGN=0.0597 → coNGN=0.0507  (+15.1% improvement)
+  log_kvrh/chemsys: coGN=0.0573 → coNGN=0.0492  (+14.3% improvement)
+
+  --- OOD vs i.i.d. architecture advantage (does coNGN help more under OOD?) ---
+  Avg coNGN improvement under i.i.d. splits: +6.9%
+  Avg coNGN improvement under OOD splits:    +5.4%
+  Note: positive = coNGN better. Similar values suggest coNGN's
+  advantage is structural (better i.i.d.) rather than OOD-specific.
+
+==============================================================================
+  SECTION 8: SPLIT DIFFICULTY — STATISTICS + BOOTSTRAP CI
+==============================================================================
+  95% bootstrap confidence intervals on mean degradation ratio.
+  All: all datasets. Large: excludes jdft2d.
+
+  Split                    mean(all)                     CI   mean(large)                     CI    median      std  N
+  ------------------------------------------------------------------------------------------------------------------------
+  periodictablegroups          4.51×         [2.46×, 6.82×]         5.10×         [2.81×, 7.67×]     2.30×    4.390  14
+  elements                     3.25×         [1.61×, 5.32×]         3.70×         [1.95×, 5.93×]     2.27×    3.685  14
+  sgnum                        1.72×         [1.29×, 2.16×]         1.89×         [1.48×, 2.36×]     1.47×    0.874  14
+  crystalsys                   1.73×         [1.42×, 2.09×]         1.78×         [1.42×, 2.21×]     1.50×    0.681  14
+  pointgroup                   1.63×         [1.26×, 2.08×]         1.68×         [1.24×, 2.23×]     1.33×    0.854  14
+  composition                  1.04×         [0.93×, 1.15×]         1.11×         [1.05×, 1.20×]     1.05×    0.230  14
+  chemsys                      1.00×         [0.92×, 1.07×]         1.04×         [0.99×, 1.10×]     0.98×    0.147  14
+
+==============================================================================
+  SECTION 9: CORRELATION ANALYSES
+==============================================================================
+
+  --- 9a: Does better i.i.d. performance predict better OOD performance? ---
+  Pearson/Spearman r between i.i.d. test_mae and mean OOD test_mae
+  across all split types (per dataset, per model).
+
+  Dataset        Model    Pearson r   Spearman r  n
+  -------------------------------------------------------
+  jdft2d         coGN             —        0.179  7
+  jdft2d         coNGN        0.000        0.214  7
+  phonons        coGN         0.000        0.393  7
+  phonons        coNGN        0.000        0.393  7
+  log_gvrh       coGN             —        0.821  7
+  log_gvrh       coNGN       -0.000        0.821  7
+  log_kvrh       coGN        -0.000        0.714  7
+  log_kvrh       coNGN            —        0.679  7
+  perovskites    coGN        -0.000        0.679  7
+  perovskites    coNGN            —        0.536  7
+  mp_gap         coGN        -0.000        0.393  7
+  mp_gap         coNGN       -0.000        0.393  7
+  mp_e_form      coGN             —        0.286  7
+  mp_e_form      coNGN        0.000        0.250  7
+
+  --- 9b: Are coGN and coNGN degradation ratios correlated? ---
+  Spearman r between coGN and coNGN degradation ratios per (dataset, split).
+  High r: both models agree on which splits are hard.
+
+  jdft2d        : Spearman r =  0.929  (n=7 OOD splits)  ↑ strong agreement
+  phonons       : Spearman r =  1.000  (n=7 OOD splits)  ↑ strong agreement
+  log_gvrh      : Spearman r =  1.000  (n=7 OOD splits)  ↑ strong agreement
+  log_kvrh      : Spearman r =  0.964  (n=7 OOD splits)  ↑ strong agreement
+  perovskites   : Spearman r =  0.964  (n=7 OOD splits)  ↑ strong agreement
+  mp_gap        : Spearman r =  1.000  (n=7 OOD splits)  ↑ strong agreement
+  mp_e_form     : Spearman r =  0.964  (n=7 OOD splits)  ↑ strong agreement
+
+  --- 9c: Global coGN vs coNGN degradation agreement (all non-jdft2d) ---
+  Pearson r:  0.988  Spearman r: 0.901  (n=42 pairs)
+  Interpretation: both models strongly agree on which (dataset, split) pairs are hard.
+
+==============================================================================
+  SECTION 10: QUALITY CLASSIFICATION (R² bins)
+==============================================================================
+  Bins: excellent (R²>0.95), good (0.80-0.95), moderate (0.50-0.80),
+        poor (0.00-0.50), collapsed (R²<0.00)
+
+  Split                     excellent         good     moderate         poor    collapsed  total
+  ----------------------------------------------------------------------------------------------
+  index                          5/14        7/14        0/14        2/14        0/14  14
+  chemsys                        6/14        6/14        0/14        2/14        0/14  14
+  composition                    4/14        8/14        0/14        2/14        0/14  14
+  crystalsys                     6/14        6/14        0/14        1/14        1/14  14
+  elements                       2/14        6/14        4/14        2/14        0/14  14
+  periodictablegroups            0/14        5/14        6/14        2/14        1/14  14
+  pointgroup                     2/14       10/14        0/14        2/14        0/14  14
+  sgnum                          3/14        9/14        0/14        2/14        0/14  14
+
+  --- Distribution across all 112 runs (test R²) ---
+  excellent    (R² > 0.95):  28 / 112  (25.0%)
+  good         (0.80 ≤ R² < 0.95):  57 / 112  (50.9%)
+  moderate     (0.50 ≤ R² < 0.80):  10 / 112  (8.9%)
+  poor         (0.00 ≤ R² < 0.50):  15 / 112  (13.4%)
+  collapsed    (R² < 0.00  (worse than predicting mean)):   2 / 112  (1.8%)
+
+  --- Collapsed runs (R² < 0.0) — worse than predicting mean ---
+  2 runs have R² < 0:
+    jdft2d/periodictablegroups/coGN: R²=-0.028
+    jdft2d/crystalsys/coGN: R²=-0.007
+
+  CSVs saved to results/phase2/analysis/
+    full_master_table.csv        — 112 rows (all metrics + ratios)
+    full_degradation_table.csv   — 98 rows (MAE+RMSE+R² degradation, val-test gap)
+    error_distribution_table.csv — 336 rows (bias, percentiles from prediction CSVs)
+
+  Full analysis complete.

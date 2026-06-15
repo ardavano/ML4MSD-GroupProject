@@ -1,0 +1,33 @@
+{
+  "meta": {
+    "dataset": "perovskites",
+    "split": "periodictablegroups",
+    "model": "coNGN",
+    "split_ratio": "0.7-0.1-0.2",
+    "epochs": 600,
+    "batch_size": 64,
+    "lr_init": 0.0005,
+    "lr_final": 1e-05,
+    "lr_schedule": "PolynomialDecay (linear)",
+    "preprocessor": "VoronoiAsymmetricUnitCell(1e-6)",
+    "n_train": 12961,
+    "n_val": 1851,
+    "n_test": 4116,
+    "train_time_s": 3751.406925678253
+  },
+  "train": {
+    "mae": 0.00040811495385895753,
+    "rmse": 0.0005242294147016207,
+    "r2": 0.9999995206173483
+  },
+  "val": {
+    "mae": 0.029618449579262206,
+    "rmse": 0.05305325718593674,
+    "r2": 0.9951311565958975
+  },
+  "test": {
+    "mae": 0.3386563306768851,
+    "rmse": 0.42571351798389145,
+    "r2": 0.5900094068381607
+  }
+}
